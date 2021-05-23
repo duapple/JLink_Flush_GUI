@@ -1,0 +1,9 @@
+{
+    "29401025": {
+        "connect_type": "SWD",
+        "device_type": "nRF52840_XXAA",
+        "firmware": "E:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_lubricatior/pca10056/s140/tool/RwOildrop_firmware_sw10_hw1_dt2_20210521_1612.hex",
+        "speed": "4000"
+    },
+    "current_dev_sn": "29401025"
+}

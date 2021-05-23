@@ -1,0 +1,21 @@
+{
+    "connect_type_list": [
+        "JTAG",
+        "SWD",
+        "cJTAG"
+    ],
+    "device_type_list": [
+        "nRF52810_XXAA",
+        "nRF52832_XXAA",
+        "nRF52840_XXAA"
+    ],
+    "jlink_cmd_path": "C:/Program Files (x86)/SEGGER/JLink/JLink.exe",
+    "speed_list": [
+        1000,
+        2000,
+        4000,
+        8000,
+        10000,
+        20000
+    ]
+}

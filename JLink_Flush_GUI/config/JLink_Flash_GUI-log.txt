@@ -1,0 +1,292 @@
+Info:   2021-05-22 16:58:30 "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" -CommandFile config/get_sn_log_cmd.txt -Log config/jlink_log.txt"
+Info:   2021-05-22 16:58:30 
+Info:   2021-05-22 16:58:45 select file:  E:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_lubricatior/pca10056/s140/tool/RwOildrop_firmware_sw10_hw1_dt2_20210521_1612.hex
+Debug:  2021-05-22 16:58:47 Select connect type is SWD
+Info:   2021-05-22 16:58:47 exec cmd:  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" config/flush_config.txt"
+Info:   2021-05-22 16:58:51 
+Debug:  2021-05-22 16:59:23  jlink_cmd_path value:  "C:/Program Files (x86)/SEGGER/JLink/JLink.exe"
+Info:   2021-05-22 16:59:27  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" -CommandFile config/get_sn_log_cmd.txt -Log config/jlink_log.txt"
+Info:   2021-05-22 16:59:27  
+Debug:  2021-05-22 17:06:36  jlink_cmd_path value:  "C:/Program Files (x86)/SEGGER/JLink/JLink.exe"
+Info:   2021-05-22 17:06:51  写global config配置文件成功
+Info:   2021-05-22 17:06:52  写global config配置文件成功
+Info:   2021-05-22 17:06:53  写global config配置文件成功
+Info:   2021-05-22 17:06:53  写global config配置文件成功
+Info:   2021-05-22 17:06:54  写global config配置文件成功
+Info:   2021-05-22 17:06:54  写global config配置文件成功
+Info:   2021-05-22 17:06:56  写global config配置文件成功
+Info:   2021-05-22 17:06:57  写global config配置文件成功
+Info:   2021-05-22 17:06:57  写global config配置文件成功
+Info:   2021-05-22 17:06:58  写global config配置文件成功
+Info:   2021-05-22 17:06:58  写global config配置文件成功
+Debug:  2021-05-22 17:07:07  Select connect type is SWD
+Info:   2021-05-22 17:07:07  exec cmd:  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" config/flush_config.txt"
+Info:   2021-05-22 17:07:08  
+Info:   2021-05-22 17:07:21  select file:  E:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_lubricatior/pca10056/s140/tool/RwOildrop_firmware_sw10_hw1_dt2_20210521_1612.hex
+Debug:  2021-05-22 17:07:23  Select connect type is SWD
+Info:   2021-05-22 17:07:23  exec cmd:  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" config/flush_config.txt"
+Info:   2021-05-22 17:07:27  
+Warn:   2021-05-22 17:07:55  QPixmap::scaled: Pixmap is a null pixmap
+Info:   2021-05-22 17:08:05  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" -CommandFile config/get_sn_log_cmd.txt -Log config/jlink_log.txt"
+Info:   2021-05-22 17:08:05  
+Debug:  2021-05-22 17:14:55  jlink_cmd_path value:  "C:/Program Files (x86)/SEGGER/JLink/JLink.exe"
+Debug:  2021-05-22 18:03:26  jlink_cmd_path value:  "C:/Program Files (x86)/SEGGER/JLink/JLink.exe"
+Info:   2021-05-22 18:03:36  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" -CommandFile config/get_sn_log_cmd.txt -Log config/jlink_log.txt"
+Info:   2021-05-22 18:03:36  
+Warn:   2021-05-22 18:03:36  "解析配置错误！"
+Info:   2021-05-22 18:03:36  写 config/jlink_device_info.json 文件成功
+Warn:   2021-05-22 20:57:12  QPixmap::scaled: Pixmap is a null pixmap
+Debug:  2021-05-22 20:57:42  jlink_cmd_path value:  "C:/Program Files (x86)/SEGGER/JLink/JLink.exe"
+Info:   2021-05-22 20:57:46  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" -CommandFile config/get_sn_log_cmd.txt -Log config/jlink_log.txt"
+Info:   2021-05-22 20:57:46  
+Info:   2021-05-22 20:57:46  写 config/jlink_device_info.json 文件成功
+Info:   2021-05-22 20:58:26  select file:  E:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_lubricatior/pca10056/s140/tool/RwOildrop_firmware_sw10_hw1_dt2_20210521_1612.hex
+Debug:  2021-05-22 20:58:32  Select connect type is SWD
+Info:   2021-05-22 20:58:32  exec cmd:  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" config/flush_config.txt"
+Info:   2021-05-22 20:58:36  
+Debug:  2021-05-22 21:00:13  file path: C:/Program Files (x86)/SEGGER/JLink_V672d/JLink.exe
+Info:   2021-05-22 21:00:14  写global config配置文件成功
+Info:   2021-05-22 21:00:25  写global config配置文件成功
+Info:   2021-05-22 21:00:44  写global config配置文件成功
+Debug:  2021-05-22 21:11:30  jlink_cmd_path value:  "C:/Program Files (x86)/SEGGER/JLink/JLink.exe"
+Debug:  2021-05-22 21:16:58  jlink_cmd_path value:  "C:/Program Files (x86)/SEGGER/JLink/JLink.exe"
+Info:   2021-05-22 21:17:22  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" -CommandFile config/get_sn_log_cmd.txt -Log config/jlink_log.txt"
+Info:   2021-05-22 21:17:22  
+Info:   2021-05-22 21:17:22  写 config/jlink_device_info.json 文件成功
+Info:   2021-05-22 21:17:40  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" -CommandFile config/get_sn_log_cmd.txt -Log config/jlink_log.txt"
+Info:   2021-05-22 21:17:40  
+Info:   2021-05-22 21:17:40  写 config/jlink_device_info.json 文件成功
+Debug:  2021-05-22 21:23:41  jlink_cmd_path value:  "C:/Program Files (x86)/SEGGER/JLink/JLink.exe"
+Info:   2021-05-22 21:23:51  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" -CommandFile config/get_sn_log_cmd.txt -Log config/jlink_log.txt"
+Info:   2021-05-22 21:23:51  
+Info:   2021-05-22 21:23:51  写 config/jlink_device_info.json 文件成功
+Debug:  2021-05-22 21:30:17  jlink_cmd_path value:  "C:/Program Files (x86)/SEGGER/JLink/JLink.exe"
+Debug:  2021-05-22 21:31:38  jlink_cmd_path value:  "C:/Program Files (x86)/SEGGER/JLink/JLink.exe"
+Info:   2021-05-22 21:31:38  写 config/jlink_device_info.json 文件成功
+Debug:  2021-05-22 21:32:43  jlink_cmd_path value:  "C:/Program Files (x86)/SEGGER/JLink/JLink.exe"
+Info:   2021-05-22 21:32:43  设置启动默认设备
+Info:   2021-05-22 21:32:43  写 config/jlink_device_info.json 文件成功
+Info:   2021-05-22 21:41:47  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" -CommandFile config/get_sn_log_cmd.txt -Log config/jlink_log.txt"
+Info:   2021-05-22 21:41:47  
+Info:   2021-05-22 21:41:47  写 config/jlink_device_info.json 文件成功
+Info:   2021-05-22 21:43:22  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" -CommandFile config/get_sn_log_cmd.txt -Log config/jlink_log.txt"
+Info:   2021-05-22 21:43:22  
+Info:   2021-05-22 21:43:22  写 config/jlink_device_info.json 文件成功
+Info:   2021-05-22 21:43:45  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" -CommandFile config/get_sn_log_cmd.txt -Log config/jlink_log.txt"
+Info:   2021-05-22 21:43:45  
+Info:   2021-05-22 21:43:45  写 config/jlink_device_info.json 文件成功
+Info:   2021-05-22 21:43:50  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" -CommandFile config/get_sn_log_cmd.txt -Log config/jlink_log.txt"
+Info:   2021-05-22 21:43:50  
+Info:   2021-05-22 21:43:50  写 config/jlink_device_info.json 文件成功
+Debug:  2021-05-22 21:49:10  jlink_cmd_path value:  "C:/Program Files (x86)/SEGGER/JLink/JLink.exe"
+Info:   2021-05-22 21:49:10  设置启动默认设备
+Info:   2021-05-22 21:49:15  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" -CommandFile config/get_sn_log_cmd.txt -Log config/jlink_log.txt"
+Info:   2021-05-22 21:49:15  
+Info:   2021-05-22 21:49:15  写 config/jlink_device_info.json 文件成功
+Info:   2021-05-22 21:49:29  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" -CommandFile config/get_sn_log_cmd.txt -Log config/jlink_log.txt"
+Info:   2021-05-22 21:49:29  
+Info:   2021-05-22 21:49:29  写 config/jlink_device_info.json 文件成功
+Debug:  2021-05-22 22:04:39  jlink_cmd_path value:  "C:/Program Files (x86)/SEGGER/JLink/JLink.exe"
+Info:   2021-05-22 22:04:39  设置启动默认设备
+Debug:  2021-05-22 22:05:48  jlink_cmd_path value:  "C:/Program Files (x86)/SEGGER/JLink/JLink.exe"
+Info:   2021-05-22 22:05:48  设置启动默认设备
+Debug:  2021-05-22 22:05:48  设置连接方式： "JTAG"
+Debug:  2021-05-22 22:06:04  jlink_cmd_path value:  "C:/Program Files (x86)/SEGGER/JLink/JLink.exe"
+Info:   2021-05-22 22:06:04  设置启动默认设备
+Debug:  2021-05-22 22:06:04  设置连接方式： "JTAG"
+Debug:  2021-05-22 22:08:56  jlink_cmd_path value:  "C:/Program Files (x86)/SEGGER/JLink/JLink.exe"
+Info:   2021-05-22 22:08:56  设置启动默认设备
+Debug:  2021-05-22 22:08:56  dev sn count:  0
+Debug:  2021-05-22 22:09:54  jlink_cmd_path value:  "C:/Program Files (x86)/SEGGER/JLink/JLink.exe"
+Info:   2021-05-22 22:09:54  设置启动默认设备
+Debug:  2021-05-22 22:09:54  dev sn count:  0
+Debug:  2021-05-22 22:09:54  设置连接方式： "JTAG"
+Debug:  2021-05-22 22:10:26  jlink_cmd_path value:  "C:/Program Files (x86)/SEGGER/JLink/JLink.exe"
+Info:   2021-05-22 22:10:26  设置启动默认设备
+Debug:  2021-05-22 22:10:26  dev sn count:  0
+Debug:  2021-05-22 22:10:26  设置连接方式： "JTAG"
+Info:   2021-05-22 22:10:39  firmware selected:  ""
+Info:   2021-05-22 22:10:41  select firmware file:  E:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_lubricatior/pca10056/s140/tool/RwOildrop_firmware_sw10_hw1_dt2_20210521_1612.hex
+Info:   2021-05-22 22:10:56  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" -CommandFile config/get_sn_log_cmd.txt -Log config/jlink_log.txt"
+Info:   2021-05-22 22:10:56  
+Info:   2021-05-22 22:10:56  写 config/jlink_device_info.json 文件成功
+Info:   2021-05-22 22:11:07  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" -CommandFile config/get_sn_log_cmd.txt -Log config/jlink_log.txt"
+Info:   2021-05-22 22:11:07  
+Info:   2021-05-22 22:11:07  写 config/jlink_device_info.json 文件成功
+Debug:  2021-05-22 22:11:52  Select connect type is SWD
+Info:   2021-05-22 22:11:52  exec cmd:  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" config/flush_config.txt"
+Info:   2021-05-22 22:11:57  
+Debug:  2021-05-22 22:12:01  jlink_cmd_path value:  "C:/Program Files (x86)/SEGGER/JLink/JLink.exe"
+Info:   2021-05-22 22:12:01  设置启动默认设备
+Debug:  2021-05-22 22:12:01  dev sn count:  0
+Debug:  2021-05-22 22:12:01  设置连接方式： "SWD"
+Debug:  2021-05-22 22:12:11  Select connect type is SWD
+Info:   2021-05-22 22:12:11  exec cmd:  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" config/reboot_config.txt"
+Info:   2021-05-22 22:12:12  
+Debug:  2021-05-22 22:12:13  Select connect type is SWD
+Info:   2021-05-22 22:12:13  exec cmd:  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" config/erase_config.txt"
+Info:   2021-05-22 22:12:14  
+Debug:  2021-05-22 22:12:17  Select connect type is SWD
+Info:   2021-05-22 22:12:17  exec cmd:  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" config/flush_config.txt"
+Info:   2021-05-22 22:12:21  
+Debug:  2021-05-22 22:21:44  jlink_cmd_path value:  "C:/Program Files (x86)/SEGGER/JLink/JLink.exe"
+Info:   2021-05-22 22:21:55  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" -CommandFile config/get_sn_log_cmd.txt -Log config/jlink_log.txt"
+Info:   2021-05-22 22:21:55  
+Info:   2021-05-22 22:21:55  写 config/jlink_device_info.json 文件成功
+Info:   2021-05-22 22:22:43  select firmware file:  E:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_lubricatior/pca10056/s140/tool/RwOildrop_firmware_sw10_hw1_dt2_20210521_1612.hex
+Info:   2021-05-22 22:22:45  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" -CommandFile config/get_sn_log_cmd.txt -Log config/jlink_log.txt"
+Info:   2021-05-22 22:22:45  
+Info:   2021-05-22 22:22:45  写 config/jlink_device_info.json 文件成功
+Debug:  2021-05-22 22:22:55  jlink_cmd_path value:  "C:/Program Files (x86)/SEGGER/JLink/JLink.exe"
+Debug:  2021-05-22 22:28:49  jlink_cmd_path value:  "C:/Program Files (x86)/SEGGER/JLink/JLink.exe"
+Debug:  2021-05-22 22:28:49  dev sn count:  0
+Debug:  2021-05-22 22:28:49  设置连接方式： "SWD"
+Debug:  2021-05-22 22:33:12  jlink_cmd_path value:  "C:/Program Files (x86)/SEGGER/JLink/JLink.exe"
+Debug:  2021-05-22 22:33:12  dev sn count:  0
+Info:   2021-05-22 22:34:17  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" -CommandFile config/get_sn_log_cmd.txt -Log config/jlink_log.txt"
+Info:   2021-05-22 22:34:17  
+Info:   2021-05-22 22:34:17  写 config/jlink_device_info.json 文件成功
+Info:   2021-05-22 22:34:27  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" -CommandFile config/get_sn_log_cmd.txt -Log config/jlink_log.txt"
+Info:   2021-05-22 22:34:27  
+Info:   2021-05-22 22:34:27  写 config/jlink_device_info.json 文件成功
+Info:   2021-05-22 22:34:38  select firmware file:  E:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_lubricatior/pca10056/s140/tool/RwOildrop_firmware_sw10_hw1_dt2_20210521_1612.hex
+Info:   2021-05-22 22:34:40  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" -CommandFile config/get_sn_log_cmd.txt -Log config/jlink_log.txt"
+Info:   2021-05-22 22:34:40  
+Info:   2021-05-22 22:34:40  写 config/jlink_device_info.json 文件成功
+Debug:  2021-05-22 22:36:20  Select connect type is SWD
+Info:   2021-05-22 22:36:20  exec cmd:  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" config/reboot_config.txt"
+Info:   2021-05-22 22:36:21  
+Debug:  2021-05-22 22:36:30  Select connect type is SWD
+Info:   2021-05-22 22:36:30  exec cmd:  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" config/reboot_config.txt"
+Info:   2021-05-22 22:36:31  
+Debug:  2021-05-22 22:36:33  Select connect type is SWD
+Info:   2021-05-22 22:36:33  exec cmd:  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" config/reboot_config.txt"
+Info:   2021-05-22 22:36:33  
+Debug:  2021-05-22 22:36:33  Select connect type is SWD
+Info:   2021-05-22 22:36:33  exec cmd:  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" config/reboot_config.txt"
+Info:   2021-05-22 22:36:34  
+Debug:  2021-05-22 22:36:37  Select connect type is SWD
+Info:   2021-05-22 22:36:37  exec cmd:  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" config/reboot_config.txt"
+Info:   2021-05-22 22:36:38  
+Debug:  2021-05-22 22:45:53  jlink_cmd_path value:  "C:/Program Files (x86)/SEGGER/JLink/JLink.exe"
+Debug:  2021-05-22 22:45:53  dev sn count:  0
+Debug:  2021-05-22 22:45:53  设置连接方式： "SWD"
+Debug:  2021-05-22 22:45:58  Select connect type is SWD
+Info:   2021-05-22 22:45:58  exec cmd:  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" config/flush_config.txt"
+Info:   2021-05-22 22:46:03  
+Info:   2021-05-22 22:46:03  写 config/jlink_device_info.json 文件成功
+Debug:  2021-05-22 22:46:13  Select connect type is SWD
+Info:   2021-05-22 22:46:13  exec cmd:  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" config/flush_config.txt"
+Info:   2021-05-22 22:46:17  
+Info:   2021-05-22 22:46:17  写 config/jlink_device_info.json 文件成功
+Debug:  2021-05-22 22:46:45  jlink_cmd_path value:  "C:/Program Files (x86)/SEGGER/JLink/JLink.exe"
+Debug:  2021-05-22 22:46:45  dev sn count:  0
+Debug:  2021-05-22 22:46:45  设置连接方式： "SWD"
+Debug:  2021-05-22 22:46:46  Select connect type is SWD
+Info:   2021-05-22 22:46:46  exec cmd:  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" config/flush_config.txt"
+Info:   2021-05-22 22:46:50  
+Debug:  2021-05-22 22:49:19  Select connect type is SWD
+Info:   2021-05-22 22:49:19  exec cmd:  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" config/flush_config.txt"
+Info:   2021-05-22 22:49:23  
+Debug:  2021-05-22 22:49:57  Select connect type is SWD
+Info:   2021-05-22 22:49:57  exec cmd:  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" config/reboot_config.txt"
+Info:   2021-05-22 22:49:57  
+Debug:  2021-05-22 22:49:59  Select connect type is SWD
+Info:   2021-05-22 22:49:59  exec cmd:  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" config/flush_config.txt"
+Info:   2021-05-22 22:50:03  
+Debug:  2021-05-22 22:50:30  Select connect type is SWD
+Info:   2021-05-22 22:50:30  exec cmd:  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" config/flush_config.txt"
+Info:   2021-05-22 22:50:34  
+Debug:  2021-05-22 22:50:39  Select connect type is SWD
+Info:   2021-05-22 22:50:39  exec cmd:  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" config/flush_config.txt"
+Info:   2021-05-22 22:50:43  
+Debug:  2021-05-22 22:51:44  jlink_cmd_path value:  "C:/Program Files (x86)/SEGGER/JLink/JLink.exe"
+Debug:  2021-05-22 22:51:44  dev sn count:  0
+Debug:  2021-05-22 22:51:44  设置连接方式： "SWD"
+Debug:  2021-05-22 22:51:49  Select connect type is SWD
+Info:   2021-05-22 22:51:49  exec cmd:  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" config/flush_config.txt"
+Info:   2021-05-22 22:51:54  
+Info:   2021-05-22 22:51:54  保存当前设备的配置
+Info:   2021-05-22 22:51:54  写 config/jlink_device_info.json 文件成功
+Info:   2021-05-22 22:55:00  firmware selected:  ""
+Info:   2021-05-22 22:55:08  firmware selected:  "E:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_lubricatior/pca10056/s140/tool/RwOildrop_firmware_sw10_hw1_dt2_20210521_1612.hex"
+Debug:  2021-05-22 23:03:16  jlink_cmd_path value:  "C:/Program Files (x86)/SEGGER/JLink/JLink.exe"
+Warn:   2021-05-22 23:03:16  QIODevice::read (QFile, "config\jlink_device_info.json"): device not open
+Warn:   2021-05-22 23:03:16  "解析配置错误！"
+Info:   2021-05-22 23:03:18  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" -CommandFile config/get_sn_log_cmd.txt -Log config/jlink_log.txt"
+Info:   2021-05-22 23:03:18  
+Info:   2021-05-22 23:03:18  保存当前设备的配置
+Warn:   2021-05-22 23:03:18  QIODevice::read (QFile, "config\jlink_device_info.json"): device not open
+Warn:   2021-05-22 23:03:18  "解析配置错误！"
+Info:   2021-05-22 23:03:18  写 config/jlink_device_info.json 文件成功
+Info:   2021-05-22 23:03:24  firmware selected:  ""
+Info:   2021-05-22 23:03:27  select firmware file:  E:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_lubricatior/pca10056/s140/tool/RwOildrop_firmware_sw10_hw1_dt2_20210521_1612.hex
+Debug:  2021-05-22 23:03:29  Select connect type is SWD
+Info:   2021-05-22 23:03:29  exec cmd:  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" config/flush_config.txt"
+Info:   2021-05-22 23:03:33  
+Info:   2021-05-22 23:03:33  保存当前设备的配置
+Info:   2021-05-22 23:03:33  写 config/jlink_device_info.json 文件成功
+Debug:  2021-05-22 23:13:04  jlink_cmd_path value:  "C:/Program Files (x86)/SEGGER/JLink/JLink.exe"
+Debug:  2021-05-22 23:13:04  dev sn count:  0
+Debug:  2021-05-22 23:13:04  设置连接方式： "SWD"
+Info:   2021-05-22 23:13:22  firmware selected:  ""
+Debug:  2021-05-22 23:44:47  jlink_cmd_path value:  "C:/Program Files (x86)/SEGGER/JLink/JLink.exe"
+Debug:  2021-05-22 23:44:47  dev sn count:  0
+Debug:  2021-05-22 23:44:47  设置连接方式： "SWD"
+Debug:  2021-05-22 23:45:10  jlink_cmd_path value:  "C:/Program Files (x86)/SEGGER/JLink/JLink.exe"
+Debug:  2021-05-22 23:45:10  dev sn count:  0
+Debug:  2021-05-22 23:45:10  设置连接方式： "SWD"
+Debug:  2021-05-22 23:45:19  jlink_cmd_path value:  "C:/Program Files (x86)/SEGGER/JLink/JLink.exe"
+Debug:  2021-05-22 23:45:19  dev sn count:  0
+Debug:  2021-05-22 23:45:19  设置连接方式： "SWD"
+Info:   2021-05-22 23:45:23  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" -CommandFile config/get_sn_log_cmd.txt -Log config/jlink_log.txt"
+Info:   2021-05-22 23:45:23  
+Info:   2021-05-22 23:45:23  保存当前设备的配置
+Info:   2021-05-22 23:45:23  写 config/jlink_device_info.json 文件成功
+Debug:  2021-05-22 23:48:31  jlink_cmd_path value:  "C:/Program Files (x86)/SEGGER/JLink/JLink.exe"
+Debug:  2021-05-22 23:48:31  dev sn count:  0
+Debug:  2021-05-22 23:48:31  设置连接方式： "SWD"
+Info:   2021-05-22 23:48:32  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" -CommandFile config/get_sn_log_cmd.txt -Log config/jlink_log.txt"
+Info:   2021-05-22 23:48:32  
+Info:   2021-05-22 23:48:32  保存当前设备的配置
+Info:   2021-05-22 23:48:32  写 config/jlink_device_info.json 文件成功
+Debug:  2021-05-23 16:15:24  jlink_cmd_path value:  "C:/Program Files (x86)/SEGGER/JLink/JLink.exe"
+Debug:  2021-05-23 16:15:24  dev sn count:  0
+Debug:  2021-05-23 16:15:24  dev sn count:  1
+Debug:  2021-05-23 16:15:24  设置连接方式： "SWD"
+Debug:  2021-05-23 16:15:24  设置连接方式： "SWD"
+Debug:  2021-05-23 16:15:58  jlink_cmd_path value:  "C:/Program Files (x86)/SEGGER/JLink/JLink.exe"
+Debug:  2021-05-23 16:15:58  dev sn count:  0
+Debug:  2021-05-23 16:15:58  dev sn count:  1
+Debug:  2021-05-23 16:15:58  设置连接方式： "SWD"
+Debug:  2021-05-23 16:15:58  设置连接方式： "SWD"
+Debug:  2021-05-23 16:30:24  jlink_cmd_path value:  "C:/Program Files (x86)/SEGGER/JLink/JLink.exe"
+Debug:  2021-05-23 16:30:24  dev sn count:  0
+Debug:  2021-05-23 16:30:24  dev sn count:  1
+Debug:  2021-05-23 16:30:24  设置连接方式： "SWD"
+Debug:  2021-05-23 16:30:24  设置连接方式： "SWD"
+Debug:  2021-05-23 16:34:52  jlink_cmd_path value:  "C:/Program Files (x86)/SEGGER/JLink/JLink.exe"
+Debug:  2021-05-23 16:34:52  dev sn count:  0
+Debug:  2021-05-23 16:34:52  dev sn count:  1
+Debug:  2021-05-23 16:34:52  设置连接方式： "SWD"
+Debug:  2021-05-23 16:34:52  设置连接方式： "SWD"
+Debug:  2021-05-23 16:35:33  jlink_cmd_path value:  "C:/Program Files (x86)/SEGGER/JLink/JLink.exe"
+Debug:  2021-05-23 16:35:33  dev sn count:  0
+Debug:  2021-05-23 16:35:33  dev sn count:  1
+Debug:  2021-05-23 16:35:33  设置连接方式： "SWD"
+Debug:  2021-05-23 16:35:33  设置连接方式： "SWD"
+Debug:  2021-05-23 16:39:04  jlink_cmd_path value:  "C:/Program Files (x86)/SEGGER/JLink/JLink.exe"
+Debug:  2021-05-23 16:39:04  dev sn count:  0
+Debug:  2021-05-23 16:39:04  dev sn count:  1
+Debug:  2021-05-23 16:39:04  设置连接方式： "SWD"
+Debug:  2021-05-23 16:39:04  设置连接方式： "SWD"
+Debug:  2021-05-23 16:40:41  jlink_cmd_path value:  "C:/Program Files (x86)/SEGGER/JLink/JLink.exe"
+Debug:  2021-05-23 16:40:41  dev sn count:  0
+Debug:  2021-05-23 16:40:41  dev sn count:  1
+Debug:  2021-05-23 16:40:41  设置连接方式： "SWD"
+Debug:  2021-05-23 16:40:41  设置连接方式： "SWD"
+Debug:  2021-05-23 16:42:39  Select connect type is SWD
+Info:   2021-05-23 16:42:39  exec cmd:  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" config/flush_config.txt"
+Info:   2021-05-23 16:42:43  
+Info:   2021-05-23 16:42:43  保存当前设备的配置
+Info:   2021-05-23 16:42:43  写 config/jlink_device_info.json 文件成功
