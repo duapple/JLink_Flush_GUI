@@ -4,7 +4,6 @@ speed 4000
 device nRF52840_XXAA
 r 
 h 
-erase 
-loadfile E:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_lubricatior/pca10056/s140/tool/RwOildrop_firmware_sw10_hw1_dt2_20210521_1612.hex
+loadfile "E:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/RwHumiture_firmware_sw4_hw1_dt3_20210527_1829.hex"
 r 
 q 

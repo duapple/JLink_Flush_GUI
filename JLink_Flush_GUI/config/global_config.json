@@ -7,7 +7,9 @@
     "device_type_list": [
         "nRF52810_XXAA",
         "nRF52832_XXAA",
-        "nRF52840_XXAA"
+        "nRF52840_XXAA",
+        "EFR32MG21AxxxF768",
+        "EFR32MG21AxxxF1024"
     ],
     "jlink_cmd_path": "C:/Program Files (x86)/SEGGER/JLink/JLink.exe",
     "speed_list": [

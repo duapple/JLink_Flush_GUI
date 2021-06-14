@@ -4,12 +4,26 @@
 #include <QMainWindow>
 #include "jlink_settings.h"
 #include "src/hj_file_write.h"
+#include <QThread>
+#include <iostream>
+
 
 #define GLOBAL_CONFIG_FILE      CONFIG_PATH "global_config.json"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
+
+class Mythread: public QThread
+{
+    Q_OBJECT
+public:
+    std::string rtt_viewer_exec_cmd;
+    Mythread(QObject * parent = 0);
+
+protected:
+    void run();
+};
 
 class MainWindow : public QMainWindow
 {
@@ -34,6 +48,13 @@ public:
     void dragEnterEvent(QDragEnterEvent * e);
     void dropEvent(QDropEvent * e);
 
+    int bin_start_addr_check(void);
+    int fw_file_check(void);
+    void fw_file1_check(QString filename);
+    void fw_file2_check(QString filename);
+    void fw_file3_check(QString filename);
+    void clear_fw_file_hex(void);
+
 private slots:
     void on_actionJLink_settings_triggered();
 
@@ -49,7 +70,25 @@ private slots:
 
     void on_comboBox_sn_currentTextChanged(const QString &arg1);
 
+    void on_pushButton_rtt_viewer_clicked();
+
+    void on_pushButton_2_choose_fw_3_clicked();
+
+    void on_pushButton_2_choose_fw_4_clicked();
+
+    void on_lineEdit_fw_path_3_editingFinished();
+
+    void on_lineEdit_fw_path_4_editingFinished();
+
+    void on_lineEdit_fw_path_2_editingFinished();
+
+    void on_action_clear_log_triggered();
+
+    void on_checkBox_erase_sector_toggled(bool checked);
+
 private:
     Ui::MainWindow *ui;
+
+    Mythread *mythread;
 };
 #endif // MAINWINDOW_H

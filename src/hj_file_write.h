@@ -19,6 +19,15 @@ typedef struct {
     uint32_t speed;
     string dev_type;
     string load_file;
+    string load_file2;
+    string load_file3;
+    string file_start_addr;
+    string file_end_addr;
+    string file2_start_addr;
+    string file2_end_addr;
+    string file3_start_addr;
+    string file3_end_addr;
+    bool erase_chip;
 } jlink_flush_config_file_args_t;
 
 class JlinkFlushConfigFileArgs
