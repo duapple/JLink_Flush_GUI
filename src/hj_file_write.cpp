@@ -44,50 +44,68 @@ void JlinkFlushConfigFileArgs::generate_flush_config_file(jlink_flush_config_fil
         flush_config_file_s << "erase \n";
     }
 
-    if (p->load_file != "")
+    if (p->load_file1_enable)
     {
-        string load_file1 = p->load_file;
-        if (get_file_format(load_file1) == ".hex") {
-            flush_config_file_s << "loadfile \"" << load_file1 << "\"" << endl;
+        if (p->load_file != "")
+        {
+            string load_file1 = p->load_file;
+            if (get_file_format(load_file1) == ".hex") {
+                flush_config_file_s << "loadfile \"" << load_file1 << "\"" << endl;
+            } else {
+                format_bin_to_hex(load_file1);
+                flush_config_file_s << "loadfile \"" << load_file1 << "\"" << endl;
+                qDebug() << "load_file name: " << load_file1.c_str();
+                bin_to_hex(p->load_file, p->file_start_addr);
+            }
         } else {
-            format_bin_to_hex(load_file1);
-            flush_config_file_s << "loadfile \"" << load_file1 << "\"" << endl;
-            qDebug() << "load_file name: " << load_file1.c_str();
-            bin_to_hex(p->load_file, p->file_start_addr);
+            qDebug() << "firmware 不存在";
         }
     } else {
-        qDebug() << "firmware 不存在";
+        qDebug() << "load file1 disabled.";
     }
 
-    if (p->load_file2 != "")
+
+    if (p->load_file2_enable)
     {
-        string load_file2 = p->load_file2;
-        if (get_file_format(load_file2) == ".hex") {
-            flush_config_file_s << "loadfile \"" << load_file2 << "\"" << endl;
+        if (p->load_file2 != "")
+        {
+            string load_file2 = p->load_file2;
+            if (get_file_format(load_file2) == ".hex") {
+                flush_config_file_s << "loadfile \"" << load_file2 << "\"" << endl;
+            } else {
+                format_bin_to_hex(load_file2);
+                flush_config_file_s << "loadfile \"" << load_file2 << "\"" << endl;
+                qDebug() << "load_file2 name: " << load_file2.c_str();
+                bin_to_hex(p->load_file2, p->file2_start_addr);
+            }
         } else {
-            format_bin_to_hex(load_file2);
-            flush_config_file_s << "loadfile \"" << load_file2 << "\"" << endl;
-            qDebug() << "load_file2 name: " << load_file2.c_str();
-            bin_to_hex(p->load_file2, p->file2_start_addr);
+            qDebug() << "firmware2 不存在";
         }
     } else {
-        qDebug() << "firmware2 不存在";
+        qDebug() << "load file2 disabled";
     }
 
-    if (p->load_file3 != "")
+
+    if (p->load_file3_enable)
     {
-        string load_file3 = p->load_file3;
-        if (get_file_format(load_file3) == ".hex") {
-            flush_config_file_s << "loadfile \"" << load_file3 << "\"" << endl;
+        if (p->load_file3 != "")
+        {
+            string load_file3 = p->load_file3;
+            if (get_file_format(load_file3) == ".hex") {
+                flush_config_file_s << "loadfile \"" << load_file3 << "\"" << endl;
+            } else {
+                format_bin_to_hex(load_file3);
+                flush_config_file_s << "loadfile \"" << load_file3 << "\"" << endl;
+                qDebug() << "load_file3 name: " << load_file3.c_str();
+                bin_to_hex(p->load_file3, p->file3_start_addr);
+            }
         } else {
-            format_bin_to_hex(load_file3);
-            flush_config_file_s << "loadfile \"" << load_file3 << "\"" << endl;
-            qDebug() << "load_file3 name: " << load_file3.c_str();
-            bin_to_hex(p->load_file3, p->file3_start_addr);
+            qDebug() << "firmware3 不存在";
         }
     } else {
-        qDebug() << "firmware3 不存在";
+        qDebug() << "load file3 disabled";
     }
+
 
     flush_config_file_s << "r \n" << "q \n";
     flush_config_file_s.close();

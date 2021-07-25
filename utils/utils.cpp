@@ -5,8 +5,13 @@
 #include <QProcess>
 #include <stdio.h>
 
+#if defined(Q_OS_LINUX)
+#define SREC_INFO_EXEC       "./bin/srec_info"
+#define SREC_CAT_EXEC        "./bin/srec_cat"
+#elif defined(Q_OS_WIN)
 #define SREC_INFO_EXEC       "./bin/srec_info.exe"
 #define SREC_CAT_EXEC        "./bin/srec_cat.exe"
+#endif
 
 using namespace std;
 

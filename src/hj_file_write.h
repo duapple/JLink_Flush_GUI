@@ -28,6 +28,9 @@ typedef struct {
     string file3_start_addr;
     string file3_end_addr;
     bool erase_chip;
+    bool load_file1_enable;
+    bool load_file2_enable;
+    bool load_file3_enable;
 } jlink_flush_config_file_args_t;
 
 class JlinkFlushConfigFileArgs

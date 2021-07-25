@@ -6,6 +6,9 @@
 #include "src/hj_file_write.h"
 #include <QThread>
 #include <iostream>
+#include <QProcess>
+#include <QSettings>
+#include <QProgressBar>
 
 
 #define GLOBAL_CONFIG_FILE      CONFIG_PATH "global_config.json"
@@ -86,9 +89,38 @@ private slots:
 
     void on_checkBox_erase_sector_toggled(bool checked);
 
+    void on_choose_load_file2_triggered(bool checked);
+
+    void on_choose_load_file3_triggered(bool checked);
+
+    void on_choose_load_file1_triggered(bool checked);
+
+    void on_readoutput();
+
+    void process_finished(int exit_code);
+
+    void on_radioButton_choose_loadfile1_clicked(bool checked);
+
+    void on_radioButton_choose_loadfile2_clicked(bool checked);
+
+    void on_radioButton_choose_loadfile3_clicked(bool checked);
+
 private:
     Ui::MainWindow *ui;
 
     Mythread *mythread;
+
+    QProcess *process;
+
+    QSettings settings;
+
+    QProgressBar *pProgressBar;
+
+    int program_grogress;
+
+    void restoreUiSettings();
+
+protected:
+    void closeEvent(QCloseEvent *event);
 };
 #endif // MAINWINDOW_H

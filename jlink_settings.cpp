@@ -7,6 +7,7 @@
 #include <QJsonObject>
 #include <QJsonArray>
 #include <QFile>
+#include <QDebug>
 #include <QMessageBox>
 
 extern global_config_t globalConf;
