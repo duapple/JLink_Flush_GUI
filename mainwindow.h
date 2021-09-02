@@ -37,8 +37,10 @@ public:
     ~MainWindow();
 
     JLink_settings *settings_window;
-    jlink_flush_config_file_args_t jlinkArgs;
-    JlinkFlushConfigFileArgs fileArgs;
+    jlink_flush_config_file_args_t jlinkArgs; //传递UI数据到JlinkFlushConfigFileArgs类中
+    JlinkFlushConfigFileArgs fileArgs;        //生成烧录命令文本
+
+    QList<specify_interface_t> connect_type;
 
     void get_global_config();
     void get_current_jlink_config();
@@ -89,12 +91,6 @@ private slots:
 
     void on_checkBox_erase_sector_toggled(bool checked);
 
-    void on_choose_load_file2_triggered(bool checked);
-
-    void on_choose_load_file3_triggered(bool checked);
-
-    void on_choose_load_file1_triggered(bool checked);
-
     void on_readoutput();
 
     void process_finished(int exit_code);
@@ -104,6 +100,8 @@ private slots:
     void on_radioButton_choose_loadfile2_clicked(bool checked);
 
     void on_radioButton_choose_loadfile3_clicked(bool checked);
+
+    void on_actionSave_triggered();
 
 private:
     Ui::MainWindow *ui;
@@ -117,6 +115,8 @@ private:
     QProgressBar *pProgressBar;
 
     int program_grogress;
+
+    QString log_buffer;
 
     void restoreUiSettings();
 

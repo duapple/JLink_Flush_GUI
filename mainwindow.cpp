@@ -36,6 +36,9 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
+    /* 恢复窗口设置 */
+    restoreUiSettings();
+
     // ui 初始化
     ui->pushButton_dev_flush->setToolTip(tr("点击刷新开始识别设备"));
 
@@ -59,7 +62,10 @@ MainWindow::MainWindow(QWidget *parent)
     get_global_config();
     set_default_config_display();
 
-    restoreUiSettings();
+    ui->lineEdit_mem_start_addr_1->setEnabled(false);
+    ui->lineEdit_mem_start_addr_2->setEnabled(false);
+    ui->lineEdit_mem_start_addr_3->setEnabled(false);
+    connect_type << JTAG << SWD << cJTAG;
 
     setAcceptDrops(true);
 }
@@ -74,7 +80,7 @@ void MainWindow::on_readoutput()
 {
     string out = QString::fromLocal8Bit(process->readLine()).toStdString();
 
-//    ui->textBrowser_log_2->append(QString::fromStdString(out));
+    log_buffer += QString::fromStdString(out);
 
     if (out.find("Programming flash") < out.size())
     {
@@ -86,14 +92,12 @@ void MainWindow::on_readoutput()
         long pos = out.find("%");
         int value = std::stoi(out.substr(pos - 3, 3).c_str());
         pProgressBar->setValue(value);
-//        ui->textBrowser_log_2->append(QString::fromStdString(out));
         if (out.find("Done.") < out.size())
         {
             program_grogress = 2;
         }
     }
-
-    if (program_grogress == 2)
+    else if (program_grogress == 2)
     {
         if (/*out.find("J-Link: Flash download:") < out.size() && */out.find("O.K.") < out.size()) {
             program_grogress = 100;
@@ -104,6 +108,8 @@ void MainWindow::on_readoutput()
 void MainWindow::process_finished(int exit_code)
 {
 //    if (exit_code) return ;
+
+    ui->textBrowser_log_2->append(log_buffer);
 
     string out;
     QProcess *p = process;
@@ -117,12 +123,22 @@ void MainWindow::process_finished(int exit_code)
         qCritical() << "Connecting to J-Link via USB...FAILED";
         QMessageBox::information(this, tr("警告"), tr("当前Jlink没有连接上终端设备，请连接终端设备后再尝试"), tr("退出"));
     }
+    else if (out.find("Cannot connect to target.") < out.size())
+    {
+        qCritical() << "Cannot connect to target.";
+        QMessageBox::information(this, tr("警告"), tr("Cannot connect to target. 请检查终端设备JLink是否正常工作"), tr("退出"));
+    }
+    else if (out.find("Failed to power up DAP") < out.size())
+    {
+        qCritical() << "Cannot connect to target. Failed to power up DAP";
+        QMessageBox::information(this, tr("警告"), tr("Cannot connect to target. Failed to power up DAP, 请检查终端设备供电是否正常"), tr("退出"));
+    }
     else if (out.find("J-Link: Flash download:") < out.size() && out.find("O.K.") < out.size()) {
         program_grogress = 100;
     }
 
     if (program_grogress != 100) {
-        QString str = QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss") + "<font color=\"#FF0000\"> 烧录 failed !!! </font>";
+        QString str = QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss") + "<font color=red> 烧录 FAILED !!! </font>";
         ui->textBrowser_log_2->append(str);
         ui->textBrowser_log_2->append("\r\n\r\n");
         ui->textBrowser_log_2->moveCursor(QTextCursor::End);
@@ -131,7 +147,7 @@ void MainWindow::process_finished(int exit_code)
     else if (program_grogress == 100)
     {
         pProgressBar->setValue(100);
-        QString str = QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss") + "<font color=\"#FF0000\"> 烧录 success !!! </font>";
+        QString str = QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss") + "<font color=blue> 烧录 SUCCESS !!! </font>";
         ui->textBrowser_log_2->append(str);
         ui->textBrowser_log_2->append("\r\n\r\n");
         ui->textBrowser_log_2->moveCursor(QTextCursor::End);
@@ -151,22 +167,6 @@ void MainWindow::restoreUiSettings()
     {
         restoreGeometry(settings.value("geometry").toByteArray());
     }
-
-    if (settings.contains("loadfile1_enable"))
-    {
-        ui->radioButton_choose_loadfile1->setChecked(settings.value("loadfile1_enable").toBool());
-        on_radioButton_choose_loadfile1_clicked(settings.value("loadfile1_enable").toBool());
-    }
-    if (settings.contains("loadfile2_enable"))
-    {
-        ui->radioButton_choose_loadfile2->setChecked(settings.value("loadfile2_enable").toBool());
-        on_radioButton_choose_loadfile2_clicked(settings.value("loadfile2_enable").toBool());
-    }
-    if (settings.contains("loadfile3_enable"))
-    {
-        ui->radioButton_choose_loadfile3->setChecked(settings.value("loadfile3_enable").toBool());
-        on_radioButton_choose_loadfile3_clicked(settings.value("loadfile3_enable").toBool());
-    }
 }
 
 /* 保存窗口配置，以便下次启动载入配置 */
@@ -174,10 +174,6 @@ void MainWindow::closeEvent(QCloseEvent *event)
 {
     settings.setValue("mainwindow", saveState());
     settings.setValue("geometry", saveGeometry());
-
-    settings.setValue("loadfile1_enable", ui->radioButton_choose_loadfile1->isChecked());
-    settings.setValue("loadfile2_enable", ui->radioButton_choose_loadfile2->isChecked());
-    settings.setValue("loadfile3_enable", ui->radioButton_choose_loadfile3->isChecked());
 
     QWidget::closeEvent(event);
 }
@@ -193,12 +189,7 @@ void MainWindow::get_current_jlink_config()
 {
     jlinkArgs.usb_sn =  ui->comboBox_sn->currentText().toStdString();
 
-    if (ui->comboBox_2_connect_2->currentText() == "SWD")
-    {
-        qDebug() << "Select connect type is SWD";
-        jlinkArgs.si = SWD;
-    }
-
+    jlinkArgs.si = connect_type[ui->comboBox_2_connect_2->currentIndex()];
     jlinkArgs.speed = ui->comboBox_3_speed_2->currentText().toLong();
     jlinkArgs.dev_type = ui->comboBox_4_dev_type_2->currentText().toStdString();
     jlinkArgs.load_file = ui->lineEdit_fw_path_2->displayText().toStdString();
@@ -230,6 +221,8 @@ void MainWindow::set_default_config_display()
         root = document.object();
     }
 
+    get_connect_sn();
+
     // 读取配置记录的第一个，作为启动默认选项
     if (root.contains("current_dev_sn")) {
         QJsonValue value = root.value("current_dev_sn");
@@ -237,6 +230,9 @@ void MainWindow::set_default_config_display()
             qDebug() << "dev sn count: " << ui->comboBox_sn->count();
             if (ui->comboBox_sn->count() == 0) {
                 ui->comboBox_sn->addItem(value.toString());
+            }
+            else {
+                ui->comboBox_sn->setCurrentText(value.toString());
             }
         }
     }
@@ -353,6 +349,39 @@ void MainWindow::set_default_config_display(QString usb_sn)
                 ui->checkBox_erase_sector->setChecked(item.toBool());
             }
         }
+        if (p.contains(("fw_enabled"))) {
+            item = p.value("fw_enabled");
+            if (item.isBool()) {
+                ui->radioButton_choose_loadfile1->setChecked(item.toBool());
+//                bool checked = item.toBool();
+//                jlinkArgs.load_file1_enable = checked;
+//                fw_file2_check(ui->lineEdit_fw_path_2->displayText());
+//                ui->lineEdit_fw_path_2->setEnabled(checked);
+//                ui->pushButton_2_choose_fw_2->setEnabled(checked);
+            }
+        }
+        if (p.contains(("fw2_enabled"))) {
+            item = p.value("fw2_enabled");
+            if (item.isBool()) {
+                ui->radioButton_choose_loadfile2->setChecked(item.toBool());
+//                bool checked = item.toBool();
+//                jlinkArgs.load_file2_enable = checked;
+//                fw_file2_check(ui->lineEdit_fw_path_3->displayText());
+//                ui->lineEdit_fw_path_3->setEnabled(checked);
+//                ui->pushButton_2_choose_fw_3->setEnabled(checked);
+            }
+        }
+        if (p.contains(("fw3_enabled"))) {
+            item = p.value("fw3_enabled");
+            if (item.isBool()) {
+                ui->radioButton_choose_loadfile3->setChecked(item.toBool());
+//                bool checked = item.toBool();
+//                jlinkArgs.load_file3_enable = checked;
+//                fw_file2_check(ui->lineEdit_fw_path_4->displayText());
+//                ui->lineEdit_fw_path_4->setEnabled(checked);
+//                ui->pushButton_2_choose_fw_4->setEnabled(checked);
+            }
+        }
     }
 }
 
@@ -390,6 +419,9 @@ void MainWindow::save_current_jlink_config(QString usb_sn)
     jlink_config.insert("fw_start_addr", ui->lineEdit_mem_start_addr_1->displayText());
     jlink_config.insert("fw2_start_addr", ui->lineEdit_mem_start_addr_2->displayText());
     jlink_config.insert("fw3_start_addr", ui->lineEdit_mem_start_addr_3->displayText());
+    jlink_config.insert("fw_enabled", ui->radioButton_choose_loadfile1->isChecked());
+    jlink_config.insert("fw2_enabled", ui->radioButton_choose_loadfile2->isChecked());
+    jlink_config.insert("fw3_enabled", ui->radioButton_choose_loadfile3->isChecked());
 
     root.insert("current_dev_sn", usb_sn);
     root.insert(usb_sn, QJsonValue(jlink_config));
@@ -627,7 +659,7 @@ void MainWindow::clear_fw_file_hex(void)
 
 int MainWindow::bin_start_addr_check(void)
 {
-    if ( jlinkArgs.load_file != "")
+    if ( ui->radioButton_choose_loadfile1->isChecked() && jlinkArgs.load_file != "")
     {
         string load_file1 = jlinkArgs.load_file;
         if (get_file_format(load_file1) == ".bin") {
@@ -637,7 +669,7 @@ int MainWindow::bin_start_addr_check(void)
             }
         }
     }
-    if ( jlinkArgs.load_file2 != "")
+    if ( ui->radioButton_choose_loadfile2->isChecked() && jlinkArgs.load_file2 != "")
     {
         qDebug() << "load_file2 存在";
         string load_file2 = jlinkArgs.load_file2;
@@ -649,7 +681,7 @@ int MainWindow::bin_start_addr_check(void)
             }
         }
     }
-    if ( jlinkArgs.load_file3 != "")
+    if ( ui->radioButton_choose_loadfile3->isChecked() && jlinkArgs.load_file3 != "")
     {
         string load_file3 = jlinkArgs.load_file3;
         if (get_file_format(load_file3) == ".bin") {
@@ -665,17 +697,17 @@ int MainWindow::bin_start_addr_check(void)
 
 int MainWindow::fw_file_check(void)
 {
-    if (jlinkArgs.load_file != "" && !is_file_exit(jlinkArgs.load_file)) {
+    if (ui->radioButton_choose_loadfile1->isChecked() && jlinkArgs.load_file != "" && !is_file_exit(jlinkArgs.load_file)) {
         QMessageBox::information(this, tr("警告"), tr("固件1 不存在"), tr("确认"), tr("退出"));
         return -1;
     }
 
-    if (jlinkArgs.load_file2 != "" && !is_file_exit(jlinkArgs.load_file2)) {
+    if (ui->radioButton_choose_loadfile2->isChecked() && jlinkArgs.load_file2 != "" && !is_file_exit(jlinkArgs.load_file2)) {
         QMessageBox::information(this, tr("警告"), tr("固件2 不存在"), tr("确认"), tr("退出"));
         return -2;
     }
 
-    if (jlinkArgs.load_file3 != "" && !is_file_exit(jlinkArgs.load_file3)) {
+    if (ui->radioButton_choose_loadfile3->isChecked() && jlinkArgs.load_file3 != "" && !is_file_exit(jlinkArgs.load_file3)) {
         QMessageBox::information(this, tr("警告"), tr("固件3 不存在"), tr("确认"), tr("退出"));
         return -3;
     }
@@ -716,6 +748,8 @@ void MainWindow::on_pushButton_flush_clicked()
 
     ui->textBrowser_log_2->append("Programming start ......................");
     ui->textBrowser_log_2->moveCursor(QTextCursor::End);
+
+    log_buffer.clear();
 
     // 执行获取动作
     QString cmd;
@@ -805,16 +839,32 @@ void MainWindow::on_pushButton_reboot_clicked()
     ui->textBrowser_log_2->append(QString::fromStdString(out));
     ui->textBrowser_log_2->moveCursor(QTextCursor::End);
 
+    QString str;
     if (out.find("Connecting to J-Link via USB...FAILED") < out.size())
     {
         qCritical() << "Connecting to J-Link via USB...FAILED";
         QMessageBox::information(this, tr("警告"), tr("当前Jlink没有连接上终端设备，请连接终端设备后再尝试"), tr("退出"));
-    } else {
-        QString str = QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss") + "<font color=\"#FF0000\"> 重启芯片 success !!! </font>";
-        ui->textBrowser_log_2->append(str);
-        ui->textBrowser_log_2->append("\r\n\r\n");
-        ui->textBrowser_log_2->moveCursor(QTextCursor::End);
+        str = QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss") + "<font color=\"#FF0000\"> 重启芯片 FAILED !!! </font>";
     }
+    else if (out.find("Cannot connect to target.") < out.size())
+    {
+        qCritical() << "Cannot connect to target.";
+        QMessageBox::information(this, tr("警告"), tr("Cannot connect to target. 请检查Jlink是否正常工作"), tr("退出"));
+        str = QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss") + "<font color=red> 重启芯片 FAILED !!! </font>";
+    }
+    else if (out.find("Failed to power up DAP") < out.size())
+    {
+        qCritical() << "Cannot connect to target. Failed to power up DAP";
+        QMessageBox::information(this, tr("警告"), tr("Cannot connect to target. Failed to power up DAP, 请检查终端设备供电是否正常"), tr("退出"));
+        str = QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss") + "<font color=red> 重启芯片 FAILED !!! </font>";
+    }
+    else {
+        str = QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss") + "<font color=blue> 重启芯片 SUCCESS !!! </font>";
+    }
+
+    ui->textBrowser_log_2->append(str);
+    ui->textBrowser_log_2->append("\r\n\r\n");
+    ui->textBrowser_log_2->moveCursor(QTextCursor::End);
 }
 
 void MainWindow::on_pushButton_erase_clicked()
@@ -853,16 +903,32 @@ void MainWindow::on_pushButton_erase_clicked()
     ui->textBrowser_log_2->append(QString::fromStdString(out));
     ui->textBrowser_log_2->moveCursor(QTextCursor::End);
 
+    QString str;
     if (out.find("Connecting to J-Link via USB...FAILED") < out.size())
     {
         qCritical() << "Connecting to J-Link via USB...FAILED";
         QMessageBox::information(this, tr("警告"), tr("当前Jlink没有连接上终端设备，请连接终端设备后再尝试"), tr("退出"));
-    } else {
-        QString str = QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss") + "<font color=\"#FF0000\"> 擦除芯片 success !!! </font>";
-        ui->textBrowser_log_2->append(str);
-        ui->textBrowser_log_2->append("\r\n\r\n");
-        ui->textBrowser_log_2->moveCursor(QTextCursor::End);
+        str = QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss") + "<font color=red> 擦除芯片 FAILED !!! </font>";
     }
+    else if (out.find("Failed to power up DAP") < out.size())
+    {
+        qCritical() << "Cannot connect to target. Failed to power up DAP";
+        QMessageBox::information(this, tr("警告"), tr("Cannot connect to target. Failed to power up DAP, 请检查终端设备供电是否正常"), tr("退出"));
+        str = QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss") + "<font color=red> 擦除芯片 FAILED !!! </font>";
+    }
+    else if (out.find("Cannot connect to target.") < out.size())
+    {
+        qCritical() << "Cannot connect to target. Failed to power up DAP";
+        QMessageBox::information(this, tr("警告"), tr("Cannot connect to target. 请检查Jlink是否正常工作"), tr("退出"));
+        str = QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss") + "<font color=red> 擦除芯片 FAILED !!! </font>";
+    }
+    else {
+        str = QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss") + "<font color=blue> 擦除芯片 SUCCESS !!! </font>";
+    }
+
+    ui->textBrowser_log_2->append(str);
+    ui->textBrowser_log_2->append("\r\n\r\n");
+    ui->textBrowser_log_2->moveCursor(QTextCursor::End);
 }
 
 void MainWindow::dragEnterEvent(QDragEnterEvent *e)
@@ -886,21 +952,24 @@ void MainWindow::dropEvent(QDropEvent *e)
 
     qInfo() << "select firmware file: " << filePath;
 
+    if(!ui->textBrowser_log_2->geometry().contains(this->mapFromGlobal(QCursor::pos())))
+    {
+        ui->lineEdit_fw_path_4->setText(filePath);
+        save_current_jlink_config(ui->comboBox_sn->currentText()); //保存当前配置
+    }
+
     if (ui->lineEdit_fw_path_2->underMouse())
     {
-        fw_file1_check(QString::fromStdString(filePath));
         ui->lineEdit_fw_path_2->setText(filePath);
         save_current_jlink_config(ui->comboBox_sn->currentText()); //保存当前配置
     }
     else if (ui->lineEdit_fw_path_3->underMouse())
     {
-        fw_file2_check(QString::fromStdString(filePath));
         ui->lineEdit_fw_path_3->setText(filePath);
         save_current_jlink_config(ui->comboBox_sn->currentText()); //保存当前配置
     }
     else if (ui->lineEdit_fw_path_4->underMouse())
     {
-        fw_file3_check(QString::fromStdString(filePath));
         ui->lineEdit_fw_path_4->setText(filePath);
         save_current_jlink_config(ui->comboBox_sn->currentText()); //保存当前配置
     }
@@ -1009,13 +1078,14 @@ void MainWindow::fw_file1_check(QString filename)
         qDebug() << "已选择Bin文件";
         ui->textBrowser_log_2->append(">> 请输入Bin文件的起始地址");
         ui->lineEdit_mem_start_addr_1->clear();
-        ui->lineEdit_mem_start_addr_1->setEnabled(true);
+        if (ui->radioButton_choose_loadfile1->isChecked()) ui->lineEdit_mem_start_addr_1->setEnabled(true);
     } else if (format == ".hex") {
         qDebug() << "已选择HEX文件";
 
         int ret = get_bin_file_start_addr(filename.toStdString(), jlinkArgs.file_start_addr, jlinkArgs.file_end_addr);
         if (ret) {
             QMessageBox::information(this, tr("警告"), tr("HEX文件错误，请检查"), tr("确认"), tr("退出"));
+            ui->textBrowser_log_2->append(filename);
             ui->textBrowser_log_2->append("固件1 选择的文件格式不正确，请选择.bin或者.hex后缀格式的文件");
             ui->textBrowser_log_2->moveCursor(QTextCursor::End);
             ui->lineEdit_fw_path_2->clear();
@@ -1052,13 +1122,14 @@ void MainWindow::fw_file2_check(QString filename)
         ui->textBrowser_log_2->append(">> 请输入Bin文件的起始地址");
         ui->textBrowser_log_2->moveCursor(QTextCursor::End);
         ui->lineEdit_mem_start_addr_2->clear();
-        ui->lineEdit_mem_start_addr_2->setEnabled(true);
+        if (ui->radioButton_choose_loadfile1->isChecked()) ui->lineEdit_mem_start_addr_2->setEnabled(true);
     } else if (format == ".hex") {
         qDebug() << "已选择HEX文件";
 
         int ret = get_bin_file_start_addr(filename.toStdString(), jlinkArgs.file2_start_addr, jlinkArgs.file2_end_addr);
         if (ret) {
             QMessageBox::information(this, tr("警告"), tr("HEX文件错误，请检查"), tr("确认"), tr("退出"));
+            ui->textBrowser_log_2->append(filename);
             ui->textBrowser_log_2->append("固件2 选择的文件格式不正确，请选择.bin或者.hex后缀格式的文件");
             ui->textBrowser_log_2->moveCursor(QTextCursor::End);
             ui->lineEdit_fw_path_3->clear();
@@ -1089,6 +1160,8 @@ void MainWindow::fw_file3_check(QString filename)
         return ;
     }
 
+    qDebug() << "filename: " << filename;
+
     string format = get_file_format(filename.toStdString());
     printf("test1");
     if (format == ".bin") {
@@ -1096,12 +1169,13 @@ void MainWindow::fw_file3_check(QString filename)
         ui->textBrowser_log_2->append(">> 请输入Bin文件的起始地址");
         ui->textBrowser_log_2->moveCursor(QTextCursor::End);
         ui->lineEdit_mem_start_addr_3->clear();
-        ui->lineEdit_mem_start_addr_3->setEnabled(true);
+        if (ui->radioButton_choose_loadfile1->isChecked()) ui->lineEdit_mem_start_addr_3->setEnabled(true);
     } else if (format == ".hex") {
         qDebug() << "已选择HEX文件";
         int ret = get_bin_file_start_addr(filename.toStdString(), jlinkArgs.file3_start_addr, jlinkArgs.file3_end_addr);
         if (ret) {
             QMessageBox::information(this, tr("警告"), tr("HEX文件错误，请检查"), tr("确认"), tr("退出"));
+            ui->textBrowser_log_2->append(filename);
             ui->textBrowser_log_2->append("固件3 选择的文件格式不正确，请选择.bin或者.hex后缀格式的文件");
             ui->textBrowser_log_2->moveCursor(QTextCursor::End);
             ui->lineEdit_fw_path_4->clear();
@@ -1129,12 +1203,22 @@ void MainWindow::fw_file3_check(QString filename)
 
 void MainWindow::on_lineEdit_fw_path_2_editingFinished()
 {
+    if (ui->lineEdit_fw_path_2->displayText().toStdString().substr(0, 7) == "file://")
+    {
+        ui->lineEdit_fw_path_2->setText(QString::fromStdString(ui->lineEdit_fw_path_2->displayText().toStdString().substr(7)));
+        return ;
+    }
     fw_file1_check(ui->lineEdit_fw_path_2->displayText());
     qDebug() << "fw file1 changed";
 }
 
 void MainWindow::on_lineEdit_fw_path_3_editingFinished()
 {
+    if (ui->lineEdit_fw_path_3->displayText().toStdString().substr(0, 7) == "file://")
+    {
+        ui->lineEdit_fw_path_3->setText(QString::fromStdString(ui->lineEdit_fw_path_3->displayText().toStdString().substr(7)));
+        return ;
+    }
     QString filename = ui->lineEdit_fw_path_3->displayText();
     fw_file2_check(filename);
     qDebug() << "fw file2 changed";
@@ -1142,6 +1226,11 @@ void MainWindow::on_lineEdit_fw_path_3_editingFinished()
 
 void MainWindow::on_lineEdit_fw_path_4_editingFinished()
 {
+    if (ui->lineEdit_fw_path_4->displayText().toStdString().substr(0, 7) == "file://")
+    {
+        ui->lineEdit_fw_path_4->setText(QString::fromStdString(ui->lineEdit_fw_path_4->displayText().toStdString().substr(7)));
+        return ;
+    }
     fw_file3_check(ui->lineEdit_fw_path_4->displayText());
     qDebug() << "fw file3 changed";
 }
@@ -1157,56 +1246,57 @@ void MainWindow::on_checkBox_erase_sector_toggled(bool checked)
     if (checked) {
         jlinkArgs.erase_chip = true;
         qInfo() << "选择擦除整个芯片";
+#if 0
+#define JLINK_VERSION_TXT   "./config/get_jlink_version.txt"
 
-//#define JLINK_VERSION_TXT   "./config/get_jlink_version.txt"
+        QFileInfo file(JLINK_VERSION_TXT);
+        if(file.exists()==false) {
+            qDebug() << JLINK_VERSION_TXT << "不存在";
+            QFile file_create(JLINK_VERSION_TXT);
+            file_create.open(QIODevice::ReadWrite | QIODevice::Text);
+            file_create.close();
 
-//        QFileInfo file(JLINK_VERSION_TXT);
-//        if(file.exists()==false) {
-//            qDebug() << JLINK_VERSION_TXT << "不存在";
-//            QFile file_create(JLINK_VERSION_TXT);
-//            file_create.open(QIODevice::ReadWrite | QIODevice::Text);
-//            file_create.close();
+            using namespace std;
+            ofstream get_jlink_version_s;
+            get_jlink_version_s.open(JLINK_VERSION_TXT);
 
-//            using namespace std;
-//            ofstream get_jlink_version_s;
-//            get_jlink_version_s.open(JLINK_VERSION_TXT);
+            get_jlink_version_s << "?\n";
+            get_jlink_version_s.close();
+        }
 
-//            get_jlink_version_s << "?\n";
-//            get_jlink_version_s.close();
-//        }
+        QObject *parent=NULL;
+        QString program = QString::fromStdString(globalConf.jlink_cmd_path);
+        QStringList arguments;
+        arguments << "\"" JLINK_VERSION_TXT "\"";
 
-//        QObject *parent=NULL;
-//        QString program = QString::fromStdString(globalConf.jlink_cmd_path);
-//        QStringList arguments;
-//        arguments << "\"" JLINK_VERSION_TXT "\"";
+        QProcess *myProcess = new QProcess(parent);
+        myProcess->start(program, arguments);
+        myProcess->waitForStarted();
+        myProcess->waitForFinished();
 
-//        QProcess *myProcess = new QProcess(parent);
-//        myProcess->start(program, arguments);
-//        myProcess->waitForStarted();
-//        myProcess->waitForFinished();
+        string out = QString::fromLocal8Bit(myProcess->readAllStandardOutput()).toStdString();
+        qDebug() << out.c_str();
 
-//        string out = QString::fromLocal8Bit(myProcess->readAllStandardOutput()).toStdString();
-//        qDebug() << out.c_str();
+#define DLL_VERSION_STR "DLL version V"
 
-//#define DLL_VERSION_STR "DLL version V"
+        string dll_version = DLL_VERSION_STR;
 
-//        string dll_version = DLL_VERSION_STR;
+        long long unsigned pos = out.find(DLL_VERSION_STR);
+        if (pos >= out.size()) {
+            qCritical() << "命令执行错误，无法获取到Jlink版本";
+        }
+        string ver = out.substr(pos + dll_version.size());
+        char ver_str[32] = {0};
+        float ver_float = 0.0;
+        sscanf(ver.c_str(), "%[^d]", ver_str);
+        sscanf(ver_str, "%f", &ver_float);
 
-//        long long unsigned pos = out.find(DLL_VERSION_STR);
-//        if (pos >= out.size()) {
-//            qCritical() << "命令执行错误，无法获取到Jlink版本";
-//        }
-//        string ver = out.substr(pos + dll_version.size());
-//        char ver_str[32] = {0};
-//        float ver_float = 0.0;
-//        sscanf(ver.c_str(), "%[^d]", ver_str);
-//        sscanf(ver_str, "%f", &ver_float);
-
-//        if (ver_float < 6.9) {
-//            qCritical() << "当前Jlink版本不支持擦除选区";
-//            QMessageBox::information(this, tr("警告"), tr("当前Jlink版本不支持擦除选区"), tr("退出"));
-//            ui->checkBox_erase_sector->toggle();
-//        }
+        if (ver_float < 6.9) {
+            qCritical() << "当前Jlink版本不支持擦除选区";
+            QMessageBox::information(this, tr("警告"), tr("当前Jlink版本不支持擦除选区"), tr("退出"));
+            ui->checkBox_erase_sector->toggle();
+        }
+#endif
     } else {
         jlinkArgs.erase_chip = false;
         qInfo() << "取消选择擦除整个芯片";
@@ -1217,8 +1307,8 @@ void MainWindow::on_radioButton_choose_loadfile1_clicked(bool checked)
 {
     jlinkArgs.load_file1_enable = checked;
     ui->lineEdit_fw_path_2->setEnabled(checked);
-//    ui->lineEdit_mem_start_addr_1->setEnabled(checked);
     fw_file1_check(ui->lineEdit_fw_path_2->displayText());
+//    ui->lineEdit_mem_start_addr_1->setEnabled(checked);
     ui->pushButton_2_choose_fw_2->setEnabled(checked);
     QString log = checked ? "启用" : "禁用";
     ui->textBrowser_log_2->append("固件1 已" + log);
@@ -1230,8 +1320,8 @@ void MainWindow::on_radioButton_choose_loadfile2_clicked(bool checked)
 {
     jlinkArgs.load_file2_enable = checked;
     ui->lineEdit_fw_path_3->setEnabled(checked);
-//    ui->lineEdit_mem_start_addr_2->setEnabled(checked);
     fw_file2_check(ui->lineEdit_fw_path_3->displayText());
+//    ui->lineEdit_mem_start_addr_2->setEnabled(checked);
     ui->pushButton_2_choose_fw_3->setEnabled(checked);
     QString log = checked ? "启用" : "禁用";
     ui->textBrowser_log_2->append("固件2 已" + log);
@@ -1242,11 +1332,19 @@ void MainWindow::on_radioButton_choose_loadfile3_clicked(bool checked)
 {
     jlinkArgs.load_file3_enable = checked;
     ui->lineEdit_fw_path_4->setEnabled(checked);
-//    ui->lineEdit_mem_start_addr_3->setEnabled(checked);
     fw_file3_check(ui->lineEdit_fw_path_4->displayText());
+//    ui->lineEdit_mem_start_addr_3->setEnabled(checked);
     ui->pushButton_2_choose_fw_4->setEnabled(checked);
     QString log = checked ? "启用" : "禁用";
     ui->textBrowser_log_2->append("固件3 已" + log);
     ui->textBrowser_log_2->moveCursor(QTextCursor::End);
+}
+
+void MainWindow::on_actionSave_triggered()
+{
+    if (ui->comboBox_sn->currentText() != "")
+    {
+        save_current_jlink_config(ui->comboBox_sn->currentText());
+    }
 }
 
