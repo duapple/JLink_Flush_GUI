@@ -30,7 +30,7 @@ public:
 
 
 signals:
-
+    void reboot_mainwindow(void);
 
 private slots:
     void on_pushButton_3_cancle_clicked();
@@ -41,8 +41,14 @@ private slots:
 
     void on_pushButton_4_reset_default_clicked();
 
+    void on_pushButton_global_config_edit_enable_clicked();
+
+    void on_pushButton_save_global_config_clicked();
+
 private:
     Ui::JLink_settings *ui;
+
+    void load_global_config_file(void);
 };
 
 #endif // JLINK_SETTINGS_H

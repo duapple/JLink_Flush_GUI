@@ -1,0 +1,18 @@
+{
+    "29401025": {
+        "connect_type": "SWD",
+        "device_type": "nRF52840_XXAA",
+        "erase_chip": true,
+        "firmware": "/home/duapple/work/qt/JLink_Flash_GUI/JLink_Flash_GUI/build-JLink_Flash_GUI-Desktop_Qt_5_12_2_GCC_64bit-Debug/Z3_Humiture.bin",
+        "firmware2": "",
+        "firmware3": "/home/duapple/work/qt/JLink_Flash_GUI/JLink_Flash_GUI/build-JLink_Flash_GUI-Desktop_Qt_5_12_2_GCC_64bit-Debug/Z3_Humiture.hex",
+        "fw2_enabled": false,
+        "fw2_start_addr": "000000",
+        "fw3_enabled": false,
+        "fw3_start_addr": "000000",
+        "fw_enabled": false,
+        "fw_start_addr": "",
+        "speed": "4000"
+    },
+    "current_dev_sn": "29401025"
+}

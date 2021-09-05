@@ -24,6 +24,7 @@
 #include <QSettings>
 #include <string>
 #include <QMutex>
+#include <QWidget>
 
 #define JLINK_LOG_FILE              CONFIG_PATH "jlink_log.txt"
 #define JLINK_DEVICE_INFO_FILE      CONFIG_PATH "jlink_device_info.json"
@@ -57,13 +58,14 @@ MainWindow::MainWindow(QWidget *parent)
     statusBar()->addWidget(pProgressBar);
 #endif
 
-//    ui->lineEdit_mem_start_addr_1->setEnabled(false);
-//    ui->lineEdit_mem_start_addr_2->setEnabled(false);
-//    ui->lineEdit_mem_start_addr_3->setEnabled(false);
     connect_type << JTAG << SWD << cJTAG;
 
     /* 恢复窗口设置 */
     restoreUiSettings();
+
+    // 加载并设置固件记录，放在JLink配置加载之前
+    load_fw_records();
+    set_fw_records();
 
     // 加载Jlink配置
     get_global_config();
@@ -76,6 +78,16 @@ MainWindow::~MainWindow()
 {
     delete ui;
     delete mythread;
+}
+
+void MainWindow::reboot_mainwindow()
+{
+    qDebug() << "Program rebooting now";
+    QString program = QApplication::applicationFilePath();
+    QStringList arguments = QApplication::arguments();
+    QString workingDirectory = QDir::currentPath();
+    QProcess::startDetached(program, arguments, workingDirectory);
+    QApplication::exit();
 }
 
 void MainWindow::on_readoutput()
@@ -160,6 +172,20 @@ void MainWindow::process_finished(int exit_code)
 
 void MainWindow::restoreUiSettings()
 {
+    /* 当comboBox内容大于size时，会自动拉长comboBox，因此在程序启动的时候还原之前的配置，可解决此问题 */
+    if (settings.contains("fw1_geometry"))
+    {
+        restoreGeometry(settings.value("fw1_geometry").toByteArray());
+    }
+    if (settings.contains("fw2_geometry"))
+    {
+        restoreGeometry(settings.value("fw2_geometry").toByteArray());
+    }
+    if (settings.contains("fw3_geometry"))
+    {
+        restoreGeometry(settings.value("fw3_geometry").toByteArray());
+    }
+
     if (settings.contains("mainwindow"))
     {
         restoreState(settings.value("mainwindow").toByteArray());
@@ -176,10 +202,211 @@ void MainWindow::closeEvent(QCloseEvent *event)
 {
     settings.setValue("mainwindow", saveState());
     settings.setValue("geometry", saveGeometry());
+    settings.setValue("fw1_geometry", ui->comboBox_fw1_path->saveGeometry());
+    settings.setValue("fw2_geometry", ui->comboBox_fw2_path->saveGeometry());
+    settings.setValue("fw3_geometry", ui->comboBox_fw3_path->saveGeometry());
 
     save_current_jlink_config(ui->comboBox_sn->currentText());          // 保存当前的配置
+    save_fw_records();                                                  // 保存固件记录
 
     QWidget::closeEvent(event);
+}
+
+void MainWindow::set_fw_records()
+{
+    ui->comboBox_fw1_path->addItems(fw_records.fw_record_list);
+    ui->comboBox_fw2_path->addItems(fw_records.fw2_record_list);
+    ui->comboBox_fw3_path->addItems(fw_records.fw3_record_list);
+}
+
+void MainWindow::get_fw_records()
+{
+    fw_records.fw_record_list.clear();
+    for (int i= 0; i < ui->comboBox_fw1_path->count(); i++)
+    {
+        if (ui->comboBox_fw1_path->itemText(i) == "")
+            continue;
+        fw_records.fw_record_list << ui->comboBox_fw1_path->itemText(i);
+    }
+
+    fw_records.fw2_record_list.clear();
+    for (int i= 0; i < ui->comboBox_fw2_path->count(); i++)
+    {
+        if (ui->comboBox_fw2_path->itemText(i) == "")
+            continue;
+        fw_records.fw2_record_list << ui->comboBox_fw2_path->itemText(i);
+    }
+
+    fw_records.fw3_record_list.clear();
+    for (int i= 0; i < ui->comboBox_fw3_path->count(); i++)
+    {
+        if (ui->comboBox_fw3_path->itemText(i) == "")
+            continue;
+        fw_records.fw3_record_list << ui->comboBox_fw3_path->itemText(i);
+    }
+}
+
+void MainWindow::load_fw_records()
+{
+    QFile file(GLOBAL_CONFIG_FILE);
+    file.open(QIODevice::ReadOnly | QIODevice::Text);
+    QString value = file.readAll();
+    file.close();
+
+    QJsonObject root;
+    QJsonParseError parseJsonErr;
+    QJsonDocument document = QJsonDocument::fromJson(value.toUtf8(), &parseJsonErr);
+
+    if (!(parseJsonErr.error == QJsonParseError::NoError))
+    {
+        qWarning() << tr("解析配置错误！");
+    }
+    else
+    {
+        root = document.object();
+    }
+
+    qDebug() << "存在固件记录";
+
+    if (root.contains(QStringLiteral("fw_records"))) {
+        QJsonValue value = root.value("fw_records");
+
+        qDebug() << "存在固件记录";
+
+        if (value.isObject())
+        {
+            QJsonObject record = value.toObject();
+            qDebug() << "存在固件记录";
+
+            /* 读取固件1的记录 */
+            if (record.contains("fw_list"))
+            {
+
+                qDebug() << "存在固件记录";
+                QJsonValue fw_record = record.value("fw_list");
+                if (fw_record.isArray())
+                {
+                    QJsonArray fw_record_list = fw_record.toArray();
+                    int size = fw_record_list.size();
+                    for (int i = 0; i < size; i++)
+                    {
+                        QJsonValue str = fw_record_list.at(i);
+                        if (str.isString())
+                        {
+                            qDebug() << "读取固件1记录成功";
+                            fw_records.fw_record_list << str.toString();
+                        }
+                    }
+                }
+            }
+            /* 读取固件2的记录 */
+            if (record.contains("fw2_list"))
+            {
+                QJsonValue fw2_record = record.value("fw2_list");
+                if (fw2_record.isArray())
+                {
+                    QJsonArray fw2_record_list = fw2_record.toArray();
+                    int size = fw2_record_list.size();
+                    for (int i = 0; i < size; i++)
+                    {
+                        QJsonValue str = fw2_record_list.at(i);
+                        if (str.isString())
+                        {
+                            qDebug() << "读取固件1记录成功";
+                            fw_records.fw2_record_list << str.toString();
+                        }
+                    }
+                }
+            }
+
+            /* 读取固件3的记录 */
+            if (record.contains("fw3_list"))
+            {
+                QJsonValue fw3_record = record.value("fw3_list");
+                if (fw3_record.isArray())
+                {
+                    QJsonArray fw3_record_list = fw3_record.toArray();
+                    int size = fw3_record_list.size();
+                    for (int i = 0; i < size; i++)
+                    {
+                        QJsonValue str = fw3_record_list.at(i);
+                        if (str.isString())
+                        {
+                            qDebug() << "读取固件1记录成功";
+                            fw_records.fw3_record_list << str.toString();
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+void MainWindow::save_fw_records(void)
+{
+    /* 读取全局配置文件 */
+    QFile file(GLOBAL_CONFIG_FILE);
+    file.open(QIODevice::ReadOnly | QIODevice::Text);
+    QString value = file.readAll();
+    file.close();
+
+    QJsonParseError parseJsonErr;
+    QJsonDocument document = QJsonDocument::fromJson(value.toUtf8(), &parseJsonErr);
+    if (!(parseJsonErr.error == QJsonParseError::NoError))
+    {
+        qCritical() << tr("解析配置错误！");
+        QMessageBox::information(this, tr("Information"), tr("保存失败   "), tr("确认"));
+        return ;
+    }
+
+    get_fw_records();
+
+    QJsonObject root = document.object();
+
+    /* 向json中添加固件记录 */
+    QJsonArray fw1_record;
+    for (int i = 0; i < fw_records.fw_record_list.size(); i++)
+    {
+        qDebug() << "添加固件1记录";
+        fw1_record.append(QJsonValue(fw_records.fw_record_list[i]));
+    }
+
+    QJsonArray fw2_record;
+    for (int i = 0; i < fw_records.fw2_record_list.size(); i++)
+    {
+        fw2_record.append(QJsonValue(fw_records.fw2_record_list[i]));
+    }
+
+    QJsonArray fw3_record;
+    for (int i = 0; i < fw_records.fw3_record_list.size(); i++)
+    {
+        fw3_record.append(QJsonValue(fw_records.fw3_record_list[i]));
+    }
+
+    QJsonObject record;
+    record["fw_list"] = fw1_record;
+    record["fw2_list"] = QJsonValue(fw2_record);
+    record["fw3_list"] = QJsonValue(fw3_record);
+//    record.insert("fw_list", QJsonValue(fw1_record));
+
+    root["fw_records"] = record;
+
+    /* 写入修改后的内容到文件中 */
+    if (!(file.open(QIODevice::WriteOnly))) {
+        qCritical() << "open global config file failed";
+    }
+
+    QJsonDocument jsonDoc;
+    jsonDoc.setObject(root);
+
+    file.write(jsonDoc.toJson());
+    file.close();
+    qInfo() << "写global config配置文件成功";
+//    QMessageBox::StandardButton btn = (QMessageBox::StandardButton )QMessageBox::information(this, tr("Information"), tr("保存成功    "), tr("确认"));
+//    if (btn == QMessageBox::NoButton) {
+//        this->close();
+//        qDebug() << "保存成功，关闭JLink配置窗口";
+//    }
 }
 
 void MainWindow::on_actionJLink_settings_triggered()
@@ -187,6 +414,9 @@ void MainWindow::on_actionJLink_settings_triggered()
     settings_window = new JLink_settings;
 
     settings_window->show();
+
+    /* settings windows必须实例化后，才能connect信号槽，否则会段错误导致程序结束 */
+    connect(settings_window, SIGNAL(reboot_mainwindow()), this, SLOT(reboot_mainwindow()));
 }
 
 void MainWindow::get_current_jlink_config()
@@ -196,9 +426,9 @@ void MainWindow::get_current_jlink_config()
     jlinkArgs.si = connect_type[ui->comboBox_2_connect_2->currentIndex()];
     jlinkArgs.speed = ui->comboBox_3_speed_2->currentText().toLong();
     jlinkArgs.dev_type = ui->comboBox_4_dev_type_2->currentText().toStdString();
-    jlinkArgs.load_file = ui->lineEdit_fw_path_2->displayText().toStdString();
-    jlinkArgs.load_file2 = ui->lineEdit_fw_path_3->displayText().toStdString();
-    jlinkArgs.load_file3 = ui->lineEdit_fw_path_4->displayText().toStdString();
+    jlinkArgs.load_file = ui->comboBox_fw1_path->currentText().toStdString();
+    jlinkArgs.load_file2 = ui->comboBox_fw2_path->currentText().toStdString();
+    jlinkArgs.load_file3 = ui->comboBox_fw3_path->currentText().toStdString();
     jlinkArgs.file_start_addr = ui->lineEdit_mem_start_addr_1->displayText().toStdString();
     jlinkArgs.file2_start_addr = ui->lineEdit_mem_start_addr_2->displayText().toStdString();
     jlinkArgs.file3_start_addr = ui->lineEdit_mem_start_addr_3->displayText().toStdString();
@@ -299,8 +529,9 @@ void MainWindow::set_default_config_display(QString usb_sn)
         if (p.contains("firmware")) {
             item = p.value("firmware");
             if (item.isString()) {
-                ui->lineEdit_fw_path_2->setText(item.toString());
-                fw_file1_check(ui->lineEdit_fw_path_2->displayText());
+                QString path = QString::fromStdString(item.toString().toStdString());
+                insert_fw1_path_comboBox(path);
+                fw_file1_check(ui->comboBox_fw1_path->currentText());
                 if (get_file_format(item.toString().toStdString()) == ".bin")
                 {
                     qDebug() << "固件1 为BIN文件，显示其保存的Start Address";
@@ -316,8 +547,9 @@ void MainWindow::set_default_config_display(QString usb_sn)
         if (p.contains("firmware2")) {
             item = p.value("firmware2");
             if (item.isString()) {
-                ui->lineEdit_fw_path_3->setText(item.toString());
-                fw_file2_check(ui->lineEdit_fw_path_3->displayText());
+                QString path = QString::fromStdString(item.toString().toStdString());
+                insert_fw2_path_comboBox(path);
+                fw_file2_check(ui->comboBox_fw2_path->currentText());
                 if (get_file_format(item.toString().toStdString()) == ".bin")
                 {
                     qDebug() << "固件2 为BIN文件，显示其保存的Start Address";
@@ -333,8 +565,9 @@ void MainWindow::set_default_config_display(QString usb_sn)
         if (p.contains("firmware3")) {
             item = p.value("firmware3");
             if (item.isString()) {
-                ui->lineEdit_fw_path_4->setText(item.toString());
-                fw_file3_check(ui->lineEdit_fw_path_4->displayText());
+                QString path = QString::fromStdString(item.toString().toStdString());
+                insert_fw3_path_comboBox(path);
+                fw_file3_check(ui->comboBox_fw3_path->currentText());
                 if (get_file_format(item.toString().toStdString()) == ".bin")
                 {
                     qDebug() << "固件3 为BIN文件，显示其保存的Start Address";
@@ -359,8 +592,8 @@ void MainWindow::set_default_config_display(QString usb_sn)
                 ui->radioButton_choose_loadfile1->setChecked(item.toBool());
                 bool checked = item.toBool();
                 jlinkArgs.load_file1_enable = checked;
-                fw_file2_check(ui->lineEdit_fw_path_2->displayText());
-                ui->lineEdit_fw_path_2->setEnabled(checked);
+//                fw_file1_check(ui->comboBox_fw1_path->currentText());
+                ui->comboBox_fw1_path->setEnabled(checked);
                 ui->pushButton_2_choose_fw_2->setEnabled(checked);
             }
         }
@@ -370,8 +603,8 @@ void MainWindow::set_default_config_display(QString usb_sn)
                 ui->radioButton_choose_loadfile2->setChecked(item.toBool());
                 bool checked = item.toBool();
                 jlinkArgs.load_file2_enable = checked;
-                fw_file2_check(ui->lineEdit_fw_path_3->displayText());
-                ui->lineEdit_fw_path_3->setEnabled(checked);
+//                fw_file2_check(ui->comboBox_fw2_path->currentText());
+                ui->comboBox_fw2_path->setEnabled(checked);
                 ui->pushButton_2_choose_fw_3->setEnabled(checked);
             }
         }
@@ -381,8 +614,8 @@ void MainWindow::set_default_config_display(QString usb_sn)
                 ui->radioButton_choose_loadfile3->setChecked(item.toBool());
                 bool checked = item.toBool();
                 jlinkArgs.load_file3_enable = checked;
-                fw_file2_check(ui->lineEdit_fw_path_4->displayText());
-                ui->lineEdit_fw_path_4->setEnabled(checked);
+//                fw_file3_check(ui->comboBox_fw3_path->currentText());
+                ui->comboBox_fw3_path->setEnabled(checked);
                 ui->pushButton_2_choose_fw_4->setEnabled(checked);
             }
         }
@@ -416,9 +649,9 @@ void MainWindow::save_current_jlink_config(QString usb_sn)
     jlink_config.insert("connect_type", ui->comboBox_2_connect_2->currentText());
     jlink_config.insert("speed", ui->comboBox_3_speed_2->currentText());
     jlink_config.insert("device_type", ui->comboBox_4_dev_type_2->currentText());
-    jlink_config.insert("firmware", ui->lineEdit_fw_path_2->displayText());
-    jlink_config.insert("firmware2", ui->lineEdit_fw_path_3->displayText());
-    jlink_config.insert("firmware3", ui->lineEdit_fw_path_4->displayText());
+    jlink_config.insert("firmware", ui->comboBox_fw1_path->currentText());
+    jlink_config.insert("firmware2", ui->comboBox_fw2_path->currentText());
+    jlink_config.insert("firmware3", ui->comboBox_fw3_path->currentText());
     jlink_config.insert("erase_chip", ui->checkBox_erase_sector->isChecked());
     jlink_config.insert("fw_start_addr", ui->lineEdit_mem_start_addr_1->displayText());
     jlink_config.insert("fw2_start_addr", ui->lineEdit_mem_start_addr_2->displayText());
@@ -699,6 +932,32 @@ int MainWindow::bin_start_addr_check(void)
     return 0;
 }
 
+int MainWindow::fw_path_check()
+{
+    if (ui->radioButton_choose_loadfile1->isChecked()) {
+        QString path1 = remove_file_path_head(1);
+        insert_fw1_path_comboBox(path1);
+        if (fw_file1_check(ui->comboBox_fw1_path->currentText()) == false)
+            return 1;
+    }
+
+    if (ui->radioButton_choose_loadfile2->isChecked()) {
+        QString path2 = remove_file_path_head(2);
+        insert_fw2_path_comboBox(path2);
+        if (fw_file2_check(ui->comboBox_fw2_path->currentText()) == false)
+            return 2;
+    }
+
+    if (ui->radioButton_choose_loadfile3->isChecked()) {
+        QString path3 = remove_file_path_head(3);
+        insert_fw3_path_comboBox(path3);
+        if (fw_file3_check(ui->comboBox_fw3_path->currentText()) == false)
+            return 3;
+    }
+
+    return 0;
+}
+
 int MainWindow::fw_file_check(void)
 {
     if (ui->radioButton_choose_loadfile1->isChecked() && jlinkArgs.load_file != "" && !is_file_exit(jlinkArgs.load_file)) {
@@ -737,7 +996,11 @@ void MainWindow::on_pushButton_flush_clicked()
         return ;
     }
 
+    /* 校验未保存的路径 */
+    fw_path_check();
+
     get_current_jlink_config();
+
     if (bin_start_addr_check() || fw_file_check()) {
         return ;
     }
@@ -945,6 +1208,7 @@ void MainWindow::dragEnterEvent(QDragEnterEvent *e)
 
 void MainWindow::dropEvent(QDropEvent *e)
 {
+    /* 部分控件的拖放事件无法当前接口接收 */
 #if 0
     //获取文件路径 (QString)
     QList<QUrl> urls = e->mimeData()->urls();
@@ -954,25 +1218,25 @@ void MainWindow::dropEvent(QDropEvent *e)
     //转为char*
     QByteArray qByteArrary = qStr.toLatin1();
     char* filePath = qByteArrary.data();
-
+    QString path = filePath;
     qInfo() << "select firmware file: " << filePath;
 
-    if (ui->lineEdit_fw_path_2->underMouse())
+    if (this->focusWidget() == ui->comboBox_fw1_path)
     {
-        ui->lineEdit_fw_path_2->clear();
-        ui->lineEdit_fw_path_2->setText(filePath);
+        ui->comboBox_fw1_path->clear();
+        insert_fw1_path_comboBox(path);
         save_current_jlink_config(ui->comboBox_sn->currentText()); //保存当前配置
     }
-    else if (ui->lineEdit_fw_path_3->underMouse())
+    else if (this->focusWidget() == ui->comboBox_fw2_path)
     {
-        ui->lineEdit_fw_path_3->clear();
-        ui->lineEdit_fw_path_3->setText(filePath);
+        ui->comboBox_fw2_path->clear();
+        insert_fw2_path_comboBox(path);
         save_current_jlink_config(ui->comboBox_sn->currentText()); //保存当前配置
     }
-    else if (ui->lineEdit_fw_path_4->underMouse())
+    else if (this->focusWidget() == ui->comboBox_fw3_path)
     {
-        ui->lineEdit_fw_path_4->clear();
-        ui->lineEdit_fw_path_4->setText(filePath);
+        ui->comboBox_fw3_path->clear();
+        insert_fw3_path_comboBox(path);
         save_current_jlink_config(ui->comboBox_sn->currentText()); //保存当前配置
     }
     else {
@@ -1035,13 +1299,120 @@ Mythread::Mythread(QObject * parent)
 {
 }
 
+QString MainWindow::remove_file_path_head(int index)
+{
+    QString path;
+    switch(index)
+    {
+    case 1: {
+        if (ui->comboBox_fw1_path->currentText().toStdString().substr(0, 7) == "file://")
+        {
+            path = QString::fromStdString(ui->comboBox_fw1_path->currentText().toStdString().substr(7));
+            ui->comboBox_fw1_path->setCurrentText(path);
+            qDebug() << "去除固件1的文件头：" << ui->comboBox_fw1_path->currentText();
+        } else {
+            path = ui->comboBox_fw1_path->currentText();
+        }
+    } break;
+    case 2: {
+        if (ui->comboBox_fw2_path->currentText().toStdString().substr(0, 7) == "file://")
+        {
+            path = QString::fromStdString(ui->comboBox_fw2_path->currentText().toStdString().substr(7));
+            ui->comboBox_fw2_path->setCurrentText(path);
+        } else {
+            path = ui->comboBox_fw2_path->currentText();
+        }
+    } break;
+    case 3: {
+        if (ui->comboBox_fw3_path->currentText().toStdString().substr(0, 7) == "file://")
+        {
+            path = QString::fromStdString(ui->comboBox_fw3_path->currentText().toStdString().substr(7));
+            ui->comboBox_fw3_path->setCurrentText(path);
+        } else {
+            path = ui->comboBox_fw3_path->currentText();
+        }
+    } break;
+    }
+    return path;
+}
+
+void MainWindow::insert_fw1_path_comboBox(QString &path)
+{
+    if (path == "")
+        return ;
+
+    /* 去重 */
+    for (int i = 0; i < ui->comboBox_fw1_path->count(); i++)
+    {
+        if (path == ui->comboBox_fw1_path->itemText(i))
+        {
+            ui->comboBox_fw1_path->removeItem(i);
+        }
+    }
+    /* 达到容量后移除最后一条 */
+    if (ui->comboBox_fw1_path->count() >= FW_RECORDS_MAX_SIZE)
+    {
+        ui->comboBox_fw1_path->removeItem(ui->comboBox_fw1_path->count() - 1);
+    }
+
+    ui->comboBox_fw1_path->insertItem(0, path);
+    ui->comboBox_fw1_path->setCurrentIndex(0);
+}
+
+void MainWindow::insert_fw2_path_comboBox(QString &path)
+{
+    if (path == "")
+        return ;
+
+    for (int i = 0; i < ui->comboBox_fw2_path->count(); i++)
+    {
+        if (path == ui->comboBox_fw2_path->itemText(i))
+        {
+            ui->comboBox_fw2_path->removeItem(i);
+        }
+    }
+
+    if (ui->comboBox_fw2_path->count() >= FW_RECORDS_MAX_SIZE)
+    {
+        ui->comboBox_fw2_path->removeItem(ui->comboBox_fw2_path->count() - 1);
+    }
+
+
+    ui->comboBox_fw2_path->insertItem(0, path);
+    ui->comboBox_fw2_path->setCurrentIndex(0);
+}
+
+void MainWindow::insert_fw3_path_comboBox(QString &path)
+{
+    if (path == "")
+        return ;
+
+    for (int i = 0; i < ui->comboBox_fw3_path->count(); i++)
+    {
+        if (path == ui->comboBox_fw3_path->itemText(i))
+        {
+            ui->comboBox_fw3_path->removeItem(i);
+        }
+    }
+
+    if (ui->comboBox_fw3_path->count() >= FW_RECORDS_MAX_SIZE)
+    {
+        ui->comboBox_fw3_path->removeItem(ui->comboBox_fw3_path->count() - 1);
+    }
+
+
+    ui->comboBox_fw3_path->insertItem(0, path);
+    ui->comboBox_fw3_path->setCurrentIndex(0);
+}
+
 void MainWindow::on_pushButton_2_choose_fw_2_clicked()
 {
-    QString filename = QFileDialog::getOpenFileName(this, "选择HEX固件1", ui->lineEdit_fw_path_2->displayText());
+    QString filename = QFileDialog::getOpenFileName(this, "选择HEX固件1", ui->comboBox_fw1_path->currentText());
     jlinkArgs.load_file = filename.toStdString();
 
     if (filename != "")
     {
+        insert_fw1_path_comboBox(filename);
         fw_file1_check(filename);
     }
     qInfo() << "firmware1 selected: " << filename;
@@ -1049,10 +1420,11 @@ void MainWindow::on_pushButton_2_choose_fw_2_clicked()
 
 void MainWindow::on_pushButton_2_choose_fw_3_clicked()
 {
-    QString filename = QFileDialog::getOpenFileName(this, "选择HEX固件2", ui->lineEdit_fw_path_3->displayText());
+    QString filename = QFileDialog::getOpenFileName(this, "选择HEX固件2", ui->comboBox_fw2_path->currentText());
     jlinkArgs.load_file2 = filename.toStdString();
 
     if (filename != "") {
+        insert_fw2_path_comboBox(filename);
         fw_file2_check(filename);
     }
     qInfo() << "firmware2 selected: " << filename;
@@ -1060,27 +1432,28 @@ void MainWindow::on_pushButton_2_choose_fw_3_clicked()
 
 void MainWindow::on_pushButton_2_choose_fw_4_clicked()
 {
-    QString filename = QFileDialog::getOpenFileName(this, "选择HEX固件3", ui->lineEdit_fw_path_4->displayText());
+    QString filename = QFileDialog::getOpenFileName(this, "选择HEX固件3", ui->comboBox_fw3_path->currentText());
     jlinkArgs.load_file3 = filename.toStdString();
 
     if (filename != "") {
+        insert_fw3_path_comboBox(filename);
         fw_file3_check(filename);
     }
 
     qInfo() << "firmware3 selected: " << filename;
 }
 
-void MainWindow::fw_file1_check(QString filename)
+bool MainWindow::fw_file1_check(QString filename)
 {
     if (filename == "") {
-        return ;
+        return true;
     }
+    qDebug() << "固件1: " << filename;
 
     string format = get_file_format(filename.toStdString());
     if (format == ".bin") {
         qDebug() << "已选择Bin文件";
-        ui->textBrowser_log_2->append(TEXT_COLOR_BLUE(">> 请输入Bin文件的起始地址"));
-        ui->lineEdit_mem_start_addr_1->clear();
+        ui->textBrowser_log_2->append(TEXT_COLOR_BLUE(">> 请输入固件1 Bin文件的起始地址"));
         if (ui->radioButton_choose_loadfile1->isChecked()) ui->lineEdit_mem_start_addr_1->setEnabled(true);
     } else if (format == ".hex") {
         qDebug() << "已选择HEX文件";
@@ -1091,9 +1464,10 @@ void MainWindow::fw_file1_check(QString filename)
             ui->textBrowser_log_2->append(filename);
             ui->textBrowser_log_2->append(TEXT_COLOR_RED("固件1 选择的文件格式不正确，请选择.bin或者.hex后缀格式的文件"));
             ui->textBrowser_log_2->moveCursor(QTextCursor::End);
-            ui->lineEdit_fw_path_2->clear();
+            ui->comboBox_fw1_path->removeItem(ui->comboBox_fw1_path->currentIndex());
+            ui->comboBox_fw1_path->setCurrentText("");
             ui->lineEdit_mem_start_addr_1->clear();
-            return ;
+            return false;
         }
         qDebug() << "jlinkArgs.file_start_addr: " << jlinkArgs.file_start_addr.c_str()
                  << "jlinkArgs.file_end_addr: " << jlinkArgs.file_end_addr.c_str();
@@ -1104,27 +1478,27 @@ void MainWindow::fw_file1_check(QString filename)
         qCritical() << "文件格式不正确，请检查";
         ui->textBrowser_log_2->append(TEXT_COLOR_RED("固件1 选择的文件格式不正确，请选择.bin或者.hex后缀格式的文件"));
         ui->textBrowser_log_2->moveCursor(QTextCursor::End);
-        ui->lineEdit_fw_path_2->clear();
+        ui->comboBox_fw1_path->removeItem(ui->comboBox_fw1_path->currentIndex());
+        ui->comboBox_fw1_path->setCurrentText("");
         ui->lineEdit_mem_start_addr_1->clear();
-        return ;
+        return false;
     }
 
-    ui->lineEdit_fw_path_2->setText(filename);
     save_current_jlink_config(ui->comboBox_sn->currentText()); //保存当前配置
+    return true;
 }
 
-void MainWindow::fw_file2_check(QString filename)
+bool MainWindow::fw_file2_check(QString filename)
 {
     if (filename == "") {
-        return ;
+        return true;
     }
 
     string format = get_file_format(filename.toStdString());
     if (format == ".bin") {
         qDebug() << "已选择Bin文件";
-        ui->textBrowser_log_2->append(TEXT_COLOR_BLUE(">> 请输入Bin文件的起始地址"));
+        ui->textBrowser_log_2->append(TEXT_COLOR_BLUE(">> 请输入固件2 Bin文件的起始地址"));
         ui->textBrowser_log_2->moveCursor(QTextCursor::End);
-        ui->lineEdit_mem_start_addr_2->clear();
         if (ui->radioButton_choose_loadfile1->isChecked()) ui->lineEdit_mem_start_addr_2->setEnabled(true);
     } else if (format == ".hex") {
         qDebug() << "已选择HEX文件";
@@ -1138,9 +1512,10 @@ void MainWindow::fw_file2_check(QString filename)
             ui->textBrowser_log_2->append(TEXT_COLOR_RED("固件2 选择的文件格式不正确，请选择.bin或者.hex后缀格式的文件"));
             mutex.unlock();
             ui->textBrowser_log_2->moveCursor(QTextCursor::End);
-            ui->lineEdit_fw_path_3->clear();
-            ui->lineEdit_mem_start_addr_2->clear();
-            return ;
+            ui->comboBox_fw2_path->removeItem(ui->comboBox_fw2_path->currentIndex());
+            ui->comboBox_fw2_path->setCurrentText("");
+//            ui->lineEdit_mem_start_addr_2->clear();
+            return false;
         }
         qDebug() << "jlinkArgs.file2_start_addr: " << jlinkArgs.file2_start_addr.c_str()
                  << "jlinkArgs.file2_end_addr: " << jlinkArgs.file2_end_addr.c_str();
@@ -1154,19 +1529,20 @@ void MainWindow::fw_file2_check(QString filename)
         ui->textBrowser_log_2->append(TEXT_COLOR_RED("固件2 选择的文件格式不正确，请选择.bin或者.hex后缀格式的文件"));
         mutex.unlock();
         ui->textBrowser_log_2->moveCursor(QTextCursor::End);
-        ui->lineEdit_fw_path_3->clear();
-        ui->lineEdit_mem_start_addr_2->clear();
-        return ;
+        ui->comboBox_fw2_path->removeItem(ui->comboBox_fw2_path->currentIndex());
+        ui->comboBox_fw2_path->setCurrentText("");
+//        ui->lineEdit_mem_start_addr_2->clear();
+        return false;
     }
 
-    ui->lineEdit_fw_path_3->setText(filename);
     save_current_jlink_config(ui->comboBox_sn->currentText()); //保存当前配置
+    return true;
 }
 
-void MainWindow::fw_file3_check(QString filename)
+bool MainWindow::fw_file3_check(QString filename)
 {
     if (filename == "") {
-        return ;
+        return true;
     }
 
     qDebug() << "filename: " << filename;
@@ -1175,9 +1551,8 @@ void MainWindow::fw_file3_check(QString filename)
     printf("test1");
     if (format == ".bin") {
         qDebug() << "已选择Bin文件";
-        ui->textBrowser_log_2->append(TEXT_COLOR_BLUE(">> 请输入Bin文件的起始地址"));
+        ui->textBrowser_log_2->append(TEXT_COLOR_BLUE(">> 请输入固件3 Bin文件的起始地址"));
         ui->textBrowser_log_2->moveCursor(QTextCursor::End);
-        ui->lineEdit_mem_start_addr_3->clear();
         if (ui->radioButton_choose_loadfile1->isChecked()) ui->lineEdit_mem_start_addr_3->setEnabled(true);
     } else if (format == ".hex") {
         qDebug() << "已选择HEX文件";
@@ -1187,9 +1562,10 @@ void MainWindow::fw_file3_check(QString filename)
             ui->textBrowser_log_2->append(filename);
             ui->textBrowser_log_2->append(TEXT_COLOR_RED("固件3 选择的文件格式不正确，请选择.bin或者.hex后缀格式的文件"));
             ui->textBrowser_log_2->moveCursor(QTextCursor::End);
-            ui->lineEdit_fw_path_4->clear();
-            ui->lineEdit_mem_start_addr_3->clear();
-            return ;
+            ui->comboBox_fw3_path->removeItem(ui->comboBox_fw3_path->currentIndex());
+            ui->comboBox_fw3_path->setCurrentText("");
+//            ui->lineEdit_mem_start_addr_3->clear();
+            return false;
         }
         qDebug() << "jlinkArgs.file3_start_addr: " << jlinkArgs.file3_start_addr.c_str()
                  << "jlinkArgs.file3_end_addr: " << jlinkArgs.file3_end_addr.c_str();
@@ -1201,53 +1577,14 @@ void MainWindow::fw_file3_check(QString filename)
         qCritical() << "文件格式不正确，请检查";
         ui->textBrowser_log_2->append(TEXT_COLOR_RED("固件3 选择的文件格式不正确，请选择.bin或者.hex后缀格式的文件"));
         ui->textBrowser_log_2->moveCursor(QTextCursor::End);
-        ui->lineEdit_fw_path_4->clear();
-        ui->lineEdit_mem_start_addr_3->clear();
-        return ;
+        ui->comboBox_fw3_path->removeItem(ui->comboBox_fw3_path->currentIndex());
+        ui->comboBox_fw3_path->setCurrentText("");
+//        ui->lineEdit_mem_start_addr_3->clear();
+        return false;
     }
 
-    ui->lineEdit_fw_path_4->setText(filename);
     save_current_jlink_config(ui->comboBox_sn->currentText()); //保存当前配置
-}
-
-void MainWindow::on_lineEdit_fw_path_2_editingFinished()
-{
-    if (ui->lineEdit_fw_path_2->displayText() == "")
-        return ;
-    if (ui->lineEdit_fw_path_2->displayText().toStdString().substr(0, 7) == "file://")
-    {
-        ui->lineEdit_fw_path_2->setText(QString::fromStdString(ui->lineEdit_fw_path_2->displayText().toStdString().substr(7)));
-        return ;
-    }
-    fw_file1_check(ui->lineEdit_fw_path_2->displayText());
-    qDebug() << "fw file1 changed";
-}
-
-void MainWindow::on_lineEdit_fw_path_3_editingFinished()
-{
-    if (ui->lineEdit_fw_path_3->displayText() == "")
-        return ;
-    if (ui->lineEdit_fw_path_3->displayText().toStdString().substr(0, 7) == "file://")
-    {
-        ui->lineEdit_fw_path_3->setText(QString::fromStdString(ui->lineEdit_fw_path_3->displayText().toStdString().substr(7)));
-        return ;
-    }
-    QString filename = ui->lineEdit_fw_path_3->displayText();
-    fw_file2_check(filename);
-    qDebug() << "fw file2 changed";
-}
-
-void MainWindow::on_lineEdit_fw_path_4_editingFinished()
-{
-    if (ui->lineEdit_fw_path_4->displayText() == "")
-        return ;
-    if (ui->lineEdit_fw_path_4->displayText().toStdString().substr(0, 7) == "file://")
-    {
-        ui->lineEdit_fw_path_4->setText(QString::fromStdString(ui->lineEdit_fw_path_4->displayText().toStdString().substr(7)));
-        return ;
-    }
-    fw_file3_check(ui->lineEdit_fw_path_4->displayText());
-    qDebug() << "fw file3 changed";
+    return true;
 }
 
 void MainWindow::on_action_clear_log_triggered()
@@ -1318,12 +1655,49 @@ void MainWindow::on_checkBox_erase_sector_toggled(bool checked)
     }
 }
 
+void MainWindow::keyPressEvent(QKeyEvent *event)
+{
+    if (event->key() == Qt::Key_Return)
+    {
+        qDebug() << "回车按下，检测固件格式是否正确";
+
+        if (this->focusWidget() == ui->comboBox_fw1_path) {
+            qDebug() << "当前聚焦于固件1输入框";
+            QString path = ui->comboBox_fw1_path->currentText();
+            /* 去掉路径头 */
+            QString path1 = remove_file_path_head(1);
+            if (fw_file1_check(ui->comboBox_fw1_path->currentText()))
+                insert_fw1_path_comboBox(path1);
+        }
+
+        if (this->focusWidget() == ui->comboBox_fw2_path) {
+            qDebug() << "当前聚焦于固件2输入框";
+            QString path = ui->comboBox_fw2_path->currentText();
+            /* 去掉路径头 */
+            QString path1 = remove_file_path_head(2);
+            if (fw_file2_check(ui->comboBox_fw2_path->currentText()))
+                insert_fw2_path_comboBox(path1);
+        }
+
+        if (this->focusWidget() == ui->comboBox_fw3_path) {
+            qDebug() << "当前聚焦于固件3输入框";
+            QString path = ui->comboBox_fw3_path->currentText();
+            /* 去掉路径头 */
+            QString path1 = remove_file_path_head(3);
+            if (fw_file3_check(ui->comboBox_fw3_path->currentText()))
+                insert_fw3_path_comboBox(path1);
+        }
+    }
+
+    QWidget::keyPressEvent(event);
+}
+
 void MainWindow::on_radioButton_choose_loadfile1_clicked(bool checked)
 {
     jlinkArgs.load_file1_enable = checked;
-    ui->lineEdit_fw_path_2->setEnabled(checked);
+    ui->comboBox_fw1_path->setEnabled(checked);
     if (checked)
-        fw_file1_check(ui->lineEdit_fw_path_2->displayText());
+        fw_file1_check(ui->comboBox_fw1_path->currentText());
     ui->pushButton_2_choose_fw_2->setEnabled(checked);
     QString log = checked ? "启用" : "禁用";
     ui->textBrowser_log_2->append("固件1 已" + log);
@@ -1334,9 +1708,9 @@ void MainWindow::on_radioButton_choose_loadfile1_clicked(bool checked)
 void MainWindow::on_radioButton_choose_loadfile2_clicked(bool checked)
 {
     jlinkArgs.load_file2_enable = checked;
-    ui->lineEdit_fw_path_3->setEnabled(checked);
+    ui->comboBox_fw2_path->setEnabled(checked);
     if (checked)
-        fw_file2_check(ui->lineEdit_fw_path_3->displayText());
+        fw_file2_check(ui->comboBox_fw2_path->currentText());
     ui->pushButton_2_choose_fw_3->setEnabled(checked);
     QString log = checked ? "启用" : "禁用";
     ui->textBrowser_log_2->append("固件2 已" + log);
@@ -1346,9 +1720,9 @@ void MainWindow::on_radioButton_choose_loadfile2_clicked(bool checked)
 void MainWindow::on_radioButton_choose_loadfile3_clicked(bool checked)
 {
     jlinkArgs.load_file3_enable = checked;
-    ui->lineEdit_fw_path_4->setEnabled(checked);
+    ui->comboBox_fw3_path->setEnabled(checked);
     if (checked)
-        fw_file3_check(ui->lineEdit_fw_path_4->displayText());
+        fw_file3_check(ui->comboBox_fw3_path->currentText());
     ui->pushButton_2_choose_fw_4->setEnabled(checked);
     QString log = checked ? "启用" : "禁用";
     ui->textBrowser_log_2->append("固件3 已" + log);

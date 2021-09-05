@@ -1,0 +1,10 @@
+usb 29401025
+si 1
+speed 4000
+device nRF52840_XXAA
+r 
+h 
+erase 
+loadfile "/home/duapple/work/qt/JLink_Flash_GUI/JLink_Flash_GUI/build-JLink_Flash_GUI-Desktop_Qt_5_12_2_GCC_64bit-Debug/Z3_Humiture.hex"
+r 
+q 

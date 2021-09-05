@@ -1,0 +1,8 @@
+usb 29401025
+si 1
+speed 1000
+device nRF52840_XXAA
+r 
+h 
+erase 
+q 

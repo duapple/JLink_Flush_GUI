@@ -20,22 +20,22 @@ void outputMessage(QtMsgType type, const QMessageLogContext &context, const QStr
     QString text;
     switch(type) {
     case QtDebugMsg:
-        text = QString("Debug: ");
+        text = QString("DDD:");
         break;
     case QtInfoMsg:
-        text = QString("Info:  ");
+        text = QString("III:");
         break;
     case QtWarningMsg:
-        text = QString("Warn:  ");
+        text = QString("WWW:");
         break;
     case QtCriticalMsg:
-        text = QString("Error: ");
+        text = QString("EEE:");
         break;
     case QtFatalMsg:
-        text = QString("Fatal: ");
+        text = QString("FFF:");
         break;
     default:
-        text = QString("Debug: ");
+        text = QString("DDD:");
     }
 
     // 设置输出信息格式
