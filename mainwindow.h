@@ -14,12 +14,12 @@
 #define GLOBAL_CONFIG_FILE              CONFIG_PATH "global_config.json"
 #define GLOBAL_CONFIG_FILE_BACKUP       CONFIG_PATH "global_config.json_bakup"
 
-#define TEXT_COLOR_RED(STRING)         "<font color=red>" STRING "</font>" "<font color=black> </font>"
-#define TEXT_COLOR_BLUE(STRING)        "<font color=blue>" STRING "</font>" "<font color=black> </font>"
+#define TEXT_COLOR_RED(STRING)          "<font color=red>" STRING "</font>" "<font color=black> </font>"
+#define TEXT_COLOR_BLUE(STRING)         "<font color=blue>" STRING "</font>" "<font color=black> </font>"
 #define TEXT_COLOR_GREEN(STRING)        "<font color=green>" STRING "</font>" "<font color=black> </font>"
 
-/* 每个comboBox记录path的最大条数 */
-#define FW_RECORDS_MAX_SIZE            (3)
+/* 每个fw path comboBox记录path的最大条数 */
+#define FW_RECORDS_MAX_SIZE             (10)
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -87,8 +87,8 @@ public:
 
 private slots:
     void on_actionJLink_settings_triggered();
-    void on_pushButton_dev_flush_clicked();
-    void on_pushButton_flush_clicked();
+    void on_pushButton_dev_flush_clicked();                         /* JLink设备刷新 */
+    void on_pushButton_flush_clicked();                             /* 固件烧录 */
     void on_pushButton_reboot_clicked();
     void on_pushButton_erase_clicked();
     void on_comboBox_sn_currentTextChanged(const QString &arg1);

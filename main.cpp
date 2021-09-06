@@ -8,6 +8,7 @@
 #include <QFile>
 #include <QMutex>
 #include <QTranslator>
+#include <QTextCodec>
 
 QString log_file_name;
 
@@ -16,6 +17,8 @@ void outputMessage(QtMsgType type, const QMessageLogContext &context, const QStr
     // 加锁
     static QMutex mutex;
     mutex.lock();
+//    QTextCodec *codec = QTextCodec::codecForLocale();
+//    QByteArray localMsg = codec->fromUnicode(msg);
     QByteArray localMsg = msg.toLocal8Bit();
     QString text;
     switch(type) {

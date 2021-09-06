@@ -384,10 +384,9 @@ void MainWindow::save_fw_records(void)
     }
 
     QJsonObject record;
-    record["fw_list"] = fw1_record;
+    record["fw_list"] = QJsonValue(fw1_record);
     record["fw2_list"] = QJsonValue(fw2_record);
     record["fw3_list"] = QJsonValue(fw3_record);
-//    record.insert("fw_list", QJsonValue(fw1_record));
 
     root["fw_records"] = record;
 
@@ -402,11 +401,6 @@ void MainWindow::save_fw_records(void)
     file.write(jsonDoc.toJson());
     file.close();
     qInfo() << "写global config配置文件成功";
-//    QMessageBox::StandardButton btn = (QMessageBox::StandardButton )QMessageBox::information(this, tr("Information"), tr("保存成功    "), tr("确认"));
-//    if (btn == QMessageBox::NoButton) {
-//        this->close();
-//        qDebug() << "保存成功，关闭JLink配置窗口";
-//    }
 }
 
 void MainWindow::on_actionJLink_settings_triggered()
@@ -592,7 +586,6 @@ void MainWindow::set_default_config_display(QString usb_sn)
                 ui->radioButton_choose_loadfile1->setChecked(item.toBool());
                 bool checked = item.toBool();
                 jlinkArgs.load_file1_enable = checked;
-//                fw_file1_check(ui->comboBox_fw1_path->currentText());
                 ui->comboBox_fw1_path->setEnabled(checked);
                 ui->pushButton_2_choose_fw_2->setEnabled(checked);
             }
@@ -603,7 +596,6 @@ void MainWindow::set_default_config_display(QString usb_sn)
                 ui->radioButton_choose_loadfile2->setChecked(item.toBool());
                 bool checked = item.toBool();
                 jlinkArgs.load_file2_enable = checked;
-//                fw_file2_check(ui->comboBox_fw2_path->currentText());
                 ui->comboBox_fw2_path->setEnabled(checked);
                 ui->pushButton_2_choose_fw_3->setEnabled(checked);
             }
@@ -614,7 +606,6 @@ void MainWindow::set_default_config_display(QString usb_sn)
                 ui->radioButton_choose_loadfile3->setChecked(item.toBool());
                 bool checked = item.toBool();
                 jlinkArgs.load_file3_enable = checked;
-//                fw_file3_check(ui->comboBox_fw3_path->currentText());
                 ui->comboBox_fw3_path->setEnabled(checked);
                 ui->pushButton_2_choose_fw_4->setEnabled(checked);
             }
@@ -792,7 +783,6 @@ void MainWindow::get_connect_sn()
     cmd.append(" -Log ");
     cmd.append(JLINK_LOG_FILE);
     qInfo() << cmd;
-    // system(cmd.toStdString().c_str());
 
     // 使用QProcess来执行命令
     QProcess p(0);
@@ -858,12 +848,12 @@ uint32_t MainWindow::get_jlink_sn(const char* file, long* sn_ary, uint32_t len)
 
 void MainWindow::on_pushButton_dev_flush_clicked()
 {
-    get_connect_sn();
-
     if (ui->comboBox_sn->currentText() != "")
     {
         save_current_jlink_config(ui->comboBox_sn->currentText());
     }
+
+    get_connect_sn();
 }
 
 void MainWindow::clear_fw_file_hex(void)
@@ -1466,7 +1456,6 @@ bool MainWindow::fw_file1_check(QString filename)
             ui->textBrowser_log_2->moveCursor(QTextCursor::End);
             ui->comboBox_fw1_path->removeItem(ui->comboBox_fw1_path->currentIndex());
             ui->comboBox_fw1_path->setCurrentText("");
-            ui->lineEdit_mem_start_addr_1->clear();
             return false;
         }
         qDebug() << "jlinkArgs.file_start_addr: " << jlinkArgs.file_start_addr.c_str()
@@ -1480,11 +1469,9 @@ bool MainWindow::fw_file1_check(QString filename)
         ui->textBrowser_log_2->moveCursor(QTextCursor::End);
         ui->comboBox_fw1_path->removeItem(ui->comboBox_fw1_path->currentIndex());
         ui->comboBox_fw1_path->setCurrentText("");
-        ui->lineEdit_mem_start_addr_1->clear();
         return false;
     }
 
-    save_current_jlink_config(ui->comboBox_sn->currentText()); //保存当前配置
     return true;
 }
 
@@ -1514,7 +1501,6 @@ bool MainWindow::fw_file2_check(QString filename)
             ui->textBrowser_log_2->moveCursor(QTextCursor::End);
             ui->comboBox_fw2_path->removeItem(ui->comboBox_fw2_path->currentIndex());
             ui->comboBox_fw2_path->setCurrentText("");
-//            ui->lineEdit_mem_start_addr_2->clear();
             return false;
         }
         qDebug() << "jlinkArgs.file2_start_addr: " << jlinkArgs.file2_start_addr.c_str()
@@ -1531,11 +1517,9 @@ bool MainWindow::fw_file2_check(QString filename)
         ui->textBrowser_log_2->moveCursor(QTextCursor::End);
         ui->comboBox_fw2_path->removeItem(ui->comboBox_fw2_path->currentIndex());
         ui->comboBox_fw2_path->setCurrentText("");
-//        ui->lineEdit_mem_start_addr_2->clear();
         return false;
     }
 
-    save_current_jlink_config(ui->comboBox_sn->currentText()); //保存当前配置
     return true;
 }
 
@@ -1548,7 +1532,6 @@ bool MainWindow::fw_file3_check(QString filename)
     qDebug() << "filename: " << filename;
 
     string format = get_file_format(filename.toStdString());
-    printf("test1");
     if (format == ".bin") {
         qDebug() << "已选择Bin文件";
         ui->textBrowser_log_2->append(TEXT_COLOR_BLUE(">> 请输入固件3 Bin文件的起始地址"));
@@ -1564,7 +1547,6 @@ bool MainWindow::fw_file3_check(QString filename)
             ui->textBrowser_log_2->moveCursor(QTextCursor::End);
             ui->comboBox_fw3_path->removeItem(ui->comboBox_fw3_path->currentIndex());
             ui->comboBox_fw3_path->setCurrentText("");
-//            ui->lineEdit_mem_start_addr_3->clear();
             return false;
         }
         qDebug() << "jlinkArgs.file3_start_addr: " << jlinkArgs.file3_start_addr.c_str()
@@ -1579,11 +1561,9 @@ bool MainWindow::fw_file3_check(QString filename)
         ui->textBrowser_log_2->moveCursor(QTextCursor::End);
         ui->comboBox_fw3_path->removeItem(ui->comboBox_fw3_path->currentIndex());
         ui->comboBox_fw3_path->setCurrentText("");
-//        ui->lineEdit_mem_start_addr_3->clear();
         return false;
     }
 
-    save_current_jlink_config(ui->comboBox_sn->currentText()); //保存当前配置
     return true;
 }
 
