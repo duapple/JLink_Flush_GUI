@@ -8,7 +8,7 @@
 #include <QFile>
 #include <QMutex>
 #include <QTranslator>
-#include <QTextCodec>
+//#include <QTextCodec>
 
 QString log_file_name;
 

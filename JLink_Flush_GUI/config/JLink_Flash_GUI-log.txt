@@ -1,88 +1,4119 @@
-Debug:  2021-06-14 22:39:26  jlink_cmd_path value:  "C:/Program Files (x86)/SEGGER/JLink/JLink.exe"
-Debug:  2021-06-14 22:39:26  dev sn count:  0
-Debug:  2021-06-14 22:39:26  设置连接方式： "SWD"
-Debug:  2021-06-14 22:39:26  file format:  .hex
-Debug:  2021-06-14 22:39:26  已选择HEX文件
-Debug:  2021-06-14 22:39:26  out: 
+DDD: 2021-09-07 21:05:44  存在固件记录
+DDD: 2021-09-07 21:05:44  存在固件记录
+DDD: 2021-09-07 21:05:44  存在固件记录
+DDD: 2021-09-07 21:05:44  存在固件记录
+DDD: 2021-09-07 21:05:44  读取固件1记录成功
+DDD: 2021-09-07 21:05:44  读取固件1记录成功
+DDD: 2021-09-07 21:05:44  jlink_cmd_path value:  "/home/duapple/下载/JLink_Linux_V672d_x86_64/JLinkExe"
+III: 2021-09-07 21:05:44  "\"/home/duapple/下载/JLink_Linux_V672d_x86_64/JLinkExe\" -CommandFile config/get_sn_log_cmd.txt -Log config/jlink_log.txt"
+III: 2021-09-07 21:05:44  
+DDD: 2021-09-07 21:05:44  设置连接方式： "SWD"
+DDD: 2021-09-07 21:05:44  固件1:  "/home/duapple/work/qt/JLink_Flash_GUI/JLink_Flash_GUI/build-JLink_Flash_GUI-Desktop_Qt_5_12_2_GCC_64bit-Debug/Z3_Humiture.bin"
+DDD: 2021-09-07 21:05:44  file format:  .bin
+DDD: 2021-09-07 21:05:44  已选择Bin文件
+DDD: 2021-09-07 21:05:44  file format:  .bin
+DDD: 2021-09-07 21:05:44  固件1 为BIN文件，显示其保存的Start Address
+DDD: 2021-09-07 21:05:44  filename:  "/home/duapple/work/qt/JLink_Flash_GUI/JLink_Flash_GUI/build-JLink_Flash_GUI-Desktop_Qt_5_12_2_GCC_64bit-Debug/Z3_Humiture.hex"
+DDD: 2021-09-07 21:05:44  file format:  .hex
+DDD: 2021-09-07 21:05:44  已选择HEX文件
+DDD: 2021-09-07 21:05:44  out: 
+ 
+EEE: 2021-09-07 21:05:44  HEX文件错误，请检查HEX文件是否是标准HEX文件
+DDD: 2021-09-07 21:05:46  file format:  .hex
+III: 2021-09-07 21:05:46  选择擦除整个芯片
+DDD: 2021-09-07 21:05:46  dev sn count:  1
+DDD: 2021-09-07 21:05:48  固件1:  "/home/duapple/work/qt/JLink_Flash_GUI/JLink_Flash_GUI/build-JLink_Flash_GUI-Desktop_Qt_5_12_2_GCC_64bit-Debug/Z3_Humiture.bin"
+DDD: 2021-09-07 21:05:48  file format:  .bin
+DDD: 2021-09-07 21:05:48  已选择Bin文件
+III: 2021-09-07 21:05:50  保存当前设备的配置
+III: 2021-09-07 21:05:50  写 config/jlink_device_info.json 文件成功
+III: 2021-09-07 21:05:50  "\"/home/duapple/下载/JLink_Linux_V672d_x86_64/JLinkExe\" -CommandFile config/get_sn_log_cmd.txt -Log config/jlink_log.txt"
+III: 2021-09-07 21:05:50  
+DDD: 2021-09-07 21:05:50  设置连接方式： "SWD"
+DDD: 2021-09-07 21:05:50  固件1:  "/home/duapple/work/qt/JLink_Flash_GUI/JLink_Flash_GUI/build-JLink_Flash_GUI-Desktop_Qt_5_12_2_GCC_64bit-Debug/Z3_Humiture.bin"
+DDD: 2021-09-07 21:05:50  file format:  .bin
+DDD: 2021-09-07 21:05:50  已选择Bin文件
+DDD: 2021-09-07 21:05:50  file format:  .bin
+DDD: 2021-09-07 21:05:50  固件1 为BIN文件，显示其保存的Start Address
+III: 2021-09-07 21:06:04  保存当前设备的配置
+III: 2021-09-07 21:06:04  写 config/jlink_device_info.json 文件成功
+III: 2021-09-07 21:06:04  "\"/home/duapple/下载/JLink_Linux_V672d_x86_64/JLinkExe\" -CommandFile config/get_sn_log_cmd.txt -Log config/jlink_log.txt"
+III: 2021-09-07 21:06:04  
+DDD: 2021-09-07 21:06:04  设置连接方式： "SWD"
+DDD: 2021-09-07 21:06:04  固件1:  "/home/duapple/work/qt/JLink_Flash_GUI/JLink_Flash_GUI/build-JLink_Flash_GUI-Desktop_Qt_5_12_2_GCC_64bit-Debug/Z3_Humiture.bin"
+DDD: 2021-09-07 21:06:04  file format:  .bin
+DDD: 2021-09-07 21:06:04  已选择Bin文件
+DDD: 2021-09-07 21:06:04  file format:  .bin
+DDD: 2021-09-07 21:06:04  固件1 为BIN文件，显示其保存的Start Address
+III: 2021-09-07 21:06:14  保存当前设备的配置
+III: 2021-09-07 21:06:14  写 config/jlink_device_info.json 文件成功
+III: 2021-09-07 21:06:14  "\"/home/duapple/下载/JLink_Linux_V672d_x86_64/JLinkExe\" -CommandFile config/get_sn_log_cmd.txt -Log config/jlink_log.txt"
+III: 2021-09-07 21:06:14  
+DDD: 2021-09-07 21:06:14  设置连接方式： "SWD"
+DDD: 2021-09-07 21:06:14  固件1:  "/home/duapple/work/qt/JLink_Flash_GUI/JLink_Flash_GUI/build-JLink_Flash_GUI-Desktop_Qt_5_12_2_GCC_64bit-Debug/Z3_Humiture.bin"
+DDD: 2021-09-07 21:06:14  file format:  .bin
+DDD: 2021-09-07 21:06:14  已选择Bin文件
+DDD: 2021-09-07 21:06:14  file format:  .bin
+DDD: 2021-09-07 21:06:14  固件1 为BIN文件，显示其保存的Start Address
+III: 2021-09-07 21:06:38  写global config配置文件成功
+DDD: 2021-09-07 21:06:40  button:  QMessageBox::NoButton
+DDD: 2021-09-07 21:06:40  Program rebooting now
+DDD: 2021-09-07 21:06:40  保存成功，关闭JLink配置窗口
+DDD: 2021-09-07 21:06:40  存在固件记录
+DDD: 2021-09-07 21:06:40  存在固件记录
+DDD: 2021-09-07 21:06:40  存在固件记录
+DDD: 2021-09-07 21:06:40  jlink_cmd_path value:  "/home/duapple/下载/JLink_Linux_V672d_x86_64/JLinkExe"
+III: 2021-09-07 21:06:40  "\"/home/duapple/下载/JLink_Linux_V672d_x86_64/JLinkExe\" -CommandFile config/get_sn_log_cmd.txt -Log config/jlink_log.txt"
+III: 2021-09-07 21:06:40  
+DDD: 2021-09-07 21:06:40  设置连接方式： "SWD"
+DDD: 2021-09-07 21:06:40  固件1:  "/home/duapple/work/qt/JLink_Flash_GUI/JLink_Flash_GUI/build-JLink_Flash_GUI-Desktop_Qt_5_12_2_GCC_64bit-Debug/Z3_Humiture.bin"
+DDD: 2021-09-07 21:06:40  file format:  .bin
+DDD: 2021-09-07 21:06:40  已选择Bin文件
+DDD: 2021-09-07 21:06:40  file format:  .bin
+DDD: 2021-09-07 21:06:40  固件1 为BIN文件，显示其保存的Start Address
+III: 2021-09-07 21:06:40  选择擦除整个芯片
+DDD: 2021-09-07 21:06:40  dev sn count:  1
+III: 2021-09-07 21:06:42  保存当前设备的配置
+III: 2021-09-07 21:06:42  写 config/jlink_device_info.json 文件成功
+III: 2021-09-07 21:06:42  "\"/home/duapple/下载/JLink_Linux_V672d_x86_64/JLinkExe\" -CommandFile config/get_sn_log_cmd.txt -Log config/jlink_log.txt"
+III: 2021-09-07 21:06:42  
+DDD: 2021-09-07 21:06:42  设置连接方式： "SWD"
+DDD: 2021-09-07 21:06:42  固件1:  "/home/duapple/work/qt/JLink_Flash_GUI/JLink_Flash_GUI/build-JLink_Flash_GUI-Desktop_Qt_5_12_2_GCC_64bit-Debug/Z3_Humiture.bin"
+DDD: 2021-09-07 21:06:42  file format:  .bin
+DDD: 2021-09-07 21:06:42  已选择Bin文件
+DDD: 2021-09-07 21:06:42  file format:  .bin
+DDD: 2021-09-07 21:06:42  固件1 为BIN文件，显示其保存的Start Address
+III: 2021-09-07 21:06:44  保存当前设备的配置
+III: 2021-09-07 21:06:44  写 config/jlink_device_info.json 文件成功
+III: 2021-09-07 21:06:44  "\"/home/duapple/下载/JLink_Linux_V672d_x86_64/JLinkExe\" -CommandFile config/get_sn_log_cmd.txt -Log config/jlink_log.txt"
+III: 2021-09-07 21:06:44  
+DDD: 2021-09-07 21:06:44  设置连接方式： "SWD"
+DDD: 2021-09-07 21:06:44  固件1:  "/home/duapple/work/qt/JLink_Flash_GUI/JLink_Flash_GUI/build-JLink_Flash_GUI-Desktop_Qt_5_12_2_GCC_64bit-Debug/Z3_Humiture.bin"
+DDD: 2021-09-07 21:06:44  file format:  .bin
+DDD: 2021-09-07 21:06:44  已选择Bin文件
+DDD: 2021-09-07 21:06:44  file format:  .bin
+DDD: 2021-09-07 21:06:44  固件1 为BIN文件，显示其保存的Start Address
+III: 2021-09-07 21:06:56  保存当前设备的配置
+III: 2021-09-07 21:06:56  写 config/jlink_device_info.json 文件成功
+III: 2021-09-07 21:06:56  "\"/home/duapple/下载/JLink_Linux_V672d_x86_64/JLinkExe\" -CommandFile config/get_sn_log_cmd.txt -Log config/jlink_log.txt"
+III: 2021-09-07 21:06:56  
+DDD: 2021-09-07 21:06:56  设置连接方式： "SWD"
+DDD: 2021-09-07 21:06:56  固件1:  "/home/duapple/work/qt/JLink_Flash_GUI/JLink_Flash_GUI/build-JLink_Flash_GUI-Desktop_Qt_5_12_2_GCC_64bit-Debug/Z3_Humiture.bin"
+DDD: 2021-09-07 21:06:56  file format:  .bin
+DDD: 2021-09-07 21:06:56  已选择Bin文件
+DDD: 2021-09-07 21:06:56  file format:  .bin
+DDD: 2021-09-07 21:06:56  固件1 为BIN文件，显示其保存的Start Address
+III: 2021-09-07 21:06:57  保存当前设备的配置
+III: 2021-09-07 21:06:57  写 config/jlink_device_info.json 文件成功
+III: 2021-09-07 21:06:57  "\"/home/duapple/下载/JLink_Linux_V672d_x86_64/JLinkExe\" -CommandFile config/get_sn_log_cmd.txt -Log config/jlink_log.txt"
+III: 2021-09-07 21:06:57  
+DDD: 2021-09-07 21:06:57  设置连接方式： "SWD"
+DDD: 2021-09-07 21:06:57  固件1:  "/home/duapple/work/qt/JLink_Flash_GUI/JLink_Flash_GUI/build-JLink_Flash_GUI-Desktop_Qt_5_12_2_GCC_64bit-Debug/Z3_Humiture.bin"
+DDD: 2021-09-07 21:06:57  file format:  .bin
+DDD: 2021-09-07 21:06:57  已选择Bin文件
+DDD: 2021-09-07 21:06:57  file format:  .bin
+DDD: 2021-09-07 21:06:57  固件1 为BIN文件，显示其保存的Start Address
+III: 2021-09-07 21:06:58  保存当前设备的配置
+III: 2021-09-07 21:06:58  写 config/jlink_device_info.json 文件成功
+III: 2021-09-07 21:06:58  "\"/home/duapple/下载/JLink_Linux_V672d_x86_64/JLinkExe\" -CommandFile config/get_sn_log_cmd.txt -Log config/jlink_log.txt"
+III: 2021-09-07 21:06:58  
+DDD: 2021-09-07 21:06:58  设置连接方式： "SWD"
+DDD: 2021-09-07 21:06:58  固件1:  "/home/duapple/work/qt/JLink_Flash_GUI/JLink_Flash_GUI/build-JLink_Flash_GUI-Desktop_Qt_5_12_2_GCC_64bit-Debug/Z3_Humiture.bin"
+DDD: 2021-09-07 21:06:58  file format:  .bin
+DDD: 2021-09-07 21:06:58  已选择Bin文件
+DDD: 2021-09-07 21:06:58  file format:  .bin
+DDD: 2021-09-07 21:06:58  固件1 为BIN文件，显示其保存的Start Address
+III: 2021-09-07 21:06:58  保存当前设备的配置
+III: 2021-09-07 21:06:58  写 config/jlink_device_info.json 文件成功
+III: 2021-09-07 21:06:58  "\"/home/duapple/下载/JLink_Linux_V672d_x86_64/JLinkExe\" -CommandFile config/get_sn_log_cmd.txt -Log config/jlink_log.txt"
+III: 2021-09-07 21:06:58  
+DDD: 2021-09-07 21:06:58  设置连接方式： "SWD"
+DDD: 2021-09-07 21:06:58  固件1:  "/home/duapple/work/qt/JLink_Flash_GUI/JLink_Flash_GUI/build-JLink_Flash_GUI-Desktop_Qt_5_12_2_GCC_64bit-Debug/Z3_Humiture.bin"
+DDD: 2021-09-07 21:06:58  file format:  .bin
+DDD: 2021-09-07 21:06:58  已选择Bin文件
+DDD: 2021-09-07 21:06:58  file format:  .bin
+DDD: 2021-09-07 21:06:58  固件1 为BIN文件，显示其保存的Start Address
+III: 2021-09-07 21:06:58  保存当前设备的配置
+III: 2021-09-07 21:06:58  写 config/jlink_device_info.json 文件成功
+III: 2021-09-07 21:06:58  "\"/home/duapple/下载/JLink_Linux_V672d_x86_64/JLinkExe\" -CommandFile config/get_sn_log_cmd.txt -Log config/jlink_log.txt"
+III: 2021-09-07 21:06:58  
+DDD: 2021-09-07 21:06:58  设置连接方式： "SWD"
+DDD: 2021-09-07 21:06:58  固件1:  "/home/duapple/work/qt/JLink_Flash_GUI/JLink_Flash_GUI/build-JLink_Flash_GUI-Desktop_Qt_5_12_2_GCC_64bit-Debug/Z3_Humiture.bin"
+DDD: 2021-09-07 21:06:58  file format:  .bin
+DDD: 2021-09-07 21:06:58  已选择Bin文件
+DDD: 2021-09-07 21:06:58  file format:  .bin
+DDD: 2021-09-07 21:06:58  固件1 为BIN文件，显示其保存的Start Address
+III: 2021-09-07 21:06:58  保存当前设备的配置
+III: 2021-09-07 21:06:58  写 config/jlink_device_info.json 文件成功
+III: 2021-09-07 21:06:58  "\"/home/duapple/下载/JLink_Linux_V672d_x86_64/JLinkExe\" -CommandFile config/get_sn_log_cmd.txt -Log config/jlink_log.txt"
+III: 2021-09-07 21:06:58  
+DDD: 2021-09-07 21:06:58  设置连接方式： "SWD"
+DDD: 2021-09-07 21:06:58  固件1:  "/home/duapple/work/qt/JLink_Flash_GUI/JLink_Flash_GUI/build-JLink_Flash_GUI-Desktop_Qt_5_12_2_GCC_64bit-Debug/Z3_Humiture.bin"
+DDD: 2021-09-07 21:06:58  file format:  .bin
+DDD: 2021-09-07 21:06:58  已选择Bin文件
+DDD: 2021-09-07 21:06:58  file format:  .bin
+DDD: 2021-09-07 21:06:58  固件1 为BIN文件，显示其保存的Start Address
+III: 2021-09-07 21:06:59  保存当前设备的配置
+III: 2021-09-07 21:06:59  写 config/jlink_device_info.json 文件成功
+III: 2021-09-07 21:06:59  "\"/home/duapple/下载/JLink_Linux_V672d_x86_64/JLinkExe\" -CommandFile config/get_sn_log_cmd.txt -Log config/jlink_log.txt"
+III: 2021-09-07 21:06:59  
+DDD: 2021-09-07 21:06:59  设置连接方式： "SWD"
+DDD: 2021-09-07 21:06:59  固件1:  "/home/duapple/work/qt/JLink_Flash_GUI/JLink_Flash_GUI/build-JLink_Flash_GUI-Desktop_Qt_5_12_2_GCC_64bit-Debug/Z3_Humiture.bin"
+DDD: 2021-09-07 21:06:59  file format:  .bin
+DDD: 2021-09-07 21:06:59  已选择Bin文件
+DDD: 2021-09-07 21:06:59  file format:  .bin
+DDD: 2021-09-07 21:06:59  固件1 为BIN文件，显示其保存的Start Address
+III: 2021-09-07 21:07:10  保存当前设备的配置
+III: 2021-09-07 21:07:10  写 config/jlink_device_info.json 文件成功
+III: 2021-09-07 21:07:10  "\"/home/duapple/下载/JLink_Linux_V672d_x86_64/JLinkExe\" -CommandFile config/get_sn_log_cmd.txt -Log config/jlink_log.txt"
+III: 2021-09-07 21:07:10  
+DDD: 2021-09-07 21:07:10  设置连接方式： "SWD"
+DDD: 2021-09-07 21:07:10  固件1:  "/home/duapple/work/qt/JLink_Flash_GUI/JLink_Flash_GUI/build-JLink_Flash_GUI-Desktop_Qt_5_12_2_GCC_64bit-Debug/Z3_Humiture.bin"
+DDD: 2021-09-07 21:07:10  file format:  .bin
+DDD: 2021-09-07 21:07:10  已选择Bin文件
+DDD: 2021-09-07 21:07:10  file format:  .bin
+DDD: 2021-09-07 21:07:10  固件1 为BIN文件，显示其保存的Start Address
+III: 2021-09-07 21:07:13  保存当前设备的配置
+III: 2021-09-07 21:07:13  写 config/jlink_device_info.json 文件成功
+III: 2021-09-07 21:07:13  "\"/home/duapple/下载/JLink_Linux_V672d_x86_64/JLinkExe\" -CommandFile config/get_sn_log_cmd.txt -Log config/jlink_log.txt"
+III: 2021-09-07 21:07:13  
+DDD: 2021-09-07 21:07:13  设置连接方式： "SWD"
+DDD: 2021-09-07 21:07:13  固件1:  "/home/duapple/work/qt/JLink_Flash_GUI/JLink_Flash_GUI/build-JLink_Flash_GUI-Desktop_Qt_5_12_2_GCC_64bit-Debug/Z3_Humiture.bin"
+DDD: 2021-09-07 21:07:13  file format:  .bin
+DDD: 2021-09-07 21:07:13  已选择Bin文件
+DDD: 2021-09-07 21:07:13  file format:  .bin
+DDD: 2021-09-07 21:07:13  固件1 为BIN文件，显示其保存的Start Address
+III: 2021-09-07 21:07:13  保存当前设备的配置
+III: 2021-09-07 21:07:13  写 config/jlink_device_info.json 文件成功
+III: 2021-09-07 21:07:13  "\"/home/duapple/下载/JLink_Linux_V672d_x86_64/JLinkExe\" -CommandFile config/get_sn_log_cmd.txt -Log config/jlink_log.txt"
+III: 2021-09-07 21:07:13  
+DDD: 2021-09-07 21:07:13  设置连接方式： "SWD"
+DDD: 2021-09-07 21:07:13  固件1:  "/home/duapple/work/qt/JLink_Flash_GUI/JLink_Flash_GUI/build-JLink_Flash_GUI-Desktop_Qt_5_12_2_GCC_64bit-Debug/Z3_Humiture.bin"
+DDD: 2021-09-07 21:07:13  file format:  .bin
+DDD: 2021-09-07 21:07:13  已选择Bin文件
+DDD: 2021-09-07 21:07:13  file format:  .bin
+DDD: 2021-09-07 21:07:13  固件1 为BIN文件，显示其保存的Start Address
+III: 2021-09-07 21:07:14  保存当前设备的配置
+III: 2021-09-07 21:07:14  写 config/jlink_device_info.json 文件成功
+III: 2021-09-07 21:07:14  "\"/home/duapple/下载/JLink_Linux_V672d_x86_64/JLinkExe\" -CommandFile config/get_sn_log_cmd.txt -Log config/jlink_log.txt"
+III: 2021-09-07 21:07:14  
+DDD: 2021-09-07 21:07:14  设置连接方式： "SWD"
+DDD: 2021-09-07 21:07:14  固件1:  "/home/duapple/work/qt/JLink_Flash_GUI/JLink_Flash_GUI/build-JLink_Flash_GUI-Desktop_Qt_5_12_2_GCC_64bit-Debug/Z3_Humiture.bin"
+DDD: 2021-09-07 21:07:14  file format:  .bin
+DDD: 2021-09-07 21:07:14  已选择Bin文件
+DDD: 2021-09-07 21:07:14  file format:  .bin
+DDD: 2021-09-07 21:07:14  固件1 为BIN文件，显示其保存的Start Address
+III: 2021-09-07 21:07:35  写global config配置文件成功
+DDD: 2021-09-07 21:07:36  button:  QMessageBox::NoButton
+DDD: 2021-09-07 21:07:36  Program rebooting now
+DDD: 2021-09-07 21:07:36  保存成功，关闭JLink配置窗口
+DDD: 2021-09-07 21:07:36  存在固件记录
+DDD: 2021-09-07 21:07:36  存在固件记录
+DDD: 2021-09-07 21:07:36  存在固件记录
+DDD: 2021-09-07 21:07:36  jlink_cmd_path value:  "/home/duapple/下载/JLink_Linux_V672d_x86_64/JLinkExe"
+III: 2021-09-07 21:07:36  "\"/home/duapple/下载/JLink_Linux_V672d_x86_64/JLinkExe\" -CommandFile config/get_sn_log_cmd.txt -Log config/jlink_log.txt"
+III: 2021-09-07 21:07:36  
+DDD: 2021-09-07 21:07:36  设置连接方式： "SWD"
+DDD: 2021-09-07 21:07:36  固件1:  "/home/duapple/work/qt/JLink_Flash_GUI/JLink_Flash_GUI/build-JLink_Flash_GUI-Desktop_Qt_5_12_2_GCC_64bit-Debug/Z3_Humiture.bin"
+DDD: 2021-09-07 21:07:36  file format:  .bin
+DDD: 2021-09-07 21:07:36  已选择Bin文件
+DDD: 2021-09-07 21:07:36  file format:  .bin
+DDD: 2021-09-07 21:07:36  固件1 为BIN文件，显示其保存的Start Address
+III: 2021-09-07 21:07:36  选择擦除整个芯片
+DDD: 2021-09-07 21:07:36  dev sn count:  1
+DDD: 2021-09-07 21:08:01  file path: C:/Program Files (x86)/SEGGER/JLink/JLink.exe
+III: 2021-09-07 21:08:03  写global config配置文件成功
+DDD: 2021-09-07 21:08:04  保存成功，关闭JLink配置窗口
+III: 2021-09-07 21:08:09  保存当前设备的配置
+III: 2021-09-07 21:08:09  写 config/jlink_device_info.json 文件成功
+III: 2021-09-07 21:08:09  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" -CommandFile config/get_sn_log_cmd.txt -Log config/jlink_log.txt"
+III: 2021-09-07 21:08:09  SEGGER J-Link Commander V6.72d (Compiled May 15 2020 16:48:00)
+DLL version V6.72d, compiled May 15 2020 16:47:06
+
+
+J-Link Command File read successfully.
+Processing script file...
+
+J-Link[0]: Connection: USB, Serial number: 23521525, ProductName: SAM-ICE
+
+
+Script processing completed.
+
+
+III: 2021-09-07 21:08:18  保存当前设备的配置
+III: 2021-09-07 21:08:18  写 config/jlink_device_info.json 文件成功
+III: 2021-09-07 21:08:18  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" -CommandFile config/get_sn_log_cmd.txt -Log config/jlink_log.txt"
+III: 2021-09-07 21:08:18  SEGGER J-Link Commander V6.72d (Compiled May 15 2020 16:48:00)
+DLL version V6.72d, compiled May 15 2020 16:47:06
+
+
+J-Link Command File read successfully.
+Processing script file...
+
+J-Link[0]: Connection: USB, Serial number: 23521525, ProductName: SAM-ICE
+
+
+Script processing completed.
+
+
+DDD: 2021-09-07 21:08:18  设置连接方式： "SWD"
+DDD: 2021-09-07 21:08:18  固件1:  "/home/duapple/work/qt/JLink_Flash_GUI/JLink_Flash_GUI/build-JLink_Flash_GUI-Desktop_Qt_5_12_2_GCC_64bit-Debug/Z3_Humiture.bin"
+DDD: 2021-09-07 21:08:18  file format:  .bin
+DDD: 2021-09-07 21:08:18  已选择Bin文件
+DDD: 2021-09-07 21:08:18  file format:  .bin
+DDD: 2021-09-07 21:08:18  固件1 为BIN文件，显示其保存的Start Address
+III: 2021-09-07 21:08:27  保存当前设备的配置
+III: 2021-09-07 21:08:27  写 config/jlink_device_info.json 文件成功
+III: 2021-09-07 21:08:27  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" -CommandFile config/get_sn_log_cmd.txt -Log config/jlink_log.txt"
+III: 2021-09-07 21:08:27  SEGGER J-Link Commander V6.72d (Compiled May 15 2020 16:48:00)
+DLL version V6.72d, compiled May 15 2020 16:47:06
+
+
+J-Link Command File read successfully.
+Processing script file...
+
+J-Link[0]: Connection: USB, Serial number: 23521525, ProductName: SAM-ICE
+J-Link[1]: Connection: USB, Serial number: 29401025, ProductName: SAM-ICE
+
+
+Script processing completed.
+
+
+DDD: 2021-09-07 21:08:27  设置连接方式： "SWD"
+DDD: 2021-09-07 21:08:27  固件1:  "/home/duapple/work/qt/JLink_Flash_GUI/JLink_Flash_GUI/build-JLink_Flash_GUI-Desktop_Qt_5_12_2_GCC_64bit-Debug/Z3_Humiture.bin"
+DDD: 2021-09-07 21:08:27  file format:  .bin
+DDD: 2021-09-07 21:08:27  已选择Bin文件
+DDD: 2021-09-07 21:08:27  file format:  .bin
+DDD: 2021-09-07 21:08:27  固件1 为BIN文件，显示其保存的Start Address
+DDD: 2021-09-07 21:09:02  固件1:  "D:/Course/Nordic/nRF5_SDK_17.0.2_d674dde/components/softdevice/s140/hex/s140_nrf52_7.2.0_softdevice.hex"
+DDD: 2021-09-07 21:09:02  file format:  .hex
+DDD: 2021-09-07 21:09:02  已选择HEX文件
+DDD: 2021-09-07 21:09:02  out: 
+ 
+EEE: 2021-09-07 21:09:02  HEX文件错误，请检查HEX文件是否是标准HEX文件
+III: 2021-09-07 21:09:03  firmware1 selected:  "D:/Course/Nordic/nRF5_SDK_17.0.2_d674dde/components/softdevice/s140/hex/s140_nrf52_7.2.0_softdevice.hex"
+DDD: 2021-09-07 21:09:09  固件1:  "D:/Course/Nordic/nRF5_SDK_17.0.2_d674dde/components/softdevice/s140/hex/s140_nrf52_7.2.0_softdevice.hex"
+DDD: 2021-09-07 21:09:09  file format:  .hex
+DDD: 2021-09-07 21:09:09  已选择HEX文件
+DDD: 2021-09-07 21:09:09  out: 
+ 
+EEE: 2021-09-07 21:09:09  HEX文件错误，请检查HEX文件是否是标准HEX文件
+III: 2021-09-07 21:09:17  firmware1 selected:  "D:/Course/Nordic/nRF5_SDK_17.0.2_d674dde/components/softdevice/s140/hex/s140_nrf52_7.2.0_softdevice.hex"
+DDD: 2021-09-07 21:09:31  固件1:  "D:/Course/Nordic/nRF5_SDK_17.0.2_d674dde/components/softdevice/s140/hex/s140_nrf52_7.2.0_softdevice.hex"
+DDD: 2021-09-07 21:09:31  file format:  .hex
+DDD: 2021-09-07 21:09:31  已选择HEX文件
+DDD: 2021-09-07 21:09:31  out: 
+ 
+EEE: 2021-09-07 21:09:31  HEX文件错误，请检查HEX文件是否是标准HEX文件
+III: 2021-09-07 21:09:33  firmware1 selected:  "D:/Course/Nordic/nRF5_SDK_17.0.2_d674dde/components/softdevice/s140/hex/s140_nrf52_7.2.0_softdevice.hex"
+DDD: 2021-09-07 21:09:59  固件1:  "D:/Course/Nordic/nRF5_SDK_17.0.2_d674dde/components/softdevice/s140/hex/s140_nrf52_7.2.0_softdevice.hex"
+DDD: 2021-09-07 21:09:59  file format:  .hex
+DDD: 2021-09-07 21:09:59  已选择HEX文件
+DDD: 2021-09-07 21:09:59  out: 
  Format: Intel Hexadecimal (MCS-86)
 Data:   000000 - 000AFF
         001000 - 026633
-        027000 - 0301A7
-        0380C0 - 048927
 
-Debug:  2021-06-14 22:39:26  data: 
+DDD: 2021-09-07 21:09:59  data: 
  Data:   000000 - 000AFF
         001000 - 026633
-        027000 - 0301A7
-        0380C0 - 048927
 
-Debug:  2021-06-14 22:39:26  start addr:  000000 ,  end_addr:  000AFF
-Debug:  2021-06-14 22:39:26  jlinkArgs.file_start_addr:  000000 jlinkArgs.file_end_addr:  000AFF
-Info:   2021-06-14 22:39:26  保存当前设备的配置
-Info:   2021-06-14 22:39:26  写 config/jlink_device_info.json 文件成功
-Debug:  2021-06-14 22:39:26  file format:  .hex
-Debug:  2021-06-14 22:39:31  fw file2 changed
-Debug:  2021-06-14 22:39:33  jlink_cmd_path value:  "C:/Program Files (x86)/SEGGER/JLink/JLink.exe"
-Debug:  2021-06-14 22:39:33  dev sn count:  0
-Debug:  2021-06-14 22:39:33  设置连接方式： "SWD"
-Debug:  2021-06-14 22:39:33  file format:  .hex
-Debug:  2021-06-14 22:39:33  已选择HEX文件
-Debug:  2021-06-14 22:39:33  out: 
+DDD: 2021-09-07 21:09:59  start addr:  000000 ,  end_addr:  000AFF
+DDD: 2021-09-07 21:09:59  jlinkArgs.file_start_addr:  000000 jlinkArgs.file_end_addr:  000AFF
+III: 2021-09-07 21:09:59  firmware1 selected:  "D:/Course/Nordic/nRF5_SDK_17.0.2_d674dde/components/softdevice/s140/hex/s140_nrf52_7.2.0_softdevice.hex"
+DDD: 2021-09-07 21:11:23  固件1:  "D:/Course/Nordic/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_uart/pca10056/s140/arm5_no_packs/ble_app_uart_pca10056_s140.uvprojx"
+DDD: 2021-09-07 21:11:23  file format:  .uvprojx
+EEE: 2021-09-07 21:11:23  文件格式不正确，请检查
+III: 2021-09-07 21:11:23  firmware1 selected:  "D:/Course/Nordic/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_uart/pca10056/s140/arm5_no_packs/ble_app_uart_pca10056_s140.uvprojx"
+III: 2021-09-07 21:11:28  firmware1 selected:  ""
+DDD: 2021-09-07 21:11:33  回车按下，检测固件格式是否正确
+DDD: 2021-09-07 21:11:33  当前聚焦于固件1输入框
+DDD: 2021-09-07 21:11:33  固件1:  "D:/Course/Nordic/nRF5_SDK_17.0.2_d674dde/components/softdevice/s140/hex/s140_nrf52_7.2.0_softdevice.hex"
+DDD: 2021-09-07 21:11:33  file format:  .hex
+DDD: 2021-09-07 21:11:33  已选择HEX文件
+DDD: 2021-09-07 21:11:33  out: 
  Format: Intel Hexadecimal (MCS-86)
 Data:   000000 - 000AFF
         001000 - 026633
-        027000 - 0301A7
-        0380C0 - 048927
 
-Debug:  2021-06-14 22:39:33  data: 
+DDD: 2021-09-07 21:11:33  data: 
  Data:   000000 - 000AFF
         001000 - 026633
-        027000 - 0301A7
-        0380C0 - 048927
 
-Debug:  2021-06-14 22:39:33  start addr:  000000 ,  end_addr:  000AFF
-Debug:  2021-06-14 22:39:33  jlinkArgs.file_start_addr:  000000 jlinkArgs.file_end_addr:  000AFF
-Info:   2021-06-14 22:39:33  保存当前设备的配置
-Info:   2021-06-14 22:39:33  写 config/jlink_device_info.json 文件成功
-Debug:  2021-06-14 22:39:33  file format:  .hex
-Debug:  2021-06-14 22:40:54  jlink_cmd_path value:  "C:/Program Files (x86)/SEGGER/JLink/JLink.exe"
-Debug:  2021-06-14 22:40:54  dev sn count:  0
-Debug:  2021-06-14 22:40:54  设置连接方式： "SWD"
-Debug:  2021-06-14 22:40:54  file format:  .hex
-Debug:  2021-06-14 22:40:54  已选择HEX文件
-Debug:  2021-06-14 22:40:54  out: 
+DDD: 2021-09-07 21:11:33  start addr:  000000 ,  end_addr:  000AFF
+DDD: 2021-09-07 21:11:33  jlinkArgs.file_start_addr:  000000 jlinkArgs.file_end_addr:  000AFF
+DDD: 2021-09-07 21:11:38  清除log
+DDD: 2021-09-07 21:11:39  清除log
+DDD: 2021-09-07 21:11:42  回车按下，检测固件格式是否正确
+DDD: 2021-09-07 21:11:42  当前聚焦于固件1输入框
+DDD: 2021-09-07 21:11:42  固件1:  "/home/duapple/work/qt/JLink_Flash_GUI/JLink_Flash_GUI/build-JLink_Flash_GUI-Desktop_Qt_5_12_2_GCC_64bit-Debug/Z3_Humiture.bin"
+DDD: 2021-09-07 21:11:42  file format:  .bin
+DDD: 2021-09-07 21:11:42  已选择Bin文件
+DDD: 2021-09-07 21:11:44  回车按下，检测固件格式是否正确
+DDD: 2021-09-07 21:11:44  当前聚焦于固件1输入框
+DDD: 2021-09-07 21:11:44  固件1:  "D:/Course/Nordic/nRF5_SDK_17.0.2_d674dde/components/softdevice/s140/hex/s140_nrf52_7.2.0_softdevice.hex"
+DDD: 2021-09-07 21:11:44  file format:  .hex
+DDD: 2021-09-07 21:11:44  已选择HEX文件
+DDD: 2021-09-07 21:11:45  out: 
  Format: Intel Hexadecimal (MCS-86)
 Data:   000000 - 000AFF
         001000 - 026633
-        027000 - 0301A7
-        0380C0 - 048927
 
-Debug:  2021-06-14 22:40:54  data: 
+DDD: 2021-09-07 21:11:45  data: 
  Data:   000000 - 000AFF
         001000 - 026633
-        027000 - 0301A7
-        0380C0 - 048927
 
-Debug:  2021-06-14 22:40:54  start addr:  000000 ,  end_addr:  000AFF
-Debug:  2021-06-14 22:40:54  jlinkArgs.file_start_addr:  000000 jlinkArgs.file_end_addr:  000AFF
-Info:   2021-06-14 22:40:54  保存当前设备的配置
-Info:   2021-06-14 22:40:54  写 config/jlink_device_info.json 文件成功
-Debug:  2021-06-14 22:40:54  file format:  .hex
-Info:   2021-06-14 22:41:10  写global config配置文件成功
-Debug:  2021-06-14 22:41:12  保存成功，关闭JLink配置窗口
-Debug:  2021-06-14 22:41:14  Select connect type is SWD
-Debug:  2021-06-14 22:41:14  file format:  .hex
-Debug:  2021-06-14 22:41:14  file format:  .hex
-Debug:  2021-06-14 22:41:14  firmware2 不存在
-Debug:  2021-06-14 22:41:14  firmware3 不存在
-Error:  2021-06-14 22:41:14  "C:/Program Files (x86)/SEGGER/JLink1/JLink.exe"  路径不存在
-Info:   2021-06-14 22:41:23  写global config配置文件成功
-Debug:  2021-06-14 22:41:24  保存成功，关闭JLink配置窗口
-Debug:  2021-06-14 22:41:24  Select connect type is SWD
-Debug:  2021-06-14 22:41:24  file format:  .hex
-Debug:  2021-06-14 22:41:24  file format:  .hex
-Debug:  2021-06-14 22:41:24  firmware2 不存在
-Debug:  2021-06-14 22:41:24  firmware3 不存在
-Info:   2021-06-14 22:41:24  exec cmd:  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" config/flush_config.txt"
-Info:   2021-06-14 22:41:25  保存当前设备的配置
-Info:   2021-06-14 22:41:25  写 config/jlink_device_info.json 文件成功
+DDD: 2021-09-07 21:11:45  start addr:  000000 ,  end_addr:  000AFF
+DDD: 2021-09-07 21:11:45  jlinkArgs.file_start_addr:  000000 jlinkArgs.file_end_addr:  000AFF
+III: 2021-09-07 21:11:50  保存当前设备的配置
+III: 2021-09-07 21:11:50  写 config/jlink_device_info.json 文件成功
+III: 2021-09-07 21:11:50  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" -CommandFile config/get_sn_log_cmd.txt -Log config/jlink_log.txt"
+III: 2021-09-07 21:11:50  SEGGER J-Link Commander V6.72d (Compiled May 15 2020 16:48:00)
+DLL version V6.72d, compiled May 15 2020 16:47:06
+
+
+J-Link Command File read successfully.
+Processing script file...
+
+J-Link[0]: Connection: USB, Serial number: 23521525, ProductName: SAM-ICE
+J-Link[1]: Connection: USB, Serial number: 29401025, ProductName: SAM-ICE
+
+
+Script processing completed.
+
+
+DDD: 2021-09-07 21:11:50  设置连接方式： "SWD"
+DDD: 2021-09-07 21:11:50  固件1:  "D:/Course/Nordic/nRF5_SDK_17.0.2_d674dde/components/softdevice/s140/hex/s140_nrf52_7.2.0_softdevice.hex"
+DDD: 2021-09-07 21:11:50  file format:  .hex
+DDD: 2021-09-07 21:11:50  已选择HEX文件
+DDD: 2021-09-07 21:11:50  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:11:50  data: 
+ Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:11:50  start addr:  000000 ,  end_addr:  000AFF
+DDD: 2021-09-07 21:11:50  jlinkArgs.file_start_addr:  000000 jlinkArgs.file_end_addr:  000AFF
+DDD: 2021-09-07 21:11:50  file format:  .hex
+III: 2021-09-07 21:11:55  保存当前设备的配置
+III: 2021-09-07 21:11:55  写 config/jlink_device_info.json 文件成功
+III: 2021-09-07 21:11:55  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" -CommandFile config/get_sn_log_cmd.txt -Log config/jlink_log.txt"
+III: 2021-09-07 21:11:55  SEGGER J-Link Commander V6.72d (Compiled May 15 2020 16:48:00)
+DLL version V6.72d, compiled May 15 2020 16:47:06
+
+
+J-Link Command File read successfully.
+Processing script file...
+
+J-Link[0]: Connection: USB, Serial number: 23521525, ProductName: SAM-ICE
+J-Link[1]: Connection: USB, Serial number: 29401025, ProductName: SAM-ICE
+
+
+Script processing completed.
+
+
+DDD: 2021-09-07 21:11:55  设置连接方式： "SWD"
+DDD: 2021-09-07 21:11:55  固件1:  "D:/Course/Nordic/nRF5_SDK_17.0.2_d674dde/components/softdevice/s140/hex/s140_nrf52_7.2.0_softdevice.hex"
+DDD: 2021-09-07 21:11:55  file format:  .hex
+DDD: 2021-09-07 21:11:55  已选择HEX文件
+DDD: 2021-09-07 21:11:55  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:11:55  data: 
+ Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:11:55  start addr:  000000 ,  end_addr:  000AFF
+DDD: 2021-09-07 21:11:55  jlinkArgs.file_start_addr:  000000 jlinkArgs.file_end_addr:  000AFF
+DDD: 2021-09-07 21:11:55  file format:  .hex
+III: 2021-09-07 21:11:59  保存当前设备的配置
+III: 2021-09-07 21:11:59  写 config/jlink_device_info.json 文件成功
+III: 2021-09-07 21:11:59  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" -CommandFile config/get_sn_log_cmd.txt -Log config/jlink_log.txt"
+III: 2021-09-07 21:11:59  SEGGER J-Link Commander V6.72d (Compiled May 15 2020 16:48:00)
+DLL version V6.72d, compiled May 15 2020 16:47:06
+
+
+J-Link Command File read successfully.
+Processing script file...
+
+J-Link[0]: Connection: USB, Serial number: 23521525, ProductName: SAM-ICE
+J-Link[1]: Connection: USB, Serial number: 29401025, ProductName: SAM-ICE
+
+
+Script processing completed.
+
+
+DDD: 2021-09-07 21:11:59  设置连接方式： "SWD"
+DDD: 2021-09-07 21:11:59  固件1:  "D:/Course/Nordic/nRF5_SDK_17.0.2_d674dde/components/softdevice/s140/hex/s140_nrf52_7.2.0_softdevice.hex"
+DDD: 2021-09-07 21:11:59  file format:  .hex
+DDD: 2021-09-07 21:11:59  已选择HEX文件
+DDD: 2021-09-07 21:11:59  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:11:59  data: 
+ Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:11:59  start addr:  000000 ,  end_addr:  000AFF
+DDD: 2021-09-07 21:11:59  jlinkArgs.file_start_addr:  000000 jlinkArgs.file_end_addr:  000AFF
+DDD: 2021-09-07 21:11:59  file format:  .hex
+III: 2021-09-07 21:12:03  保存当前设备的配置
+III: 2021-09-07 21:12:03  写 config/jlink_device_info.json 文件成功
+III: 2021-09-07 21:12:03  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" -CommandFile config/get_sn_log_cmd.txt -Log config/jlink_log.txt"
+III: 2021-09-07 21:12:03  SEGGER J-Link Commander V6.72d (Compiled May 15 2020 16:48:00)
+DLL version V6.72d, compiled May 15 2020 16:47:06
+
+
+J-Link Command File read successfully.
+Processing script file...
+
+J-Link[0]: Connection: USB, Serial number: 23521525, ProductName: SAM-ICE
+J-Link[1]: Connection: USB, Serial number: 29401025, ProductName: SAM-ICE
+
+
+Script processing completed.
+
+
+DDD: 2021-09-07 21:12:03  设置连接方式： "SWD"
+DDD: 2021-09-07 21:12:03  固件1:  "D:/Course/Nordic/nRF5_SDK_17.0.2_d674dde/components/softdevice/s140/hex/s140_nrf52_7.2.0_softdevice.hex"
+DDD: 2021-09-07 21:12:03  file format:  .hex
+DDD: 2021-09-07 21:12:03  已选择HEX文件
+DDD: 2021-09-07 21:12:03  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:12:03  data: 
+ Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:12:03  start addr:  000000 ,  end_addr:  000AFF
+DDD: 2021-09-07 21:12:03  jlinkArgs.file_start_addr:  000000 jlinkArgs.file_end_addr:  000AFF
+DDD: 2021-09-07 21:12:03  file format:  .hex
+DDD: 2021-09-07 21:12:05  设置连接方式： "SWD"
+DDD: 2021-09-07 21:12:05  固件1:  "/home/duapple/work/qt/JLink_Flash_GUI/JLink_Flash_GUI/build-JLink_Flash_GUI-Desktop_Qt_5_12_2_GCC_64bit-Debug/Z3_Humiture.bin"
+DDD: 2021-09-07 21:12:05  file format:  .bin
+DDD: 2021-09-07 21:12:05  已选择Bin文件
+DDD: 2021-09-07 21:12:05  file format:  .bin
+DDD: 2021-09-07 21:12:05  固件1 为BIN文件，显示其保存的Start Address
+DDD: 2021-09-07 21:12:05  设置连接方式： "SWD"
+DDD: 2021-09-07 21:12:05  固件1:  "D:/Course/Nordic/nRF5_SDK_17.0.2_d674dde/components/softdevice/s140/hex/s140_nrf52_7.2.0_softdevice.hex"
+DDD: 2021-09-07 21:12:05  file format:  .hex
+DDD: 2021-09-07 21:12:05  已选择HEX文件
+DDD: 2021-09-07 21:12:06  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:12:06  data: 
+ Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:12:06  start addr:  000000 ,  end_addr:  000AFF
+DDD: 2021-09-07 21:12:06  jlinkArgs.file_start_addr:  000000 jlinkArgs.file_end_addr:  000AFF
+DDD: 2021-09-07 21:12:06  file format:  .hex
+DDD: 2021-09-07 21:14:15  固件1:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/script/s140_nrf52_7.2.0_softdevice.hex"
+DDD: 2021-09-07 21:14:15  file format:  .hex
+DDD: 2021-09-07 21:14:15  已选择HEX文件
+DDD: 2021-09-07 21:14:15  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:14:15  data: 
+ Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:14:15  start addr:  000000 ,  end_addr:  000AFF
+DDD: 2021-09-07 21:14:15  jlinkArgs.file_start_addr:  000000 jlinkArgs.file_end_addr:  000AFF
+III: 2021-09-07 21:14:15  firmware1 selected:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/script/s140_nrf52_7.2.0_softdevice.hex"
+DDD: 2021-09-07 21:14:19  file format:  .hex
+DDD: 2021-09-07 21:14:19  已选择HEX文件
+DDD: 2021-09-07 21:14:19  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Execution Start Address: 00027201
+Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:14:19  data: 
+ Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:14:19  start addr:  027000 ,  end_addr:  0301A7
+DDD: 2021-09-07 21:14:19  jlinkArgs.file2_start_addr:  027000 jlinkArgs.file2_end_addr:  0301A7
+III: 2021-09-07 21:14:19  firmware2 selected:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/script/bootloader_52840.hex"
+DDD: 2021-09-07 21:14:41  filename:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.hex"
+DDD: 2021-09-07 21:14:41  file format:  .hex
+DDD: 2021-09-07 21:14:41  已选择HEX文件
+DDD: 2021-09-07 21:14:41  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   0380C0 - 048927
+
+DDD: 2021-09-07 21:14:41  data: 
+ Data:   0380C0 - 048927
+
+DDD: 2021-09-07 21:14:41  start addr:  0380C0 ,  end_addr:  048927
+DDD: 2021-09-07 21:14:41  jlinkArgs.file3_start_addr:  0380C0 jlinkArgs.file3_end_addr:  048927
+III: 2021-09-07 21:14:41  firmware3 selected:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.hex"
+DDD: 2021-09-07 21:14:44  设置连接方式： "SWD"
+DDD: 2021-09-07 21:14:44  固件1:  "/home/duapple/work/qt/JLink_Flash_GUI/JLink_Flash_GUI/build-JLink_Flash_GUI-Desktop_Qt_5_12_2_GCC_64bit-Debug/Z3_Humiture.bin"
+DDD: 2021-09-07 21:14:44  file format:  .bin
+DDD: 2021-09-07 21:14:44  已选择Bin文件
+DDD: 2021-09-07 21:14:44  file format:  .bin
+DDD: 2021-09-07 21:14:44  固件1 为BIN文件，显示其保存的Start Address
+DDD: 2021-09-07 21:14:44  file format:  .hex
+DDD: 2021-09-07 21:14:44  已选择HEX文件
+DDD: 2021-09-07 21:14:44  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Execution Start Address: 00027201
+Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:14:44  data: 
+ Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:14:44  start addr:  027000 ,  end_addr:  0301A7
+DDD: 2021-09-07 21:14:44  jlinkArgs.file2_start_addr:  027000 jlinkArgs.file2_end_addr:  0301A7
+DDD: 2021-09-07 21:14:44  filename:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.hex"
+DDD: 2021-09-07 21:14:44  file format:  .hex
+DDD: 2021-09-07 21:14:44  已选择HEX文件
+DDD: 2021-09-07 21:14:44  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   0380C0 - 048927
+
+DDD: 2021-09-07 21:14:44  data: 
+ Data:   0380C0 - 048927
+
+DDD: 2021-09-07 21:14:44  start addr:  0380C0 ,  end_addr:  048927
+DDD: 2021-09-07 21:14:44  jlinkArgs.file3_start_addr:  0380C0 jlinkArgs.file3_end_addr:  048927
+DDD: 2021-09-07 21:14:59  存在固件记录
+DDD: 2021-09-07 21:14:59  存在固件记录
+DDD: 2021-09-07 21:14:59  存在固件记录
+DDD: 2021-09-07 21:14:59  jlink_cmd_path value:  "C:/Program Files (x86)/SEGGER/JLink/JLink.exe"
+III: 2021-09-07 21:14:59  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" -CommandFile config/get_sn_log_cmd.txt -Log config/jlink_log.txt"
+III: 2021-09-07 21:14:59  SEGGER J-Link Commander V6.72d (Compiled May 15 2020 16:48:00)
+DLL version V6.72d, compiled May 15 2020 16:47:06
+
+
+J-Link Command File read successfully.
+Processing script file...
+
+J-Link[0]: Connection: USB, Serial number: 23521525, ProductName: SAM-ICE
+J-Link[1]: Connection: USB, Serial number: 29401025, ProductName: SAM-ICE
+
+
+Script processing completed.
+
+
+DDD: 2021-09-07 21:14:59  设置连接方式： "SWD"
+DDD: 2021-09-07 21:14:59  固件1:  "D:/Course/Nordic/nRF5_SDK_17.0.2_d674dde/components/softdevice/s140/hex/s140_nrf52_7.2.0_softdevice.hex"
+DDD: 2021-09-07 21:14:59  file format:  .hex
+DDD: 2021-09-07 21:14:59  已选择HEX文件
+DDD: 2021-09-07 21:15:00  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:15:00  data: 
+ Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:15:00  start addr:  000000 ,  end_addr:  000AFF
+DDD: 2021-09-07 21:15:00  jlinkArgs.file_start_addr:  000000 jlinkArgs.file_end_addr:  000AFF
+DDD: 2021-09-07 21:15:00  file format:  .hex
+III: 2021-09-07 21:15:00  选择擦除整个芯片
+DDD: 2021-09-07 21:15:00  dev sn count:  2
+DDD: 2021-09-07 21:15:04  设置连接方式： "SWD"
+DDD: 2021-09-07 21:15:04  固件1:  "/home/duapple/work/qt/JLink_Flash_GUI/JLink_Flash_GUI/build-JLink_Flash_GUI-Desktop_Qt_5_12_2_GCC_64bit-Debug/Z3_Humiture.bin"
+DDD: 2021-09-07 21:15:04  file format:  .bin
+DDD: 2021-09-07 21:15:04  已选择Bin文件
+DDD: 2021-09-07 21:15:04  file format:  .bin
+DDD: 2021-09-07 21:15:04  固件1 为BIN文件，显示其保存的Start Address
+DDD: 2021-09-07 21:15:18  固件1:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/script/s140_nrf52_7.2.0_softdevice.hex"
+DDD: 2021-09-07 21:15:18  file format:  .hex
+DDD: 2021-09-07 21:15:18  已选择HEX文件
+DDD: 2021-09-07 21:15:18  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:15:18  data: 
+ Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:15:18  start addr:  000000 ,  end_addr:  000AFF
+DDD: 2021-09-07 21:15:18  jlinkArgs.file_start_addr:  000000 jlinkArgs.file_end_addr:  000AFF
+III: 2021-09-07 21:15:18  firmware1 selected:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/script/s140_nrf52_7.2.0_softdevice.hex"
+DDD: 2021-09-07 21:15:21  file format:  .hex
+DDD: 2021-09-07 21:15:21  已选择HEX文件
+DDD: 2021-09-07 21:15:21  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Execution Start Address: 00027201
+Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:15:21  data: 
+ Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:15:21  start addr:  027000 ,  end_addr:  0301A7
+DDD: 2021-09-07 21:15:21  jlinkArgs.file2_start_addr:  027000 jlinkArgs.file2_end_addr:  0301A7
+III: 2021-09-07 21:15:21  firmware2 selected:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/script/bootloader_52840.hex"
+DDD: 2021-09-07 21:15:33  filename:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.hex"
+DDD: 2021-09-07 21:15:33  file format:  .hex
+DDD: 2021-09-07 21:15:33  已选择HEX文件
+DDD: 2021-09-07 21:15:33  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   0380C0 - 048927
+
+DDD: 2021-09-07 21:15:33  data: 
+ Data:   0380C0 - 048927
+
+DDD: 2021-09-07 21:15:33  start addr:  0380C0 ,  end_addr:  048927
+DDD: 2021-09-07 21:15:33  jlinkArgs.file3_start_addr:  0380C0 jlinkArgs.file3_end_addr:  048927
+III: 2021-09-07 21:15:33  firmware3 selected:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.hex"
+III: 2021-09-07 21:15:34  保存当前设备的配置
+III: 2021-09-07 21:15:34  写 config/jlink_device_info.json 文件成功
+III: 2021-09-07 21:15:34  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" -CommandFile config/get_sn_log_cmd.txt -Log config/jlink_log.txt"
+III: 2021-09-07 21:15:34  SEGGER J-Link Commander V6.72d (Compiled May 15 2020 16:48:00)
+DLL version V6.72d, compiled May 15 2020 16:47:06
+
+
+J-Link Command File read successfully.
+Processing script file...
+
+J-Link[0]: Connection: USB, Serial number: 23521525, ProductName: SAM-ICE
+J-Link[1]: Connection: USB, Serial number: 29401025, ProductName: SAM-ICE
+
+
+Script processing completed.
+
+
+DDD: 2021-09-07 21:15:34  设置连接方式： "SWD"
+DDD: 2021-09-07 21:15:34  固件1:  "D:/Course/Nordic/nRF5_SDK_17.0.2_d674dde/components/softdevice/s140/hex/s140_nrf52_7.2.0_softdevice.hex"
+DDD: 2021-09-07 21:15:34  file format:  .hex
+DDD: 2021-09-07 21:15:34  已选择HEX文件
+DDD: 2021-09-07 21:15:34  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:15:34  data: 
+ Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:15:34  start addr:  000000 ,  end_addr:  000AFF
+DDD: 2021-09-07 21:15:34  jlinkArgs.file_start_addr:  000000 jlinkArgs.file_end_addr:  000AFF
+DDD: 2021-09-07 21:15:34  file format:  .hex
+DDD: 2021-09-07 21:15:34  file format:  .hex
+DDD: 2021-09-07 21:15:34  已选择HEX文件
+DDD: 2021-09-07 21:15:34  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Execution Start Address: 00027201
+Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:15:34  data: 
+ Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:15:34  start addr:  027000 ,  end_addr:  0301A7
+DDD: 2021-09-07 21:15:34  jlinkArgs.file2_start_addr:  027000 jlinkArgs.file2_end_addr:  0301A7
+DDD: 2021-09-07 21:15:34  filename:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.hex"
+DDD: 2021-09-07 21:15:34  file format:  .hex
+DDD: 2021-09-07 21:15:34  已选择HEX文件
+DDD: 2021-09-07 21:15:34  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   0380C0 - 048927
+
+DDD: 2021-09-07 21:15:34  data: 
+ Data:   0380C0 - 048927
+
+DDD: 2021-09-07 21:15:34  start addr:  0380C0 ,  end_addr:  048927
+DDD: 2021-09-07 21:15:34  jlinkArgs.file3_start_addr:  0380C0 jlinkArgs.file3_end_addr:  048927
+DDD: 2021-09-07 21:15:37  设置连接方式： "SWD"
+DDD: 2021-09-07 21:15:37  固件1:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/script/s140_nrf52_7.2.0_softdevice.hex"
+DDD: 2021-09-07 21:15:37  file format:  .hex
+DDD: 2021-09-07 21:15:37  已选择HEX文件
+DDD: 2021-09-07 21:15:37  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:15:37  data: 
+ Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:15:37  start addr:  000000 ,  end_addr:  000AFF
+DDD: 2021-09-07 21:15:37  jlinkArgs.file_start_addr:  000000 jlinkArgs.file_end_addr:  000AFF
+DDD: 2021-09-07 21:15:37  file format:  .hex
+DDD: 2021-09-07 21:15:37  file format:  .hex
+DDD: 2021-09-07 21:15:37  已选择HEX文件
+DDD: 2021-09-07 21:15:37  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Execution Start Address: 00027201
+Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:15:37  data: 
+ Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:15:37  start addr:  027000 ,  end_addr:  0301A7
+DDD: 2021-09-07 21:15:37  jlinkArgs.file2_start_addr:  027000 jlinkArgs.file2_end_addr:  0301A7
+DDD: 2021-09-07 21:15:37  file format:  .hex
+DDD: 2021-09-07 21:15:37  filename:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.hex"
+DDD: 2021-09-07 21:15:37  file format:  .hex
+DDD: 2021-09-07 21:15:37  已选择HEX文件
+DDD: 2021-09-07 21:15:37  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   0380C0 - 048927
+
+DDD: 2021-09-07 21:15:37  data: 
+ Data:   0380C0 - 048927
+
+DDD: 2021-09-07 21:15:37  start addr:  0380C0 ,  end_addr:  048927
+DDD: 2021-09-07 21:15:37  jlinkArgs.file3_start_addr:  0380C0 jlinkArgs.file3_end_addr:  048927
+DDD: 2021-09-07 21:15:37  file format:  .hex
+III: 2021-09-07 21:15:48  exec cmd:  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" config/erase_config.txt"
+DDD: 2021-09-07 21:18:01  存在固件记录
+DDD: 2021-09-07 21:18:01  存在固件记录
+DDD: 2021-09-07 21:18:01  存在固件记录
+DDD: 2021-09-07 21:18:01  jlink_cmd_path value:  "C:/Program Files (x86)/SEGGER/JLink/JLink.exe"
+III: 2021-09-07 21:18:01  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" -CommandFile config/get_sn_log_cmd.txt -Log config/jlink_log.txt"
+III: 2021-09-07 21:18:01  SEGGER J-Link Commander V6.72d (Compiled May 15 2020 16:48:00)
+DLL version V6.72d, compiled May 15 2020 16:47:06
+
+
+J-Link Command File read successfully.
+Processing script file...
+
+J-Link[0]: Connection: USB, Serial number: 23521525, ProductName: SAM-ICE
+J-Link[1]: Connection: USB, Serial number: 29401025, ProductName: SAM-ICE
+
+
+Script processing completed.
+
+
+DDD: 2021-09-07 21:18:01  设置连接方式： "SWD"
+DDD: 2021-09-07 21:18:01  固件1:  "D:/Course/Nordic/nRF5_SDK_17.0.2_d674dde/components/softdevice/s140/hex/s140_nrf52_7.2.0_softdevice.hex"
+DDD: 2021-09-07 21:18:01  file format:  .hex
+DDD: 2021-09-07 21:18:01  已选择HEX文件
+DDD: 2021-09-07 21:18:01  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:18:01  data: 
+ Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:18:01  start addr:  000000 ,  end_addr:  000AFF
+DDD: 2021-09-07 21:18:01  jlinkArgs.file_start_addr:  000000 jlinkArgs.file_end_addr:  000AFF
+DDD: 2021-09-07 21:18:01  file format:  .hex
+III: 2021-09-07 21:18:01  选择擦除整个芯片
+DDD: 2021-09-07 21:18:01  dev sn count:  2
+DDD: 2021-09-07 21:18:01  设置连接方式： "SWD"
+DDD: 2021-09-07 21:18:01  固件1:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/script/s140_nrf52_7.2.0_softdevice.hex"
+DDD: 2021-09-07 21:18:01  file format:  .hex
+DDD: 2021-09-07 21:18:02  已选择HEX文件
+DDD: 2021-09-07 21:18:02  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:18:02  data: 
+ Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:18:02  start addr:  000000 ,  end_addr:  000AFF
+DDD: 2021-09-07 21:18:02  jlinkArgs.file_start_addr:  000000 jlinkArgs.file_end_addr:  000AFF
+DDD: 2021-09-07 21:18:02  file format:  .hex
+DDD: 2021-09-07 21:18:02  file format:  .hex
+DDD: 2021-09-07 21:18:02  已选择HEX文件
+DDD: 2021-09-07 21:18:02  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Execution Start Address: 00027201
+Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:18:02  data: 
+ Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:18:02  start addr:  027000 ,  end_addr:  0301A7
+DDD: 2021-09-07 21:18:02  jlinkArgs.file2_start_addr:  027000 jlinkArgs.file2_end_addr:  0301A7
+DDD: 2021-09-07 21:18:02  file format:  .hex
+DDD: 2021-09-07 21:18:02  filename:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.hex"
+DDD: 2021-09-07 21:18:02  file format:  .hex
+DDD: 2021-09-07 21:18:02  已选择HEX文件
+DDD: 2021-09-07 21:18:02  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   0380C0 - 048927
+
+DDD: 2021-09-07 21:18:02  data: 
+ Data:   0380C0 - 048927
+
+DDD: 2021-09-07 21:18:02  start addr:  0380C0 ,  end_addr:  048927
+DDD: 2021-09-07 21:18:02  jlinkArgs.file3_start_addr:  0380C0 jlinkArgs.file3_end_addr:  048927
+DDD: 2021-09-07 21:18:02  file format:  .hex
+III: 2021-09-07 21:18:05  exec cmd:  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" config/erase_config.txt"
+DDD: 2021-09-07 21:18:07  固件1:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/script/s140_nrf52_7.2.0_softdevice.hex"
+DDD: 2021-09-07 21:18:07  file format:  .hex
+DDD: 2021-09-07 21:18:07  已选择HEX文件
+DDD: 2021-09-07 21:18:07  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:18:07  data: 
+ Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:18:07  start addr:  000000 ,  end_addr:  000AFF
+DDD: 2021-09-07 21:18:07  jlinkArgs.file_start_addr:  000000 jlinkArgs.file_end_addr:  000AFF
+DDD: 2021-09-07 21:18:07  file format:  .hex
+DDD: 2021-09-07 21:18:07  已选择HEX文件
+DDD: 2021-09-07 21:18:07  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Execution Start Address: 00027201
+Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:18:07  data: 
+ Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:18:07  start addr:  027000 ,  end_addr:  0301A7
+DDD: 2021-09-07 21:18:07  jlinkArgs.file2_start_addr:  027000 jlinkArgs.file2_end_addr:  0301A7
+DDD: 2021-09-07 21:18:07  filename:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.hex"
+DDD: 2021-09-07 21:18:07  file format:  .hex
+DDD: 2021-09-07 21:18:07  已选择HEX文件
+DDD: 2021-09-07 21:18:07  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   0380C0 - 048927
+
+DDD: 2021-09-07 21:18:07  data: 
+ Data:   0380C0 - 048927
+
+DDD: 2021-09-07 21:18:07  start addr:  0380C0 ,  end_addr:  048927
+DDD: 2021-09-07 21:18:07  jlinkArgs.file3_start_addr:  0380C0 jlinkArgs.file3_end_addr:  048927
+DDD: 2021-09-07 21:18:07  file format:  .hex
+DDD: 2021-09-07 21:18:07  load_file2 存在
+DDD: 2021-09-07 21:18:07  file format:  .hex
+DDD: 2021-09-07 21:18:07  file format:  .hex
+DDD: 2021-09-07 21:18:07  file format:  .hex
+DDD: 2021-09-07 21:18:07  file format:  .hex
+DDD: 2021-09-07 21:18:07  file format:  .hex
+III: 2021-09-07 21:18:07  exec cmd:  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" config/flush_config.txt"
+DDD: 2021-09-07 21:18:54  存在固件记录
+DDD: 2021-09-07 21:18:54  存在固件记录
+DDD: 2021-09-07 21:18:54  存在固件记录
+DDD: 2021-09-07 21:18:54  jlink_cmd_path value:  "C:/Program Files (x86)/SEGGER/JLink/JLink.exe"
+III: 2021-09-07 21:18:54  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" -CommandFile config/get_sn_log_cmd.txt -Log config/jlink_log.txt"
+III: 2021-09-07 21:18:54  SEGGER J-Link Commander V6.72d (Compiled May 15 2020 16:48:00)
+DLL version V6.72d, compiled May 15 2020 16:47:06
+
+
+J-Link Command File read successfully.
+Processing script file...
+
+J-Link[0]: Connection: USB, Serial number: 23521525, ProductName: SAM-ICE
+J-Link[1]: Connection: USB, Serial number: 29401025, ProductName: SAM-ICE
+
+
+Script processing completed.
+
+
+DDD: 2021-09-07 21:18:54  设置连接方式： "SWD"
+DDD: 2021-09-07 21:18:54  固件1:  "D:/Course/Nordic/nRF5_SDK_17.0.2_d674dde/components/softdevice/s140/hex/s140_nrf52_7.2.0_softdevice.hex"
+DDD: 2021-09-07 21:18:54  file format:  .hex
+DDD: 2021-09-07 21:18:54  已选择HEX文件
+DDD: 2021-09-07 21:18:54  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:18:54  data: 
+ Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:18:54  start addr:  000000 ,  end_addr:  000AFF
+DDD: 2021-09-07 21:18:54  jlinkArgs.file_start_addr:  000000 jlinkArgs.file_end_addr:  000AFF
+DDD: 2021-09-07 21:18:54  file format:  .hex
+III: 2021-09-07 21:18:54  选择擦除整个芯片
+DDD: 2021-09-07 21:18:54  dev sn count:  2
+DDD: 2021-09-07 21:18:54  设置连接方式： "SWD"
+DDD: 2021-09-07 21:18:54  固件1:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/script/s140_nrf52_7.2.0_softdevice.hex"
+DDD: 2021-09-07 21:18:54  file format:  .hex
+DDD: 2021-09-07 21:18:54  已选择HEX文件
+DDD: 2021-09-07 21:18:54  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:18:54  data: 
+ Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:18:54  start addr:  000000 ,  end_addr:  000AFF
+DDD: 2021-09-07 21:18:54  jlinkArgs.file_start_addr:  000000 jlinkArgs.file_end_addr:  000AFF
+DDD: 2021-09-07 21:18:54  file format:  .hex
+DDD: 2021-09-07 21:18:54  file format:  .hex
+DDD: 2021-09-07 21:18:54  已选择HEX文件
+DDD: 2021-09-07 21:18:54  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Execution Start Address: 00027201
+Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:18:54  data: 
+ Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:18:54  start addr:  027000 ,  end_addr:  0301A7
+DDD: 2021-09-07 21:18:54  jlinkArgs.file2_start_addr:  027000 jlinkArgs.file2_end_addr:  0301A7
+DDD: 2021-09-07 21:18:54  file format:  .hex
+DDD: 2021-09-07 21:18:54  filename:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.hex"
+DDD: 2021-09-07 21:18:54  file format:  .hex
+DDD: 2021-09-07 21:18:54  已选择HEX文件
+DDD: 2021-09-07 21:18:54  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   0380C0 - 048927
+
+DDD: 2021-09-07 21:18:54  data: 
+ Data:   0380C0 - 048927
+
+DDD: 2021-09-07 21:18:54  start addr:  0380C0 ,  end_addr:  048927
+DDD: 2021-09-07 21:18:54  jlinkArgs.file3_start_addr:  0380C0 jlinkArgs.file3_end_addr:  048927
+DDD: 2021-09-07 21:18:54  file format:  .hex
+III: 2021-09-07 21:19:07  exec cmd:  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" config/erase_config.txt"
+DDD: 2021-09-07 21:19:09  固件1:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/script/s140_nrf52_7.2.0_softdevice.hex"
+DDD: 2021-09-07 21:19:09  file format:  .hex
+DDD: 2021-09-07 21:19:09  已选择HEX文件
+DDD: 2021-09-07 21:19:09  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:19:09  data: 
+ Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:19:09  start addr:  000000 ,  end_addr:  000AFF
+DDD: 2021-09-07 21:19:09  jlinkArgs.file_start_addr:  000000 jlinkArgs.file_end_addr:  000AFF
+DDD: 2021-09-07 21:19:09  file format:  .hex
+DDD: 2021-09-07 21:19:09  已选择HEX文件
+DDD: 2021-09-07 21:19:09  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Execution Start Address: 00027201
+Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:19:09  data: 
+ Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:19:09  start addr:  027000 ,  end_addr:  0301A7
+DDD: 2021-09-07 21:19:09  jlinkArgs.file2_start_addr:  027000 jlinkArgs.file2_end_addr:  0301A7
+DDD: 2021-09-07 21:19:09  filename:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.hex"
+DDD: 2021-09-07 21:19:09  file format:  .hex
+DDD: 2021-09-07 21:19:09  已选择HEX文件
+DDD: 2021-09-07 21:19:09  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   0380C0 - 048927
+
+DDD: 2021-09-07 21:19:09  data: 
+ Data:   0380C0 - 048927
+
+DDD: 2021-09-07 21:19:09  start addr:  0380C0 ,  end_addr:  048927
+DDD: 2021-09-07 21:19:09  jlinkArgs.file3_start_addr:  0380C0 jlinkArgs.file3_end_addr:  048927
+DDD: 2021-09-07 21:19:09  file format:  .hex
+DDD: 2021-09-07 21:19:09  load_file2 存在
+DDD: 2021-09-07 21:19:09  file format:  .hex
+DDD: 2021-09-07 21:19:09  file format:  .hex
+DDD: 2021-09-07 21:19:09  file format:  .hex
+DDD: 2021-09-07 21:19:09  file format:  .hex
+DDD: 2021-09-07 21:19:09  file format:  .hex
+III: 2021-09-07 21:19:09  exec cmd:  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" config/flush_config.txt"
+DDD: 2021-09-07 21:23:14  存在固件记录
+DDD: 2021-09-07 21:23:14  存在固件记录
+DDD: 2021-09-07 21:23:14  存在固件记录
+DDD: 2021-09-07 21:23:14  jlink_cmd_path value:  "C:/Program Files (x86)/SEGGER/JLink/JLink.exe"
+III: 2021-09-07 21:23:14  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" -CommandFile config/get_sn_log_cmd.txt -Log config/jlink_log.txt"
+III: 2021-09-07 21:23:14  SEGGER J-Link Commander V6.72d (Compiled May 15 2020 16:48:00)
+DLL version V6.72d, compiled May 15 2020 16:47:06
+
+
+J-Link Command File read successfully.
+Processing script file...
+
+J-Link[0]: Connection: USB, Serial number: 23521525, ProductName: SAM-ICE
+J-Link[1]: Connection: USB, Serial number: 29401025, ProductName: SAM-ICE
+
+
+Script processing completed.
+
+
+DDD: 2021-09-07 21:23:14  设置连接方式： "SWD"
+DDD: 2021-09-07 21:23:14  固件1:  "D:/Course/Nordic/nRF5_SDK_17.0.2_d674dde/components/softdevice/s140/hex/s140_nrf52_7.2.0_softdevice.hex"
+DDD: 2021-09-07 21:23:14  file format:  .hex
+DDD: 2021-09-07 21:23:14  已选择HEX文件
+DDD: 2021-09-07 21:23:15  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:23:15  data: 
+ Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:23:15  start addr:  000000 ,  end_addr:  000AFF
+DDD: 2021-09-07 21:23:15  jlinkArgs.file_start_addr:  000000 jlinkArgs.file_end_addr:  000AFF
+DDD: 2021-09-07 21:23:15  file format:  .hex
+III: 2021-09-07 21:23:15  选择擦除整个芯片
+DDD: 2021-09-07 21:23:15  dev sn count:  2
+DDD: 2021-09-07 21:23:15  设置连接方式： "SWD"
+DDD: 2021-09-07 21:23:15  固件1:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/script/s140_nrf52_7.2.0_softdevice.hex"
+DDD: 2021-09-07 21:23:15  file format:  .hex
+DDD: 2021-09-07 21:23:15  已选择HEX文件
+DDD: 2021-09-07 21:23:15  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:23:15  data: 
+ Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:23:15  start addr:  000000 ,  end_addr:  000AFF
+DDD: 2021-09-07 21:23:15  jlinkArgs.file_start_addr:  000000 jlinkArgs.file_end_addr:  000AFF
+DDD: 2021-09-07 21:23:15  file format:  .hex
+DDD: 2021-09-07 21:23:15  file format:  .hex
+DDD: 2021-09-07 21:23:15  已选择HEX文件
+DDD: 2021-09-07 21:23:15  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Execution Start Address: 00027201
+Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:23:15  data: 
+ Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:23:15  start addr:  027000 ,  end_addr:  0301A7
+DDD: 2021-09-07 21:23:15  jlinkArgs.file2_start_addr:  027000 jlinkArgs.file2_end_addr:  0301A7
+DDD: 2021-09-07 21:23:15  file format:  .hex
+DDD: 2021-09-07 21:23:15  filename:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.hex"
+DDD: 2021-09-07 21:23:15  file format:  .hex
+DDD: 2021-09-07 21:23:15  已选择HEX文件
+DDD: 2021-09-07 21:23:15  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   0380C0 - 048927
+
+DDD: 2021-09-07 21:23:15  data: 
+ Data:   0380C0 - 048927
+
+DDD: 2021-09-07 21:23:15  start addr:  0380C0 ,  end_addr:  048927
+DDD: 2021-09-07 21:23:15  jlinkArgs.file3_start_addr:  0380C0 jlinkArgs.file3_end_addr:  048927
+DDD: 2021-09-07 21:23:15  file format:  .hex
+DDD: 2021-09-07 21:23:17  C:/Program Files (x86)/SEGGER/JLink
+III: 2021-09-07 21:23:17  exec cmd:  "\"C:/Program Files (x86)/SEGGER/JLink/JLinkRTTViewer.exe\""
+DDD: 2021-09-07 21:23:17  开启JLink RTT Viewer： "\"C:/Program Files (x86)/SEGGER/JLink/JLinkRTTViewer.exe\""
+III: 2021-09-07 21:23:28  exec cmd:  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" config/reboot_config.txt"
+III: 2021-09-07 21:23:35  exec cmd:  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" config/erase_config.txt"
+III: 2021-09-07 21:23:40  exec cmd:  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" config/reboot_config.txt"
+DDD: 2021-09-07 21:23:45  固件1:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/script/s140_nrf52_7.2.0_softdevice.hex"
+DDD: 2021-09-07 21:23:45  file format:  .hex
+DDD: 2021-09-07 21:23:45  已选择HEX文件
+DDD: 2021-09-07 21:23:45  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:23:45  data: 
+ Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:23:45  start addr:  000000 ,  end_addr:  000AFF
+DDD: 2021-09-07 21:23:45  jlinkArgs.file_start_addr:  000000 jlinkArgs.file_end_addr:  000AFF
+DDD: 2021-09-07 21:23:45  file format:  .hex
+DDD: 2021-09-07 21:23:45  已选择HEX文件
+DDD: 2021-09-07 21:23:45  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Execution Start Address: 00027201
+Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:23:45  data: 
+ Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:23:45  start addr:  027000 ,  end_addr:  0301A7
+DDD: 2021-09-07 21:23:45  jlinkArgs.file2_start_addr:  027000 jlinkArgs.file2_end_addr:  0301A7
+DDD: 2021-09-07 21:23:45  filename:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.hex"
+DDD: 2021-09-07 21:23:45  file format:  .hex
+DDD: 2021-09-07 21:23:45  已选择HEX文件
+DDD: 2021-09-07 21:23:45  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   0380C0 - 048927
+
+DDD: 2021-09-07 21:23:45  data: 
+ Data:   0380C0 - 048927
+
+DDD: 2021-09-07 21:23:45  start addr:  0380C0 ,  end_addr:  048927
+DDD: 2021-09-07 21:23:45  jlinkArgs.file3_start_addr:  0380C0 jlinkArgs.file3_end_addr:  048927
+DDD: 2021-09-07 21:23:45  file format:  .hex
+DDD: 2021-09-07 21:23:45  load_file2 存在
+DDD: 2021-09-07 21:23:45  file format:  .hex
+DDD: 2021-09-07 21:23:45  file format:  .hex
+DDD: 2021-09-07 21:23:45  file format:  .hex
+DDD: 2021-09-07 21:23:45  file format:  .hex
+DDD: 2021-09-07 21:23:45  file format:  .hex
+III: 2021-09-07 21:23:45  exec cmd:  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" config/flush_config.txt"
+DDD: 2021-09-07 21:23:47  out: 
+ 
+III: 2021-09-07 21:23:47  RTT Viewer process destroy!!!
+III: 2021-09-07 21:23:50  保存当前设备的配置
+III: 2021-09-07 21:23:50  写 config/jlink_device_info.json 文件成功
+III: 2021-09-07 21:24:37  保存当前设备的配置
+III: 2021-09-07 21:24:37  写 config/jlink_device_info.json 文件成功
+DDD: 2021-09-07 21:24:37  添加固件1记录
+DDD: 2021-09-07 21:24:37  添加固件1记录
+III: 2021-09-07 21:24:37  写global config配置文件成功
+DDD: 2021-09-07 21:24:48  存在固件记录
+DDD: 2021-09-07 21:24:48  存在固件记录
+DDD: 2021-09-07 21:24:48  存在固件记录
+DDD: 2021-09-07 21:24:48  存在固件记录
+DDD: 2021-09-07 21:24:48  读取固件1记录成功
+DDD: 2021-09-07 21:24:48  读取固件1记录成功
+DDD: 2021-09-07 21:24:48  读取固件1记录成功
+DDD: 2021-09-07 21:24:48  读取固件1记录成功
+DDD: 2021-09-07 21:24:48  jlink_cmd_path value:  "C:/Program Files (x86)/SEGGER/JLink/JLink.exe"
+III: 2021-09-07 21:24:48  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" -CommandFile config/get_sn_log_cmd.txt -Log config/jlink_log.txt"
+III: 2021-09-07 21:24:48  SEGGER J-Link Commander V6.72d (Compiled May 15 2020 16:48:00)
+DLL version V6.72d, compiled May 15 2020 16:47:06
+
+
+J-Link Command File read successfully.
+Processing script file...
+
+J-Link[0]: Connection: USB, Serial number: 23521525, ProductName: SAM-ICE
+J-Link[1]: Connection: USB, Serial number: 29401025, ProductName: SAM-ICE
+
+
+Script processing completed.
+
+
+DDD: 2021-09-07 21:24:48  设置连接方式： "SWD"
+DDD: 2021-09-07 21:24:48  固件1:  "D:/Course/Nordic/nRF5_SDK_17.0.2_d674dde/components/softdevice/s140/hex/s140_nrf52_7.2.0_softdevice.hex"
+DDD: 2021-09-07 21:24:48  file format:  .hex
+DDD: 2021-09-07 21:24:48  已选择HEX文件
+DDD: 2021-09-07 21:24:48  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:24:48  data: 
+ Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:24:48  start addr:  000000 ,  end_addr:  000AFF
+DDD: 2021-09-07 21:24:48  jlinkArgs.file_start_addr:  000000 jlinkArgs.file_end_addr:  000AFF
+DDD: 2021-09-07 21:24:48  file format:  .hex
+DDD: 2021-09-07 21:24:48  file format:  .hex
+DDD: 2021-09-07 21:24:48  已选择HEX文件
+DDD: 2021-09-07 21:24:48  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Execution Start Address: 00027201
+Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:24:48  data: 
+ Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:24:48  start addr:  027000 ,  end_addr:  0301A7
+DDD: 2021-09-07 21:24:48  jlinkArgs.file2_start_addr:  027000 jlinkArgs.file2_end_addr:  0301A7
+DDD: 2021-09-07 21:24:48  filename:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.hex"
+DDD: 2021-09-07 21:24:48  file format:  .hex
+DDD: 2021-09-07 21:24:48  已选择HEX文件
+DDD: 2021-09-07 21:24:48  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   0380C0 - 048927
+
+DDD: 2021-09-07 21:24:48  data: 
+ Data:   0380C0 - 048927
+
+DDD: 2021-09-07 21:24:48  start addr:  0380C0 ,  end_addr:  048927
+DDD: 2021-09-07 21:24:48  jlinkArgs.file3_start_addr:  0380C0 jlinkArgs.file3_end_addr:  048927
+III: 2021-09-07 21:24:48  选择擦除整个芯片
+DDD: 2021-09-07 21:24:48  dev sn count:  2
+DDD: 2021-09-07 21:24:48  设置连接方式： "SWD"
+DDD: 2021-09-07 21:24:48  固件1:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/script/s140_nrf52_7.2.0_softdevice.hex"
+DDD: 2021-09-07 21:24:48  file format:  .hex
+DDD: 2021-09-07 21:24:48  已选择HEX文件
+DDD: 2021-09-07 21:24:48  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:24:48  data: 
+ Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:24:48  start addr:  000000 ,  end_addr:  000AFF
+DDD: 2021-09-07 21:24:48  jlinkArgs.file_start_addr:  000000 jlinkArgs.file_end_addr:  000AFF
+DDD: 2021-09-07 21:24:48  file format:  .hex
+DDD: 2021-09-07 21:24:48  file format:  .hex
+DDD: 2021-09-07 21:24:48  已选择HEX文件
+DDD: 2021-09-07 21:24:48  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Execution Start Address: 00027201
+Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:24:48  data: 
+ Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:24:48  start addr:  027000 ,  end_addr:  0301A7
+DDD: 2021-09-07 21:24:48  jlinkArgs.file2_start_addr:  027000 jlinkArgs.file2_end_addr:  0301A7
+DDD: 2021-09-07 21:24:48  file format:  .hex
+DDD: 2021-09-07 21:24:48  filename:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.hex"
+DDD: 2021-09-07 21:24:48  file format:  .hex
+DDD: 2021-09-07 21:24:48  已选择HEX文件
+DDD: 2021-09-07 21:24:48  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   0380C0 - 048927
+
+DDD: 2021-09-07 21:24:48  data: 
+ Data:   0380C0 - 048927
+
+DDD: 2021-09-07 21:24:48  start addr:  0380C0 ,  end_addr:  048927
+DDD: 2021-09-07 21:24:48  jlinkArgs.file3_start_addr:  0380C0 jlinkArgs.file3_end_addr:  048927
+DDD: 2021-09-07 21:24:48  file format:  .hex
+DDD: 2021-09-07 21:24:53  C:/Program Files (x86)/SEGGER/JLink
+III: 2021-09-07 21:24:53  exec cmd:  "\"C:/Program Files (x86)/SEGGER/JLink/JLinkRTTViewer.exe\""
+DDD: 2021-09-07 21:24:53  开启JLink RTT Viewer： "\"C:/Program Files (x86)/SEGGER/JLink/JLinkRTTViewer.exe\""
+III: 2021-09-07 21:25:00  exec cmd:  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" config/reboot_config.txt"
+DDD: 2021-09-07 21:25:08  固件1:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/script/s140_nrf52_7.2.0_softdevice.hex"
+DDD: 2021-09-07 21:25:08  file format:  .hex
+DDD: 2021-09-07 21:25:08  已选择HEX文件
+DDD: 2021-09-07 21:25:08  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:25:08  data: 
+ Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:25:08  start addr:  000000 ,  end_addr:  000AFF
+DDD: 2021-09-07 21:25:08  jlinkArgs.file_start_addr:  000000 jlinkArgs.file_end_addr:  000AFF
+DDD: 2021-09-07 21:25:08  file format:  .hex
+DDD: 2021-09-07 21:25:08  已选择HEX文件
+DDD: 2021-09-07 21:25:08  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Execution Start Address: 00027201
+Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:25:08  data: 
+ Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:25:08  start addr:  027000 ,  end_addr:  0301A7
+DDD: 2021-09-07 21:25:08  jlinkArgs.file2_start_addr:  027000 jlinkArgs.file2_end_addr:  0301A7
+DDD: 2021-09-07 21:25:08  filename:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.hex"
+DDD: 2021-09-07 21:25:08  file format:  .hex
+DDD: 2021-09-07 21:25:08  已选择HEX文件
+DDD: 2021-09-07 21:25:08  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   0380C0 - 048927
+
+DDD: 2021-09-07 21:25:08  data: 
+ Data:   0380C0 - 048927
+
+DDD: 2021-09-07 21:25:08  start addr:  0380C0 ,  end_addr:  048927
+DDD: 2021-09-07 21:25:08  jlinkArgs.file3_start_addr:  0380C0 jlinkArgs.file3_end_addr:  048927
+DDD: 2021-09-07 21:25:08  file format:  .hex
+DDD: 2021-09-07 21:25:08  load_file2 存在
+DDD: 2021-09-07 21:25:08  file format:  .hex
+DDD: 2021-09-07 21:25:08  file format:  .hex
+DDD: 2021-09-07 21:25:08  file format:  .hex
+DDD: 2021-09-07 21:25:08  file format:  .hex
+DDD: 2021-09-07 21:25:08  file format:  .hex
+III: 2021-09-07 21:25:08  exec cmd:  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" config/flush_config.txt"
+III: 2021-09-07 21:25:12  保存当前设备的配置
+III: 2021-09-07 21:25:12  写 config/jlink_device_info.json 文件成功
+DDD: 2021-09-07 21:25:23  out: 
+ 
+III: 2021-09-07 21:25:23  RTT Viewer process destroy!!!
+DDD: 2021-09-07 21:27:06  file format:  .hex
+DDD: 2021-09-07 21:27:06  已选择HEX文件
+DDD: 2021-09-07 21:27:06  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Execution Start Address: 00027201
+Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:27:06  data: 
+ Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:27:06  start addr:  027000 ,  end_addr:  0301A7
+DDD: 2021-09-07 21:27:06  jlinkArgs.file2_start_addr:  027000 jlinkArgs.file2_end_addr:  0301A7
+III: 2021-09-07 21:27:06  firmware2 selected:  "D:/芳芳的学习资料/bootloader_52840.hex"
+III: 2021-09-07 21:27:12  exec cmd:  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" config/erase_config.txt"
+III: 2021-09-07 21:27:21  exec cmd:  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" config/reboot_config.txt"
+DDD: 2021-09-07 21:27:24  固件1:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/script/s140_nrf52_7.2.0_softdevice.hex"
+DDD: 2021-09-07 21:27:24  file format:  .hex
+DDD: 2021-09-07 21:27:24  已选择HEX文件
+DDD: 2021-09-07 21:27:24  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:27:24  data: 
+ Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:27:24  start addr:  000000 ,  end_addr:  000AFF
+DDD: 2021-09-07 21:27:24  jlinkArgs.file_start_addr:  000000 jlinkArgs.file_end_addr:  000AFF
+DDD: 2021-09-07 21:27:24  file format:  .hex
+DDD: 2021-09-07 21:27:24  已选择HEX文件
+DDD: 2021-09-07 21:27:24  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Execution Start Address: 00027201
+Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:27:24  data: 
+ Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:27:24  start addr:  027000 ,  end_addr:  0301A7
+DDD: 2021-09-07 21:27:24  jlinkArgs.file2_start_addr:  027000 jlinkArgs.file2_end_addr:  0301A7
+DDD: 2021-09-07 21:27:24  filename:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.hex"
+DDD: 2021-09-07 21:27:24  file format:  .hex
+DDD: 2021-09-07 21:27:24  已选择HEX文件
+DDD: 2021-09-07 21:27:24  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   0380C0 - 048927
+
+DDD: 2021-09-07 21:27:24  data: 
+ Data:   0380C0 - 048927
+
+DDD: 2021-09-07 21:27:24  start addr:  0380C0 ,  end_addr:  048927
+DDD: 2021-09-07 21:27:24  jlinkArgs.file3_start_addr:  0380C0 jlinkArgs.file3_end_addr:  048927
+DDD: 2021-09-07 21:27:24  file format:  .hex
+DDD: 2021-09-07 21:27:24  load_file2 存在
+DDD: 2021-09-07 21:27:24  file format:  .hex
+DDD: 2021-09-07 21:27:24  file format:  .hex
+DDD: 2021-09-07 21:27:41  固件1:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/script/s140_nrf52_7.2.0_softdevice.hex"
+DDD: 2021-09-07 21:27:41  file format:  .hex
+DDD: 2021-09-07 21:27:41  已选择HEX文件
+DDD: 2021-09-07 21:27:41  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:27:41  data: 
+ Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:27:41  start addr:  000000 ,  end_addr:  000AFF
+DDD: 2021-09-07 21:27:41  jlinkArgs.file_start_addr:  000000 jlinkArgs.file_end_addr:  000AFF
+DDD: 2021-09-07 21:27:41  file format:  .hex
+DDD: 2021-09-07 21:27:41  已选择HEX文件
+DDD: 2021-09-07 21:27:41  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Execution Start Address: 00027201
+Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:27:41  data: 
+ Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:27:41  start addr:  027000 ,  end_addr:  0301A7
+DDD: 2021-09-07 21:27:41  jlinkArgs.file2_start_addr:  027000 jlinkArgs.file2_end_addr:  0301A7
+DDD: 2021-09-07 21:27:41  filename:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.hex"
+DDD: 2021-09-07 21:27:41  file format:  .hex
+DDD: 2021-09-07 21:27:41  已选择HEX文件
+DDD: 2021-09-07 21:27:41  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   0380C0 - 048927
+
+DDD: 2021-09-07 21:27:41  data: 
+ Data:   0380C0 - 048927
+
+DDD: 2021-09-07 21:27:41  start addr:  0380C0 ,  end_addr:  048927
+DDD: 2021-09-07 21:27:41  jlinkArgs.file3_start_addr:  0380C0 jlinkArgs.file3_end_addr:  048927
+DDD: 2021-09-07 21:27:41  file format:  .hex
+DDD: 2021-09-07 21:27:41  load_file2 存在
+DDD: 2021-09-07 21:27:41  file format:  .hex
+DDD: 2021-09-07 21:27:41  file format:  .hex
+DDD: 2021-09-07 21:27:56  固件1:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/script/s140_nrf52_7.2.0_softdevice.hex"
+DDD: 2021-09-07 21:27:56  file format:  .hex
+DDD: 2021-09-07 21:27:56  已选择HEX文件
+DDD: 2021-09-07 21:27:56  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:27:56  data: 
+ Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:27:56  start addr:  000000 ,  end_addr:  000AFF
+DDD: 2021-09-07 21:27:56  jlinkArgs.file_start_addr:  000000 jlinkArgs.file_end_addr:  000AFF
+DDD: 2021-09-07 21:27:56  file format:  .hex
+DDD: 2021-09-07 21:27:56  已选择HEX文件
+DDD: 2021-09-07 21:27:56  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Execution Start Address: 00027201
+Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:27:56  data: 
+ Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:27:56  start addr:  027000 ,  end_addr:  0301A7
+DDD: 2021-09-07 21:27:56  jlinkArgs.file2_start_addr:  027000 jlinkArgs.file2_end_addr:  0301A7
+DDD: 2021-09-07 21:27:56  filename:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.hex"
+DDD: 2021-09-07 21:27:56  file format:  .hex
+DDD: 2021-09-07 21:27:56  已选择HEX文件
+DDD: 2021-09-07 21:27:56  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   0380C0 - 048927
+
+DDD: 2021-09-07 21:27:56  data: 
+ Data:   0380C0 - 048927
+
+DDD: 2021-09-07 21:27:56  start addr:  0380C0 ,  end_addr:  048927
+DDD: 2021-09-07 21:27:56  jlinkArgs.file3_start_addr:  0380C0 jlinkArgs.file3_end_addr:  048927
+DDD: 2021-09-07 21:27:56  file format:  .hex
+DDD: 2021-09-07 21:27:56  load_file2 存在
+DDD: 2021-09-07 21:27:56  file format:  .hex
+DDD: 2021-09-07 21:27:56  file format:  .hex
+DDD: 2021-09-07 21:27:56  file format:  .hex
+DDD: 2021-09-07 21:27:56  file format:  .hex
+DDD: 2021-09-07 21:27:56  file format:  .hex
+III: 2021-09-07 21:27:56  exec cmd:  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" config/flush_config.txt"
+III: 2021-09-07 21:28:00  保存当前设备的配置
+III: 2021-09-07 21:28:00  写 config/jlink_device_info.json 文件成功
+DDD: 2021-09-07 21:30:06  C:/Program Files (x86)/SEGGER/JLink
+III: 2021-09-07 21:30:06  exec cmd:  "\"C:/Program Files (x86)/SEGGER/JLink/JLinkRTTViewer.exe\""
+DDD: 2021-09-07 21:30:06  开启JLink RTT Viewer： "\"C:/Program Files (x86)/SEGGER/JLink/JLinkRTTViewer.exe\""
+DDD: 2021-09-07 21:30:16  out: 
+ 
+III: 2021-09-07 21:30:16  RTT Viewer process destroy!!!
+III: 2021-09-07 21:30:21  保存当前设备的配置
+III: 2021-09-07 21:30:21  写 config/jlink_device_info.json 文件成功
+III: 2021-09-07 21:30:21  保存当前设备的配置
+III: 2021-09-07 21:30:21  写 config/jlink_device_info.json 文件成功
+III: 2021-09-07 21:30:21  保存当前设备的配置
+III: 2021-09-07 21:30:21  写 config/jlink_device_info.json 文件成功
+III: 2021-09-07 21:30:36  保存当前设备的配置
+III: 2021-09-07 21:30:36  写 config/jlink_device_info.json 文件成功
+DDD: 2021-09-07 21:30:36  添加固件1记录
+DDD: 2021-09-07 21:30:36  添加固件1记录
+III: 2021-09-07 21:30:36  写global config配置文件成功
+DDD: 2021-09-07 21:33:03  存在固件记录
+DDD: 2021-09-07 21:33:03  存在固件记录
+DDD: 2021-09-07 21:33:03  存在固件记录
+DDD: 2021-09-07 21:33:03  存在固件记录
+DDD: 2021-09-07 21:33:03  读取固件1记录成功
+DDD: 2021-09-07 21:33:03  读取固件1记录成功
+DDD: 2021-09-07 21:33:03  读取固件1记录成功
+DDD: 2021-09-07 21:33:03  读取固件1记录成功
+DDD: 2021-09-07 21:33:03  读取固件1记录成功
+DDD: 2021-09-07 21:33:03  jlink_cmd_path value:  "C:/Program Files (x86)/SEGGER/JLink/JLink.exe"
+III: 2021-09-07 21:33:03  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" -CommandFile config/get_sn_log_cmd.txt -Log config/jlink_log.txt"
+III: 2021-09-07 21:33:03  SEGGER J-Link Commander V6.72d (Compiled May 15 2020 16:48:00)
+DLL version V6.72d, compiled May 15 2020 16:47:06
+
+
+J-Link Command File read successfully.
+Processing script file...
+
+J-Link[0]: Connection: USB, Serial number: 23521525, ProductName: SAM-ICE
+J-Link[1]: Connection: USB, Serial number: 29401025, ProductName: SAM-ICE
+
+
+Script processing completed.
+
+
+DDD: 2021-09-07 21:33:03  设置连接方式： "SWD"
+DDD: 2021-09-07 21:33:03  固件1:  "D:/Course/Nordic/nRF5_SDK_17.0.2_d674dde/components/softdevice/s140/hex/s140_nrf52_7.2.0_softdevice.hex"
+DDD: 2021-09-07 21:33:03  file format:  .hex
+DDD: 2021-09-07 21:33:03  已选择HEX文件
+DDD: 2021-09-07 21:33:03  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:33:03  data: 
+ Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:33:03  start addr:  000000 ,  end_addr:  000AFF
+DDD: 2021-09-07 21:33:03  jlinkArgs.file_start_addr:  000000 jlinkArgs.file_end_addr:  000AFF
+DDD: 2021-09-07 21:33:03  file format:  .hex
+DDD: 2021-09-07 21:33:03  file format:  .hex
+DDD: 2021-09-07 21:33:03  已选择HEX文件
+DDD: 2021-09-07 21:33:03  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Execution Start Address: 00027201
+Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:33:03  data: 
+ Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:33:03  start addr:  027000 ,  end_addr:  0301A7
+DDD: 2021-09-07 21:33:03  jlinkArgs.file2_start_addr:  027000 jlinkArgs.file2_end_addr:  0301A7
+DDD: 2021-09-07 21:33:03  filename:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.hex"
+DDD: 2021-09-07 21:33:03  file format:  .hex
+DDD: 2021-09-07 21:33:03  已选择HEX文件
+DDD: 2021-09-07 21:33:03  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   0380C0 - 048927
+
+DDD: 2021-09-07 21:33:03  data: 
+ Data:   0380C0 - 048927
+
+DDD: 2021-09-07 21:33:03  start addr:  0380C0 ,  end_addr:  048927
+DDD: 2021-09-07 21:33:03  jlinkArgs.file3_start_addr:  0380C0 jlinkArgs.file3_end_addr:  048927
+III: 2021-09-07 21:33:03  选择擦除整个芯片
+DDD: 2021-09-07 21:33:03  dev sn count:  2
+DDD: 2021-09-07 21:33:03  设置连接方式： "SWD"
+DDD: 2021-09-07 21:33:03  固件1:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/script/s140_nrf52_7.2.0_softdevice.hex"
+DDD: 2021-09-07 21:33:03  file format:  .hex
+DDD: 2021-09-07 21:33:03  已选择HEX文件
+DDD: 2021-09-07 21:33:03  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:33:03  data: 
+ Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:33:03  start addr:  000000 ,  end_addr:  000AFF
+DDD: 2021-09-07 21:33:03  jlinkArgs.file_start_addr:  000000 jlinkArgs.file_end_addr:  000AFF
+DDD: 2021-09-07 21:33:03  file format:  .hex
+DDD: 2021-09-07 21:33:03  file format:  .hex
+DDD: 2021-09-07 21:33:03  已选择HEX文件
+DDD: 2021-09-07 21:33:04  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Execution Start Address: 00027201
+Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:33:04  data: 
+ Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:33:04  start addr:  027000 ,  end_addr:  0301A7
+DDD: 2021-09-07 21:33:04  jlinkArgs.file2_start_addr:  027000 jlinkArgs.file2_end_addr:  0301A7
+DDD: 2021-09-07 21:33:04  file format:  .hex
+DDD: 2021-09-07 21:33:04  filename:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.hex"
+DDD: 2021-09-07 21:33:04  file format:  .hex
+DDD: 2021-09-07 21:33:04  已选择HEX文件
+DDD: 2021-09-07 21:33:04  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   0380C0 - 048927
+
+DDD: 2021-09-07 21:33:04  data: 
+ Data:   0380C0 - 048927
+
+DDD: 2021-09-07 21:33:04  start addr:  0380C0 ,  end_addr:  048927
+DDD: 2021-09-07 21:33:04  jlinkArgs.file3_start_addr:  0380C0 jlinkArgs.file3_end_addr:  048927
+DDD: 2021-09-07 21:33:04  file format:  .hex
+III: 2021-09-07 21:33:15  保存当前设备的配置
+III: 2021-09-07 21:33:15  写 config/jlink_device_info.json 文件成功
+DDD: 2021-09-07 21:33:15  添加固件1记录
+DDD: 2021-09-07 21:33:15  添加固件1记录
+III: 2021-09-07 21:33:15  写global config配置文件成功
+DDD: 2021-09-07 21:38:31  存在固件记录
+DDD: 2021-09-07 21:38:31  存在固件记录
+DDD: 2021-09-07 21:38:31  存在固件记录
+DDD: 2021-09-07 21:38:31  存在固件记录
+DDD: 2021-09-07 21:38:31  读取固件1记录成功
+DDD: 2021-09-07 21:38:31  读取固件1记录成功
+DDD: 2021-09-07 21:38:31  读取固件1记录成功
+DDD: 2021-09-07 21:38:31  读取固件1记录成功
+DDD: 2021-09-07 21:38:31  读取固件1记录成功
+DDD: 2021-09-07 21:38:31  jlink_cmd_path value:  "C:/Program Files (x86)/SEGGER/JLink/JLink.exe"
+III: 2021-09-07 21:38:31  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" -CommandFile config/get_sn_log_cmd.txt -Log config/jlink_log.txt"
+III: 2021-09-07 21:38:31  SEGGER J-Link Commander V6.72d (Compiled May 15 2020 16:48:00)
+DLL version V6.72d, compiled May 15 2020 16:47:06
+
+
+J-Link Command File read successfully.
+Processing script file...
+
+J-Link[0]: Connection: USB, Serial number: 23521525, ProductName: SAM-ICE
+J-Link[1]: Connection: USB, Serial number: 29401025, ProductName: SAM-ICE
+
+
+Script processing completed.
+
+
+DDD: 2021-09-07 21:38:31  设置连接方式： "SWD"
+DDD: 2021-09-07 21:38:31  固件1:  "D:/Course/Nordic/nRF5_SDK_17.0.2_d674dde/components/softdevice/s140/hex/s140_nrf52_7.2.0_softdevice.hex"
+DDD: 2021-09-07 21:38:31  file format:  .hex
+DDD: 2021-09-07 21:38:31  已选择HEX文件
+DDD: 2021-09-07 21:38:31  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:38:31  data: 
+ Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:38:31  start addr:  000000 ,  end_addr:  000AFF
+DDD: 2021-09-07 21:38:31  jlinkArgs.file_start_addr:  000000 jlinkArgs.file_end_addr:  000AFF
+DDD: 2021-09-07 21:38:31  file format:  .hex
+DDD: 2021-09-07 21:38:31  file format:  .hex
+DDD: 2021-09-07 21:38:31  已选择HEX文件
+DDD: 2021-09-07 21:38:31  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Execution Start Address: 00027201
+Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:38:31  data: 
+ Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:38:31  start addr:  027000 ,  end_addr:  0301A7
+DDD: 2021-09-07 21:38:31  jlinkArgs.file2_start_addr:  027000 jlinkArgs.file2_end_addr:  0301A7
+DDD: 2021-09-07 21:38:31  filename:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.hex"
+DDD: 2021-09-07 21:38:31  file format:  .hex
+DDD: 2021-09-07 21:38:31  已选择HEX文件
+DDD: 2021-09-07 21:38:31  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   0380C0 - 048927
+
+DDD: 2021-09-07 21:38:31  data: 
+ Data:   0380C0 - 048927
+
+DDD: 2021-09-07 21:38:31  start addr:  0380C0 ,  end_addr:  048927
+DDD: 2021-09-07 21:38:31  jlinkArgs.file3_start_addr:  0380C0 jlinkArgs.file3_end_addr:  048927
+III: 2021-09-07 21:38:31  选择擦除整个芯片
+DDD: 2021-09-07 21:38:31  dev sn count:  2
+DDD: 2021-09-07 21:38:31  设置连接方式： "SWD"
+DDD: 2021-09-07 21:38:31  固件1:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/script/s140_nrf52_7.2.0_softdevice.hex"
+DDD: 2021-09-07 21:38:31  file format:  .hex
+DDD: 2021-09-07 21:38:31  已选择HEX文件
+DDD: 2021-09-07 21:38:31  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:38:31  data: 
+ Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:38:31  start addr:  000000 ,  end_addr:  000AFF
+DDD: 2021-09-07 21:38:31  jlinkArgs.file_start_addr:  000000 jlinkArgs.file_end_addr:  000AFF
+DDD: 2021-09-07 21:38:31  file format:  .hex
+DDD: 2021-09-07 21:38:31  file format:  .hex
+DDD: 2021-09-07 21:38:31  已选择HEX文件
+DDD: 2021-09-07 21:38:31  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Execution Start Address: 00027201
+Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:38:31  data: 
+ Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:38:31  start addr:  027000 ,  end_addr:  0301A7
+DDD: 2021-09-07 21:38:31  jlinkArgs.file2_start_addr:  027000 jlinkArgs.file2_end_addr:  0301A7
+DDD: 2021-09-07 21:38:31  file format:  .hex
+DDD: 2021-09-07 21:38:31  filename:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.hex"
+DDD: 2021-09-07 21:38:31  file format:  .hex
+DDD: 2021-09-07 21:38:31  已选择HEX文件
+DDD: 2021-09-07 21:38:31  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   0380C0 - 048927
+
+DDD: 2021-09-07 21:38:31  data: 
+ Data:   0380C0 - 048927
+
+DDD: 2021-09-07 21:38:31  start addr:  0380C0 ,  end_addr:  048927
+DDD: 2021-09-07 21:38:31  jlinkArgs.file3_start_addr:  0380C0 jlinkArgs.file3_end_addr:  048927
+DDD: 2021-09-07 21:38:31  file format:  .hex
+III: 2021-09-07 21:38:50  保存当前设备的配置
+III: 2021-09-07 21:38:50  写 config/jlink_device_info.json 文件成功
+DDD: 2021-09-07 21:38:50  添加固件1记录
+DDD: 2021-09-07 21:38:50  添加固件1记录
+III: 2021-09-07 21:38:50  写global config配置文件成功
+DDD: 2021-09-07 21:40:16  存在固件记录
+DDD: 2021-09-07 21:40:16  存在固件记录
+DDD: 2021-09-07 21:40:16  存在固件记录
+DDD: 2021-09-07 21:40:16  存在固件记录
+DDD: 2021-09-07 21:40:16  读取固件1记录成功
+DDD: 2021-09-07 21:40:16  读取固件1记录成功
+DDD: 2021-09-07 21:40:16  读取固件1记录成功
+DDD: 2021-09-07 21:40:16  读取固件1记录成功
+DDD: 2021-09-07 21:40:16  读取固件1记录成功
+DDD: 2021-09-07 21:40:16  jlink_cmd_path value:  "C:/Program Files (x86)/SEGGER/JLink/JLink.exe"
+III: 2021-09-07 21:40:16  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" -CommandFile config/get_sn_log_cmd.txt -Log config/jlink_log.txt"
+III: 2021-09-07 21:40:16  SEGGER J-Link Commander V6.72d (Compiled May 15 2020 16:48:00)
+DLL version V6.72d, compiled May 15 2020 16:47:06
+
+
+J-Link Command File read successfully.
+Processing script file...
+
+J-Link[0]: Connection: USB, Serial number: 23521525, ProductName: SAM-ICE
+J-Link[1]: Connection: USB, Serial number: 29401025, ProductName: SAM-ICE
+
+
+Script processing completed.
+
+
+DDD: 2021-09-07 21:40:16  设置连接方式： "SWD"
+DDD: 2021-09-07 21:40:16  固件1:  "D:/Course/Nordic/nRF5_SDK_17.0.2_d674dde/components/softdevice/s140/hex/s140_nrf52_7.2.0_softdevice.hex"
+DDD: 2021-09-07 21:40:16  file format:  .hex
+DDD: 2021-09-07 21:40:16  已选择HEX文件
+DDD: 2021-09-07 21:40:16  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:40:16  data: 
+ Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:40:16  start addr:  000000 ,  end_addr:  000AFF
+DDD: 2021-09-07 21:40:16  jlinkArgs.file_start_addr:  000000 jlinkArgs.file_end_addr:  000AFF
+DDD: 2021-09-07 21:40:16  file format:  .hex
+DDD: 2021-09-07 21:40:16  file format:  .hex
+DDD: 2021-09-07 21:40:16  已选择HEX文件
+DDD: 2021-09-07 21:40:16  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Execution Start Address: 00027201
+Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:40:16  data: 
+ Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:40:16  start addr:  027000 ,  end_addr:  0301A7
+DDD: 2021-09-07 21:40:16  jlinkArgs.file2_start_addr:  027000 jlinkArgs.file2_end_addr:  0301A7
+DDD: 2021-09-07 21:40:16  filename:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.hex"
+DDD: 2021-09-07 21:40:16  file format:  .hex
+DDD: 2021-09-07 21:40:16  已选择HEX文件
+DDD: 2021-09-07 21:40:16  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   0380C0 - 048927
+
+DDD: 2021-09-07 21:40:16  data: 
+ Data:   0380C0 - 048927
+
+DDD: 2021-09-07 21:40:16  start addr:  0380C0 ,  end_addr:  048927
+DDD: 2021-09-07 21:40:16  jlinkArgs.file3_start_addr:  0380C0 jlinkArgs.file3_end_addr:  048927
+III: 2021-09-07 21:40:16  选择擦除整个芯片
+DDD: 2021-09-07 21:40:16  dev sn count:  2
+DDD: 2021-09-07 21:40:16  设置连接方式： "SWD"
+DDD: 2021-09-07 21:40:16  固件1:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/script/s140_nrf52_7.2.0_softdevice.hex"
+DDD: 2021-09-07 21:40:16  file format:  .hex
+DDD: 2021-09-07 21:40:16  已选择HEX文件
+DDD: 2021-09-07 21:40:17  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:40:17  data: 
+ Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:40:17  start addr:  000000 ,  end_addr:  000AFF
+DDD: 2021-09-07 21:40:17  jlinkArgs.file_start_addr:  000000 jlinkArgs.file_end_addr:  000AFF
+DDD: 2021-09-07 21:40:17  file format:  .hex
+DDD: 2021-09-07 21:40:17  file format:  .hex
+DDD: 2021-09-07 21:40:17  已选择HEX文件
+DDD: 2021-09-07 21:40:17  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Execution Start Address: 00027201
+Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:40:17  data: 
+ Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:40:17  start addr:  027000 ,  end_addr:  0301A7
+DDD: 2021-09-07 21:40:17  jlinkArgs.file2_start_addr:  027000 jlinkArgs.file2_end_addr:  0301A7
+DDD: 2021-09-07 21:40:17  file format:  .hex
+DDD: 2021-09-07 21:40:17  filename:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.hex"
+DDD: 2021-09-07 21:40:17  file format:  .hex
+DDD: 2021-09-07 21:40:17  已选择HEX文件
+DDD: 2021-09-07 21:40:17  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   0380C0 - 048927
+
+DDD: 2021-09-07 21:40:17  data: 
+ Data:   0380C0 - 048927
+
+DDD: 2021-09-07 21:40:17  start addr:  0380C0 ,  end_addr:  048927
+DDD: 2021-09-07 21:40:17  jlinkArgs.file3_start_addr:  0380C0 jlinkArgs.file3_end_addr:  048927
+DDD: 2021-09-07 21:40:17  file format:  .hex
+III: 2021-09-07 21:40:20  保存当前设备的配置
+III: 2021-09-07 21:40:20  写 config/jlink_device_info.json 文件成功
+DDD: 2021-09-07 21:40:20  添加固件1记录
+DDD: 2021-09-07 21:40:20  添加固件1记录
+III: 2021-09-07 21:40:20  写global config配置文件成功
+DDD: 2021-09-07 21:40:32  存在固件记录
+DDD: 2021-09-07 21:40:32  存在固件记录
+DDD: 2021-09-07 21:40:32  存在固件记录
+DDD: 2021-09-07 21:40:32  存在固件记录
+DDD: 2021-09-07 21:40:32  读取固件1记录成功
+DDD: 2021-09-07 21:40:32  读取固件1记录成功
+DDD: 2021-09-07 21:40:32  读取固件1记录成功
+DDD: 2021-09-07 21:40:32  读取固件1记录成功
+DDD: 2021-09-07 21:40:32  读取固件1记录成功
+DDD: 2021-09-07 21:40:32  jlink_cmd_path value:  "C:/Program Files (x86)/SEGGER/JLink/JLink.exe"
+III: 2021-09-07 21:40:32  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" -CommandFile config/get_sn_log_cmd.txt -Log config/jlink_log.txt"
+III: 2021-09-07 21:40:32  SEGGER J-Link Commander V6.72d (Compiled May 15 2020 16:48:00)
+DLL version V6.72d, compiled May 15 2020 16:47:06
+
+
+J-Link Command File read successfully.
+Processing script file...
+
+J-Link[0]: Connection: USB, Serial number: 23521525, ProductName: SAM-ICE
+J-Link[1]: Connection: USB, Serial number: 29401025, ProductName: SAM-ICE
+
+
+Script processing completed.
+
+
+DDD: 2021-09-07 21:40:32  设置连接方式： "SWD"
+DDD: 2021-09-07 21:40:32  固件1:  "D:/Course/Nordic/nRF5_SDK_17.0.2_d674dde/components/softdevice/s140/hex/s140_nrf52_7.2.0_softdevice.hex"
+DDD: 2021-09-07 21:40:32  file format:  .hex
+DDD: 2021-09-07 21:40:32  已选择HEX文件
+DDD: 2021-09-07 21:40:32  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:40:32  data: 
+ Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:40:32  start addr:  000000 ,  end_addr:  000AFF
+DDD: 2021-09-07 21:40:32  jlinkArgs.file_start_addr:  000000 jlinkArgs.file_end_addr:  000AFF
+DDD: 2021-09-07 21:40:32  file format:  .hex
+DDD: 2021-09-07 21:40:32  file format:  .hex
+DDD: 2021-09-07 21:40:32  已选择HEX文件
+DDD: 2021-09-07 21:40:32  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Execution Start Address: 00027201
+Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:40:32  data: 
+ Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:40:32  start addr:  027000 ,  end_addr:  0301A7
+DDD: 2021-09-07 21:40:32  jlinkArgs.file2_start_addr:  027000 jlinkArgs.file2_end_addr:  0301A7
+DDD: 2021-09-07 21:40:32  filename:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.hex"
+DDD: 2021-09-07 21:40:32  file format:  .hex
+DDD: 2021-09-07 21:40:32  已选择HEX文件
+DDD: 2021-09-07 21:40:32  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   0380C0 - 048927
+
+DDD: 2021-09-07 21:40:32  data: 
+ Data:   0380C0 - 048927
+
+DDD: 2021-09-07 21:40:32  start addr:  0380C0 ,  end_addr:  048927
+DDD: 2021-09-07 21:40:32  jlinkArgs.file3_start_addr:  0380C0 jlinkArgs.file3_end_addr:  048927
+III: 2021-09-07 21:40:32  选择擦除整个芯片
+DDD: 2021-09-07 21:40:32  dev sn count:  2
+DDD: 2021-09-07 21:40:32  设置连接方式： "SWD"
+DDD: 2021-09-07 21:40:32  固件1:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/script/s140_nrf52_7.2.0_softdevice.hex"
+DDD: 2021-09-07 21:40:32  file format:  .hex
+DDD: 2021-09-07 21:40:32  已选择HEX文件
+DDD: 2021-09-07 21:40:32  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:40:32  data: 
+ Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:40:32  start addr:  000000 ,  end_addr:  000AFF
+DDD: 2021-09-07 21:40:32  jlinkArgs.file_start_addr:  000000 jlinkArgs.file_end_addr:  000AFF
+DDD: 2021-09-07 21:40:32  file format:  .hex
+DDD: 2021-09-07 21:40:32  file format:  .hex
+DDD: 2021-09-07 21:40:32  已选择HEX文件
+DDD: 2021-09-07 21:40:32  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Execution Start Address: 00027201
+Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:40:32  data: 
+ Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:40:32  start addr:  027000 ,  end_addr:  0301A7
+DDD: 2021-09-07 21:40:32  jlinkArgs.file2_start_addr:  027000 jlinkArgs.file2_end_addr:  0301A7
+DDD: 2021-09-07 21:40:32  file format:  .hex
+DDD: 2021-09-07 21:40:32  filename:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.hex"
+DDD: 2021-09-07 21:40:32  file format:  .hex
+DDD: 2021-09-07 21:40:32  已选择HEX文件
+DDD: 2021-09-07 21:40:32  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   0380C0 - 048927
+
+DDD: 2021-09-07 21:40:32  data: 
+ Data:   0380C0 - 048927
+
+DDD: 2021-09-07 21:40:32  start addr:  0380C0 ,  end_addr:  048927
+DDD: 2021-09-07 21:40:32  jlinkArgs.file3_start_addr:  0380C0 jlinkArgs.file3_end_addr:  048927
+DDD: 2021-09-07 21:40:32  file format:  .hex
+III: 2021-09-07 21:40:39  保存当前设备的配置
+III: 2021-09-07 21:40:39  写 config/jlink_device_info.json 文件成功
+DDD: 2021-09-07 21:40:39  添加固件1记录
+DDD: 2021-09-07 21:40:39  添加固件1记录
+III: 2021-09-07 21:40:39  写global config配置文件成功
+DDD: 2021-09-07 21:42:13  存在固件记录
+DDD: 2021-09-07 21:42:13  存在固件记录
+DDD: 2021-09-07 21:42:13  存在固件记录
+DDD: 2021-09-07 21:42:13  存在固件记录
+DDD: 2021-09-07 21:42:13  读取固件1记录成功
+DDD: 2021-09-07 21:42:13  读取固件1记录成功
+DDD: 2021-09-07 21:42:13  读取固件1记录成功
+DDD: 2021-09-07 21:42:13  读取固件1记录成功
+DDD: 2021-09-07 21:42:13  读取固件1记录成功
+DDD: 2021-09-07 21:42:13  jlink_cmd_path value:  "C:/Program Files (x86)/SEGGER/JLink/JLink.exe"
+III: 2021-09-07 21:42:13  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" -CommandFile config/get_sn_log_cmd.txt -Log config/jlink_log.txt"
+III: 2021-09-07 21:42:13  SEGGER J-Link Commander V6.72d (Compiled May 15 2020 16:48:00)
+DLL version V6.72d, compiled May 15 2020 16:47:06
+
+
+J-Link Command File read successfully.
+Processing script file...
+
+J-Link[0]: Connection: USB, Serial number: 23521525, ProductName: SAM-ICE
+J-Link[1]: Connection: USB, Serial number: 29401025, ProductName: SAM-ICE
+
+
+Script processing completed.
+
+
+DDD: 2021-09-07 21:42:13  设置连接方式： "SWD"
+DDD: 2021-09-07 21:42:13  固件1:  "D:/Course/Nordic/nRF5_SDK_17.0.2_d674dde/components/softdevice/s140/hex/s140_nrf52_7.2.0_softdevice.hex"
+DDD: 2021-09-07 21:42:13  file format:  .hex
+DDD: 2021-09-07 21:42:13  已选择HEX文件
+DDD: 2021-09-07 21:42:13  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:42:13  data: 
+ Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:42:13  start addr:  000000 ,  end_addr:  000AFF
+DDD: 2021-09-07 21:42:13  jlinkArgs.file_start_addr:  000000 jlinkArgs.file_end_addr:  000AFF
+DDD: 2021-09-07 21:42:13  file format:  .hex
+DDD: 2021-09-07 21:42:13  file format:  .hex
+DDD: 2021-09-07 21:42:13  已选择HEX文件
+DDD: 2021-09-07 21:42:13  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Execution Start Address: 00027201
+Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:42:13  data: 
+ Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:42:13  start addr:  027000 ,  end_addr:  0301A7
+DDD: 2021-09-07 21:42:13  jlinkArgs.file2_start_addr:  027000 jlinkArgs.file2_end_addr:  0301A7
+DDD: 2021-09-07 21:42:13  filename:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.hex"
+DDD: 2021-09-07 21:42:13  file format:  .hex
+DDD: 2021-09-07 21:42:13  已选择HEX文件
+DDD: 2021-09-07 21:42:13  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   0380C0 - 048927
+
+DDD: 2021-09-07 21:42:13  data: 
+ Data:   0380C0 - 048927
+
+DDD: 2021-09-07 21:42:13  start addr:  0380C0 ,  end_addr:  048927
+DDD: 2021-09-07 21:42:13  jlinkArgs.file3_start_addr:  0380C0 jlinkArgs.file3_end_addr:  048927
+III: 2021-09-07 21:42:13  选择擦除整个芯片
+DDD: 2021-09-07 21:42:13  dev sn count:  2
+DDD: 2021-09-07 21:42:13  设置连接方式： "SWD"
+DDD: 2021-09-07 21:42:13  固件1:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/script/s140_nrf52_7.2.0_softdevice.hex"
+DDD: 2021-09-07 21:42:13  file format:  .hex
+DDD: 2021-09-07 21:42:13  已选择HEX文件
+DDD: 2021-09-07 21:42:13  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:42:13  data: 
+ Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:42:13  start addr:  000000 ,  end_addr:  000AFF
+DDD: 2021-09-07 21:42:13  jlinkArgs.file_start_addr:  000000 jlinkArgs.file_end_addr:  000AFF
+DDD: 2021-09-07 21:42:13  file format:  .hex
+DDD: 2021-09-07 21:42:13  file format:  .hex
+DDD: 2021-09-07 21:42:13  已选择HEX文件
+DDD: 2021-09-07 21:42:13  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Execution Start Address: 00027201
+Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:42:13  data: 
+ Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:42:13  start addr:  027000 ,  end_addr:  0301A7
+DDD: 2021-09-07 21:42:13  jlinkArgs.file2_start_addr:  027000 jlinkArgs.file2_end_addr:  0301A7
+DDD: 2021-09-07 21:42:13  file format:  .hex
+DDD: 2021-09-07 21:42:13  filename:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.hex"
+DDD: 2021-09-07 21:42:13  file format:  .hex
+DDD: 2021-09-07 21:42:13  已选择HEX文件
+DDD: 2021-09-07 21:42:13  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   0380C0 - 048927
+
+DDD: 2021-09-07 21:42:13  data: 
+ Data:   0380C0 - 048927
+
+DDD: 2021-09-07 21:42:13  start addr:  0380C0 ,  end_addr:  048927
+DDD: 2021-09-07 21:42:13  jlinkArgs.file3_start_addr:  0380C0 jlinkArgs.file3_end_addr:  048927
+DDD: 2021-09-07 21:42:13  file format:  .hex
+III: 2021-09-07 21:42:48  保存当前设备的配置
+III: 2021-09-07 21:42:48  写 config/jlink_device_info.json 文件成功
+DDD: 2021-09-07 21:42:48  添加固件1记录
+DDD: 2021-09-07 21:42:48  添加固件1记录
+III: 2021-09-07 21:42:48  写global config配置文件成功
+DDD: 2021-09-07 21:43:23  存在固件记录
+DDD: 2021-09-07 21:43:23  存在固件记录
+DDD: 2021-09-07 21:43:23  存在固件记录
+DDD: 2021-09-07 21:43:23  存在固件记录
+DDD: 2021-09-07 21:43:23  读取固件1记录成功
+DDD: 2021-09-07 21:43:23  读取固件1记录成功
+DDD: 2021-09-07 21:43:23  读取固件1记录成功
+DDD: 2021-09-07 21:43:23  读取固件1记录成功
+DDD: 2021-09-07 21:43:23  读取固件1记录成功
+DDD: 2021-09-07 21:43:23  jlink_cmd_path value:  "C:/Program Files (x86)/SEGGER/JLink/JLink.exe"
+III: 2021-09-07 21:43:23  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" -CommandFile config/get_sn_log_cmd.txt -Log config/jlink_log.txt"
+III: 2021-09-07 21:43:23  SEGGER J-Link Commander V6.72d (Compiled May 15 2020 16:48:00)
+DLL version V6.72d, compiled May 15 2020 16:47:06
+
+
+J-Link Command File read successfully.
+Processing script file...
+
+J-Link[0]: Connection: USB, Serial number: 23521525, ProductName: SAM-ICE
+J-Link[1]: Connection: USB, Serial number: 29401025, ProductName: SAM-ICE
+
+
+Script processing completed.
+
+
+DDD: 2021-09-07 21:43:23  设置连接方式： "SWD"
+DDD: 2021-09-07 21:43:23  固件1:  "D:/Course/Nordic/nRF5_SDK_17.0.2_d674dde/components/softdevice/s140/hex/s140_nrf52_7.2.0_softdevice.hex"
+DDD: 2021-09-07 21:43:23  file format:  .hex
+DDD: 2021-09-07 21:43:23  已选择HEX文件
+DDD: 2021-09-07 21:43:23  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:43:23  data: 
+ Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:43:23  start addr:  000000 ,  end_addr:  000AFF
+DDD: 2021-09-07 21:43:23  jlinkArgs.file_start_addr:  000000 jlinkArgs.file_end_addr:  000AFF
+DDD: 2021-09-07 21:43:23  file format:  .hex
+DDD: 2021-09-07 21:43:23  file format:  .hex
+DDD: 2021-09-07 21:43:23  已选择HEX文件
+DDD: 2021-09-07 21:43:23  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Execution Start Address: 00027201
+Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:43:23  data: 
+ Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:43:23  start addr:  027000 ,  end_addr:  0301A7
+DDD: 2021-09-07 21:43:23  jlinkArgs.file2_start_addr:  027000 jlinkArgs.file2_end_addr:  0301A7
+DDD: 2021-09-07 21:43:23  filename:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.hex"
+DDD: 2021-09-07 21:43:23  file format:  .hex
+DDD: 2021-09-07 21:43:23  已选择HEX文件
+DDD: 2021-09-07 21:43:23  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   0380C0 - 048927
+
+DDD: 2021-09-07 21:43:23  data: 
+ Data:   0380C0 - 048927
+
+DDD: 2021-09-07 21:43:23  start addr:  0380C0 ,  end_addr:  048927
+DDD: 2021-09-07 21:43:23  jlinkArgs.file3_start_addr:  0380C0 jlinkArgs.file3_end_addr:  048927
+III: 2021-09-07 21:43:23  选择擦除整个芯片
+DDD: 2021-09-07 21:43:23  dev sn count:  2
+DDD: 2021-09-07 21:43:23  设置连接方式： "SWD"
+DDD: 2021-09-07 21:43:23  固件1:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/script/s140_nrf52_7.2.0_softdevice.hex"
+DDD: 2021-09-07 21:43:23  file format:  .hex
+DDD: 2021-09-07 21:43:23  已选择HEX文件
+DDD: 2021-09-07 21:43:23  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:43:23  data: 
+ Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:43:23  start addr:  000000 ,  end_addr:  000AFF
+DDD: 2021-09-07 21:43:23  jlinkArgs.file_start_addr:  000000 jlinkArgs.file_end_addr:  000AFF
+DDD: 2021-09-07 21:43:23  file format:  .hex
+DDD: 2021-09-07 21:43:23  file format:  .hex
+DDD: 2021-09-07 21:43:23  已选择HEX文件
+DDD: 2021-09-07 21:43:23  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Execution Start Address: 00027201
+Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:43:23  data: 
+ Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:43:23  start addr:  027000 ,  end_addr:  0301A7
+DDD: 2021-09-07 21:43:23  jlinkArgs.file2_start_addr:  027000 jlinkArgs.file2_end_addr:  0301A7
+DDD: 2021-09-07 21:43:23  file format:  .hex
+DDD: 2021-09-07 21:43:23  filename:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.hex"
+DDD: 2021-09-07 21:43:23  file format:  .hex
+DDD: 2021-09-07 21:43:23  已选择HEX文件
+DDD: 2021-09-07 21:43:23  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   0380C0 - 048927
+
+DDD: 2021-09-07 21:43:23  data: 
+ Data:   0380C0 - 048927
+
+DDD: 2021-09-07 21:43:23  start addr:  0380C0 ,  end_addr:  048927
+DDD: 2021-09-07 21:43:23  jlinkArgs.file3_start_addr:  0380C0 jlinkArgs.file3_end_addr:  048927
+DDD: 2021-09-07 21:43:23  file format:  .hex
+III: 2021-09-07 21:43:34  保存当前设备的配置
+III: 2021-09-07 21:43:34  写 config/jlink_device_info.json 文件成功
+DDD: 2021-09-07 21:43:34  添加固件1记录
+DDD: 2021-09-07 21:43:34  添加固件1记录
+III: 2021-09-07 21:43:34  写global config配置文件成功
+DDD: 2021-09-07 21:44:17  存在固件记录
+DDD: 2021-09-07 21:44:17  存在固件记录
+DDD: 2021-09-07 21:44:17  存在固件记录
+DDD: 2021-09-07 21:44:17  存在固件记录
+DDD: 2021-09-07 21:44:17  读取固件1记录成功
+DDD: 2021-09-07 21:44:17  读取固件1记录成功
+DDD: 2021-09-07 21:44:17  读取固件1记录成功
+DDD: 2021-09-07 21:44:17  读取固件1记录成功
+DDD: 2021-09-07 21:44:17  读取固件1记录成功
+DDD: 2021-09-07 21:44:17  jlink_cmd_path value:  "C:/Program Files (x86)/SEGGER/JLink/JLink.exe"
+III: 2021-09-07 21:44:17  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" -CommandFile config/get_sn_log_cmd.txt -Log config/jlink_log.txt"
+III: 2021-09-07 21:44:17  SEGGER J-Link Commander V6.72d (Compiled May 15 2020 16:48:00)
+DLL version V6.72d, compiled May 15 2020 16:47:06
+
+
+J-Link Command File read successfully.
+Processing script file...
+
+J-Link[0]: Connection: USB, Serial number: 23521525, ProductName: SAM-ICE
+J-Link[1]: Connection: USB, Serial number: 29401025, ProductName: SAM-ICE
+
+
+Script processing completed.
+
+
+DDD: 2021-09-07 21:44:17  设置连接方式： "SWD"
+DDD: 2021-09-07 21:44:17  固件1:  "D:/Course/Nordic/nRF5_SDK_17.0.2_d674dde/components/softdevice/s140/hex/s140_nrf52_7.2.0_softdevice.hex"
+DDD: 2021-09-07 21:44:17  file format:  .hex
+DDD: 2021-09-07 21:44:17  已选择HEX文件
+DDD: 2021-09-07 21:44:17  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:44:17  data: 
+ Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:44:17  start addr:  000000 ,  end_addr:  000AFF
+DDD: 2021-09-07 21:44:17  jlinkArgs.file_start_addr:  000000 jlinkArgs.file_end_addr:  000AFF
+DDD: 2021-09-07 21:44:17  file format:  .hex
+DDD: 2021-09-07 21:44:17  file format:  .hex
+DDD: 2021-09-07 21:44:17  已选择HEX文件
+DDD: 2021-09-07 21:44:17  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Execution Start Address: 00027201
+Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:44:17  data: 
+ Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:44:17  start addr:  027000 ,  end_addr:  0301A7
+DDD: 2021-09-07 21:44:17  jlinkArgs.file2_start_addr:  027000 jlinkArgs.file2_end_addr:  0301A7
+DDD: 2021-09-07 21:44:17  filename:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.hex"
+DDD: 2021-09-07 21:44:17  file format:  .hex
+DDD: 2021-09-07 21:44:17  已选择HEX文件
+DDD: 2021-09-07 21:44:17  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   0380C0 - 048927
+
+DDD: 2021-09-07 21:44:17  data: 
+ Data:   0380C0 - 048927
+
+DDD: 2021-09-07 21:44:17  start addr:  0380C0 ,  end_addr:  048927
+DDD: 2021-09-07 21:44:17  jlinkArgs.file3_start_addr:  0380C0 jlinkArgs.file3_end_addr:  048927
+III: 2021-09-07 21:44:17  选择擦除整个芯片
+DDD: 2021-09-07 21:44:17  dev sn count:  2
+DDD: 2021-09-07 21:44:17  设置连接方式： "SWD"
+DDD: 2021-09-07 21:44:17  固件1:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/script/s140_nrf52_7.2.0_softdevice.hex"
+DDD: 2021-09-07 21:44:17  file format:  .hex
+DDD: 2021-09-07 21:44:17  已选择HEX文件
+DDD: 2021-09-07 21:44:17  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:44:17  data: 
+ Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:44:17  start addr:  000000 ,  end_addr:  000AFF
+DDD: 2021-09-07 21:44:17  jlinkArgs.file_start_addr:  000000 jlinkArgs.file_end_addr:  000AFF
+DDD: 2021-09-07 21:44:17  file format:  .hex
+DDD: 2021-09-07 21:44:17  file format:  .hex
+DDD: 2021-09-07 21:44:17  已选择HEX文件
+DDD: 2021-09-07 21:44:17  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Execution Start Address: 00027201
+Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:44:17  data: 
+ Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:44:17  start addr:  027000 ,  end_addr:  0301A7
+DDD: 2021-09-07 21:44:17  jlinkArgs.file2_start_addr:  027000 jlinkArgs.file2_end_addr:  0301A7
+DDD: 2021-09-07 21:44:17  file format:  .hex
+DDD: 2021-09-07 21:44:17  filename:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.hex"
+DDD: 2021-09-07 21:44:17  file format:  .hex
+DDD: 2021-09-07 21:44:17  已选择HEX文件
+DDD: 2021-09-07 21:44:17  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   0380C0 - 048927
+
+DDD: 2021-09-07 21:44:17  data: 
+ Data:   0380C0 - 048927
+
+DDD: 2021-09-07 21:44:17  start addr:  0380C0 ,  end_addr:  048927
+DDD: 2021-09-07 21:44:17  jlinkArgs.file3_start_addr:  0380C0 jlinkArgs.file3_end_addr:  048927
+DDD: 2021-09-07 21:44:17  file format:  .hex
+III: 2021-09-07 21:44:27  保存当前设备的配置
+III: 2021-09-07 21:44:27  写 config/jlink_device_info.json 文件成功
+DDD: 2021-09-07 21:44:27  添加固件1记录
+DDD: 2021-09-07 21:44:27  添加固件1记录
+III: 2021-09-07 21:44:27  写global config配置文件成功
+DDD: 2021-09-07 21:44:45  存在固件记录
+DDD: 2021-09-07 21:44:45  存在固件记录
+DDD: 2021-09-07 21:44:45  存在固件记录
+DDD: 2021-09-07 21:44:45  存在固件记录
+DDD: 2021-09-07 21:44:45  读取固件1记录成功
+DDD: 2021-09-07 21:44:45  读取固件1记录成功
+DDD: 2021-09-07 21:44:45  读取固件1记录成功
+DDD: 2021-09-07 21:44:45  读取固件1记录成功
+DDD: 2021-09-07 21:44:45  读取固件1记录成功
+DDD: 2021-09-07 21:44:45  jlink_cmd_path value:  "C:/Program Files (x86)/SEGGER/JLink/JLink.exe"
+III: 2021-09-07 21:44:45  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" -CommandFile config/get_sn_log_cmd.txt -Log config/jlink_log.txt"
+III: 2021-09-07 21:44:45  SEGGER J-Link Commander V6.72d (Compiled May 15 2020 16:48:00)
+DLL version V6.72d, compiled May 15 2020 16:47:06
+
+
+J-Link Command File read successfully.
+Processing script file...
+
+J-Link[0]: Connection: USB, Serial number: 23521525, ProductName: SAM-ICE
+J-Link[1]: Connection: USB, Serial number: 29401025, ProductName: SAM-ICE
+
+
+Script processing completed.
+
+
+DDD: 2021-09-07 21:44:45  设置连接方式： "SWD"
+DDD: 2021-09-07 21:44:45  固件1:  "D:/Course/Nordic/nRF5_SDK_17.0.2_d674dde/components/softdevice/s140/hex/s140_nrf52_7.2.0_softdevice.hex"
+DDD: 2021-09-07 21:44:45  file format:  .hex
+DDD: 2021-09-07 21:44:45  已选择HEX文件
+DDD: 2021-09-07 21:44:45  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:44:45  data: 
+ Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:44:45  start addr:  000000 ,  end_addr:  000AFF
+DDD: 2021-09-07 21:44:45  jlinkArgs.file_start_addr:  000000 jlinkArgs.file_end_addr:  000AFF
+DDD: 2021-09-07 21:44:45  file format:  .hex
+DDD: 2021-09-07 21:44:45  file format:  .hex
+DDD: 2021-09-07 21:44:45  已选择HEX文件
+DDD: 2021-09-07 21:44:45  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Execution Start Address: 00027201
+Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:44:45  data: 
+ Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:44:45  start addr:  027000 ,  end_addr:  0301A7
+DDD: 2021-09-07 21:44:45  jlinkArgs.file2_start_addr:  027000 jlinkArgs.file2_end_addr:  0301A7
+DDD: 2021-09-07 21:44:45  filename:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.hex"
+DDD: 2021-09-07 21:44:45  file format:  .hex
+DDD: 2021-09-07 21:44:45  已选择HEX文件
+DDD: 2021-09-07 21:44:45  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   0380C0 - 048927
+
+DDD: 2021-09-07 21:44:45  data: 
+ Data:   0380C0 - 048927
+
+DDD: 2021-09-07 21:44:45  start addr:  0380C0 ,  end_addr:  048927
+DDD: 2021-09-07 21:44:45  jlinkArgs.file3_start_addr:  0380C0 jlinkArgs.file3_end_addr:  048927
+III: 2021-09-07 21:44:45  选择擦除整个芯片
+DDD: 2021-09-07 21:44:45  dev sn count:  2
+DDD: 2021-09-07 21:44:45  设置连接方式： "SWD"
+DDD: 2021-09-07 21:44:45  固件1:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/script/s140_nrf52_7.2.0_softdevice.hex"
+DDD: 2021-09-07 21:44:45  file format:  .hex
+DDD: 2021-09-07 21:44:45  已选择HEX文件
+DDD: 2021-09-07 21:44:45  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:44:45  data: 
+ Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:44:45  start addr:  000000 ,  end_addr:  000AFF
+DDD: 2021-09-07 21:44:45  jlinkArgs.file_start_addr:  000000 jlinkArgs.file_end_addr:  000AFF
+DDD: 2021-09-07 21:44:45  file format:  .hex
+DDD: 2021-09-07 21:44:45  file format:  .hex
+DDD: 2021-09-07 21:44:45  已选择HEX文件
+DDD: 2021-09-07 21:44:45  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Execution Start Address: 00027201
+Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:44:45  data: 
+ Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:44:45  start addr:  027000 ,  end_addr:  0301A7
+DDD: 2021-09-07 21:44:45  jlinkArgs.file2_start_addr:  027000 jlinkArgs.file2_end_addr:  0301A7
+DDD: 2021-09-07 21:44:45  file format:  .hex
+DDD: 2021-09-07 21:44:45  filename:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.hex"
+DDD: 2021-09-07 21:44:45  file format:  .hex
+DDD: 2021-09-07 21:44:45  已选择HEX文件
+DDD: 2021-09-07 21:44:45  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   0380C0 - 048927
+
+DDD: 2021-09-07 21:44:45  data: 
+ Data:   0380C0 - 048927
+
+DDD: 2021-09-07 21:44:45  start addr:  0380C0 ,  end_addr:  048927
+DDD: 2021-09-07 21:44:45  jlinkArgs.file3_start_addr:  0380C0 jlinkArgs.file3_end_addr:  048927
+DDD: 2021-09-07 21:44:45  file format:  .hex
+DDD: 2021-09-07 21:45:39  固件1:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/script/s140_nrf52_7.2.0_softdevice.hex"
+DDD: 2021-09-07 21:45:39  file format:  .hex
+DDD: 2021-09-07 21:45:39  已选择HEX文件
+DDD: 2021-09-07 21:45:39  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:45:39  data: 
+ Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:45:39  start addr:  000000 ,  end_addr:  000AFF
+DDD: 2021-09-07 21:45:39  jlinkArgs.file_start_addr:  000000 jlinkArgs.file_end_addr:  000AFF
+DDD: 2021-09-07 21:45:39  file format:  .hex
+DDD: 2021-09-07 21:45:39  已选择HEX文件
+DDD: 2021-09-07 21:45:39  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Execution Start Address: 00027201
+Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:45:39  data: 
+ Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:45:39  start addr:  027000 ,  end_addr:  0301A7
+DDD: 2021-09-07 21:45:39  jlinkArgs.file2_start_addr:  027000 jlinkArgs.file2_end_addr:  0301A7
+DDD: 2021-09-07 21:45:39  filename:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.hex"
+DDD: 2021-09-07 21:45:39  file format:  .hex
+DDD: 2021-09-07 21:45:39  已选择HEX文件
+DDD: 2021-09-07 21:45:40  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   0380C0 - 048927
+
+DDD: 2021-09-07 21:45:40  data: 
+ Data:   0380C0 - 048927
+
+DDD: 2021-09-07 21:45:40  start addr:  0380C0 ,  end_addr:  048927
+DDD: 2021-09-07 21:45:40  jlinkArgs.file3_start_addr:  0380C0 jlinkArgs.file3_end_addr:  048927
+DDD: 2021-09-07 21:45:40  file format:  .hex
+DDD: 2021-09-07 21:45:40  load_file2 存在
+DDD: 2021-09-07 21:45:40  file format:  .hex
+DDD: 2021-09-07 21:45:40  file format:  .hex
+DDD: 2021-09-07 21:45:40  file format:  .hex
+DDD: 2021-09-07 21:45:40  file format:  .hex
+DDD: 2021-09-07 21:45:40  file format:  .hex
+III: 2021-09-07 21:45:40  exec cmd:  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" config/flush_config.txt"
+III: 2021-09-07 21:45:44  保存当前设备的配置
+III: 2021-09-07 21:45:44  写 config/jlink_device_info.json 文件成功
+DDD: 2021-09-07 21:46:05  filename:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.bin"
+DDD: 2021-09-07 21:46:05  file format:  .bin
+DDD: 2021-09-07 21:46:05  已选择Bin文件
+III: 2021-09-07 21:46:05  firmware3 selected:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.bin"
+DDD: 2021-09-07 21:46:07  固件1:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/script/s140_nrf52_7.2.0_softdevice.hex"
+DDD: 2021-09-07 21:46:07  file format:  .hex
+DDD: 2021-09-07 21:46:07  已选择HEX文件
+DDD: 2021-09-07 21:46:07  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:46:07  data: 
+ Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:46:07  start addr:  000000 ,  end_addr:  000AFF
+DDD: 2021-09-07 21:46:07  jlinkArgs.file_start_addr:  000000 jlinkArgs.file_end_addr:  000AFF
+DDD: 2021-09-07 21:46:07  file format:  .hex
+DDD: 2021-09-07 21:46:07  已选择HEX文件
+DDD: 2021-09-07 21:46:07  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Execution Start Address: 00027201
+Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:46:07  data: 
+ Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:46:07  start addr:  027000 ,  end_addr:  0301A7
+DDD: 2021-09-07 21:46:07  jlinkArgs.file2_start_addr:  027000 jlinkArgs.file2_end_addr:  0301A7
+DDD: 2021-09-07 21:46:07  filename:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.bin"
+DDD: 2021-09-07 21:46:07  file format:  .bin
+DDD: 2021-09-07 21:46:07  已选择Bin文件
+DDD: 2021-09-07 21:46:07  file format:  .hex
+DDD: 2021-09-07 21:46:07  load_file2 存在
+DDD: 2021-09-07 21:46:07  file format:  .hex
+DDD: 2021-09-07 21:46:07  file format:  .bin
+DDD: 2021-09-07 21:46:07  file format:  .hex
+DDD: 2021-09-07 21:46:07  file format:  .hex
+DDD: 2021-09-07 21:46:07  file format:  .bin
+DDD: 2021-09-07 21:46:07  load_file3 name:  D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.hex
+III: 2021-09-07 21:46:07  arguments:  QList("D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.bin", "-Binary", "-offset", "0x0380C0", "-o", "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.hex", "-Intel")
+III: 2021-09-07 21:46:08  ""
+III: 2021-09-07 21:46:08  exec cmd:  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" config/flush_config.txt"
+III: 2021-09-07 21:46:12  保存当前设备的配置
+III: 2021-09-07 21:46:12  写 config/jlink_device_info.json 文件成功
+DDD: 2021-09-07 21:46:25  回车按下，检测固件格式是否正确
+DDD: 2021-09-07 21:46:25  当前聚焦于固件3输入框
+DDD: 2021-09-07 21:46:25  filename:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.hex"
+DDD: 2021-09-07 21:46:25  file format:  .hex
+DDD: 2021-09-07 21:46:25  已选择HEX文件
+DDD: 2021-09-07 21:46:25  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   0380C0 - 048927
+
+DDD: 2021-09-07 21:46:25  data: 
+ Data:   0380C0 - 048927
+
+DDD: 2021-09-07 21:46:25  start addr:  0380C0 ,  end_addr:  048927
+DDD: 2021-09-07 21:46:25  jlinkArgs.file3_start_addr:  0380C0 jlinkArgs.file3_end_addr:  048927
+DDD: 2021-09-07 21:46:28  回车按下，检测固件格式是否正确
+DDD: 2021-09-07 21:46:28  当前聚焦于固件3输入框
+DDD: 2021-09-07 21:46:28  filename:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.bin"
+DDD: 2021-09-07 21:46:28  file format:  .bin
+DDD: 2021-09-07 21:46:28  已选择Bin文件
+DDD: 2021-09-07 21:46:35  filename:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.bin"
+DDD: 2021-09-07 21:46:35  file format:  .bin
+DDD: 2021-09-07 21:46:35  已选择Bin文件
+DDD: 2021-09-07 21:46:37  file format:  .hex
+DDD: 2021-09-07 21:46:37  已选择HEX文件
+DDD: 2021-09-07 21:46:37  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Execution Start Address: 00027201
+Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:46:37  data: 
+ Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:46:37  start addr:  027000 ,  end_addr:  0301A7
+DDD: 2021-09-07 21:46:37  jlinkArgs.file2_start_addr:  027000 jlinkArgs.file2_end_addr:  0301A7
+DDD: 2021-09-07 21:46:39  固件1:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/script/s140_nrf52_7.2.0_softdevice.hex"
+DDD: 2021-09-07 21:46:39  file format:  .hex
+DDD: 2021-09-07 21:46:39  已选择HEX文件
+DDD: 2021-09-07 21:46:39  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:46:39  data: 
+ Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:46:39  start addr:  000000 ,  end_addr:  000AFF
+DDD: 2021-09-07 21:46:39  jlinkArgs.file_start_addr:  000000 jlinkArgs.file_end_addr:  000AFF
+DDD: 2021-09-07 21:46:40  固件1:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/script/s140_nrf52_7.2.0_softdevice.hex"
+DDD: 2021-09-07 21:46:40  file format:  .hex
+DDD: 2021-09-07 21:46:40  已选择HEX文件
+DDD: 2021-09-07 21:46:40  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:46:40  data: 
+ Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:46:40  start addr:  000000 ,  end_addr:  000AFF
+DDD: 2021-09-07 21:46:40  jlinkArgs.file_start_addr:  000000 jlinkArgs.file_end_addr:  000AFF
+DDD: 2021-09-07 21:46:41  固件1:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/script/s140_nrf52_7.2.0_softdevice.hex"
+DDD: 2021-09-07 21:46:41  file format:  .hex
+DDD: 2021-09-07 21:46:41  已选择HEX文件
+DDD: 2021-09-07 21:46:41  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:46:41  data: 
+ Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:46:41  start addr:  000000 ,  end_addr:  000AFF
+DDD: 2021-09-07 21:46:41  jlinkArgs.file_start_addr:  000000 jlinkArgs.file_end_addr:  000AFF
+DDD: 2021-09-07 21:46:43  filename:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.bin"
+DDD: 2021-09-07 21:46:43  file format:  .bin
+DDD: 2021-09-07 21:46:43  已选择Bin文件
+DDD: 2021-09-07 21:47:23  固件1:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/script/s140_nrf52_7.2.0_softdevice.hex"
+DDD: 2021-09-07 21:47:23  file format:  .hex
+DDD: 2021-09-07 21:47:23  已选择HEX文件
+DDD: 2021-09-07 21:47:23  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:47:23  data: 
+ Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:47:23  start addr:  000000 ,  end_addr:  000AFF
+DDD: 2021-09-07 21:47:23  jlinkArgs.file_start_addr:  000000 jlinkArgs.file_end_addr:  000AFF
+DDD: 2021-09-07 21:47:24  file format:  .hex
+DDD: 2021-09-07 21:47:24  已选择HEX文件
+DDD: 2021-09-07 21:47:24  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Execution Start Address: 00027201
+Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:47:24  data: 
+ Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:47:24  start addr:  027000 ,  end_addr:  0301A7
+DDD: 2021-09-07 21:47:24  jlinkArgs.file2_start_addr:  027000 jlinkArgs.file2_end_addr:  0301A7
+DDD: 2021-09-07 21:47:26  固件1:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/script/s140_nrf52_7.2.0_softdevice.hex"
+DDD: 2021-09-07 21:47:26  file format:  .hex
+DDD: 2021-09-07 21:47:26  已选择HEX文件
+DDD: 2021-09-07 21:47:26  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:47:26  data: 
+ Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:47:26  start addr:  000000 ,  end_addr:  000AFF
+DDD: 2021-09-07 21:47:26  jlinkArgs.file_start_addr:  000000 jlinkArgs.file_end_addr:  000AFF
+DDD: 2021-09-07 21:47:28  设置连接方式： "SWD"
+DDD: 2021-09-07 21:47:28  固件1:  "D:/Course/Nordic/nRF5_SDK_17.0.2_d674dde/components/softdevice/s140/hex/s140_nrf52_7.2.0_softdevice.hex"
+DDD: 2021-09-07 21:47:28  file format:  .hex
+DDD: 2021-09-07 21:47:28  已选择HEX文件
+DDD: 2021-09-07 21:47:29  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:47:29  data: 
+ Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:47:29  start addr:  000000 ,  end_addr:  000AFF
+DDD: 2021-09-07 21:47:29  jlinkArgs.file_start_addr:  000000 jlinkArgs.file_end_addr:  000AFF
+DDD: 2021-09-07 21:47:29  file format:  .hex
+DDD: 2021-09-07 21:47:29  file format:  .hex
+DDD: 2021-09-07 21:47:29  已选择HEX文件
+DDD: 2021-09-07 21:47:29  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Execution Start Address: 00027201
+Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:47:29  data: 
+ Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:47:29  start addr:  027000 ,  end_addr:  0301A7
+DDD: 2021-09-07 21:47:29  jlinkArgs.file2_start_addr:  027000 jlinkArgs.file2_end_addr:  0301A7
+DDD: 2021-09-07 21:47:29  filename:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.bin"
+DDD: 2021-09-07 21:47:29  file format:  .bin
+DDD: 2021-09-07 21:47:29  已选择Bin文件
+DDD: 2021-09-07 21:47:30  设置连接方式： "SWD"
+DDD: 2021-09-07 21:47:30  固件1:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/script/s140_nrf52_7.2.0_softdevice.hex"
+DDD: 2021-09-07 21:47:30  file format:  .hex
+DDD: 2021-09-07 21:47:30  已选择HEX文件
+DDD: 2021-09-07 21:47:30  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:47:30  data: 
+ Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:47:30  start addr:  000000 ,  end_addr:  000AFF
+DDD: 2021-09-07 21:47:30  jlinkArgs.file_start_addr:  000000 jlinkArgs.file_end_addr:  000AFF
+DDD: 2021-09-07 21:47:30  file format:  .hex
+DDD: 2021-09-07 21:47:30  file format:  .hex
+DDD: 2021-09-07 21:47:30  已选择HEX文件
+DDD: 2021-09-07 21:47:30  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Execution Start Address: 00027201
+Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:47:30  data: 
+ Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:47:30  start addr:  027000 ,  end_addr:  0301A7
+DDD: 2021-09-07 21:47:30  jlinkArgs.file2_start_addr:  027000 jlinkArgs.file2_end_addr:  0301A7
+DDD: 2021-09-07 21:47:30  file format:  .hex
+DDD: 2021-09-07 21:47:30  filename:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.bin"
+DDD: 2021-09-07 21:47:30  file format:  .bin
+DDD: 2021-09-07 21:47:30  已选择Bin文件
+DDD: 2021-09-07 21:47:30  file format:  .bin
+DDD: 2021-09-07 21:47:30  固件3 为BIN文件，显示其保存的Start Address
+DDD: 2021-09-07 21:47:34  设置连接方式： "SWD"
+DDD: 2021-09-07 21:47:34  固件1:  "D:/Course/Nordic/nRF5_SDK_17.0.2_d674dde/components/softdevice/s140/hex/s140_nrf52_7.2.0_softdevice.hex"
+DDD: 2021-09-07 21:47:34  file format:  .hex
+DDD: 2021-09-07 21:47:34  已选择HEX文件
+DDD: 2021-09-07 21:47:34  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:47:34  data: 
+ Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:47:34  start addr:  000000 ,  end_addr:  000AFF
+DDD: 2021-09-07 21:47:34  jlinkArgs.file_start_addr:  000000 jlinkArgs.file_end_addr:  000AFF
+DDD: 2021-09-07 21:47:34  file format:  .hex
+DDD: 2021-09-07 21:47:34  file format:  .hex
+DDD: 2021-09-07 21:47:34  已选择HEX文件
+DDD: 2021-09-07 21:47:34  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Execution Start Address: 00027201
+Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:47:34  data: 
+ Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:47:34  start addr:  027000 ,  end_addr:  0301A7
+DDD: 2021-09-07 21:47:34  jlinkArgs.file2_start_addr:  027000 jlinkArgs.file2_end_addr:  0301A7
+DDD: 2021-09-07 21:47:34  filename:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.bin"
+DDD: 2021-09-07 21:47:34  file format:  .bin
+DDD: 2021-09-07 21:47:34  已选择Bin文件
+DDD: 2021-09-07 21:47:37  filename:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.bin"
+DDD: 2021-09-07 21:47:37  file format:  .bin
+DDD: 2021-09-07 21:47:37  已选择Bin文件
+DDD: 2021-09-07 21:47:40  设置连接方式： "SWD"
+DDD: 2021-09-07 21:47:40  固件1:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/script/s140_nrf52_7.2.0_softdevice.hex"
+DDD: 2021-09-07 21:47:40  file format:  .hex
+DDD: 2021-09-07 21:47:40  已选择HEX文件
+DDD: 2021-09-07 21:47:40  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:47:40  data: 
+ Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:47:40  start addr:  000000 ,  end_addr:  000AFF
+DDD: 2021-09-07 21:47:40  jlinkArgs.file_start_addr:  000000 jlinkArgs.file_end_addr:  000AFF
+DDD: 2021-09-07 21:47:40  file format:  .hex
+DDD: 2021-09-07 21:47:40  file format:  .hex
+DDD: 2021-09-07 21:47:40  已选择HEX文件
+DDD: 2021-09-07 21:47:40  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Execution Start Address: 00027201
+Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:47:40  data: 
+ Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:47:40  start addr:  027000 ,  end_addr:  0301A7
+DDD: 2021-09-07 21:47:40  jlinkArgs.file2_start_addr:  027000 jlinkArgs.file2_end_addr:  0301A7
+DDD: 2021-09-07 21:47:40  file format:  .hex
+DDD: 2021-09-07 21:47:40  filename:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.bin"
+DDD: 2021-09-07 21:47:40  file format:  .bin
+DDD: 2021-09-07 21:47:40  已选择Bin文件
+DDD: 2021-09-07 21:47:40  file format:  .bin
+DDD: 2021-09-07 21:47:40  固件3 为BIN文件，显示其保存的Start Address
+DDD: 2021-09-07 21:47:42  设置连接方式： "SWD"
+DDD: 2021-09-07 21:47:42  固件1:  "D:/Course/Nordic/nRF5_SDK_17.0.2_d674dde/components/softdevice/s140/hex/s140_nrf52_7.2.0_softdevice.hex"
+DDD: 2021-09-07 21:47:42  file format:  .hex
+DDD: 2021-09-07 21:47:42  已选择HEX文件
+DDD: 2021-09-07 21:47:42  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:47:42  data: 
+ Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:47:42  start addr:  000000 ,  end_addr:  000AFF
+DDD: 2021-09-07 21:47:42  jlinkArgs.file_start_addr:  000000 jlinkArgs.file_end_addr:  000AFF
+DDD: 2021-09-07 21:47:42  file format:  .hex
+DDD: 2021-09-07 21:47:42  file format:  .hex
+DDD: 2021-09-07 21:47:42  已选择HEX文件
+DDD: 2021-09-07 21:47:42  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Execution Start Address: 00027201
+Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:47:42  data: 
+ Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:47:42  start addr:  027000 ,  end_addr:  0301A7
+DDD: 2021-09-07 21:47:42  jlinkArgs.file2_start_addr:  027000 jlinkArgs.file2_end_addr:  0301A7
+DDD: 2021-09-07 21:47:42  filename:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.bin"
+DDD: 2021-09-07 21:47:42  file format:  .bin
+DDD: 2021-09-07 21:47:42  已选择Bin文件
+DDD: 2021-09-07 21:47:44  设置连接方式： "SWD"
+DDD: 2021-09-07 21:47:44  固件1:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/script/s140_nrf52_7.2.0_softdevice.hex"
+DDD: 2021-09-07 21:47:44  file format:  .hex
+DDD: 2021-09-07 21:47:44  已选择HEX文件
+DDD: 2021-09-07 21:47:44  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:47:44  data: 
+ Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:47:44  start addr:  000000 ,  end_addr:  000AFF
+DDD: 2021-09-07 21:47:44  jlinkArgs.file_start_addr:  000000 jlinkArgs.file_end_addr:  000AFF
+DDD: 2021-09-07 21:47:44  file format:  .hex
+DDD: 2021-09-07 21:47:44  file format:  .hex
+DDD: 2021-09-07 21:47:44  已选择HEX文件
+DDD: 2021-09-07 21:47:44  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Execution Start Address: 00027201
+Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:47:44  data: 
+ Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:47:44  start addr:  027000 ,  end_addr:  0301A7
+DDD: 2021-09-07 21:47:44  jlinkArgs.file2_start_addr:  027000 jlinkArgs.file2_end_addr:  0301A7
+DDD: 2021-09-07 21:47:44  file format:  .hex
+DDD: 2021-09-07 21:47:44  filename:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.bin"
+DDD: 2021-09-07 21:47:44  file format:  .bin
+DDD: 2021-09-07 21:47:44  已选择Bin文件
+DDD: 2021-09-07 21:47:44  file format:  .bin
+DDD: 2021-09-07 21:47:44  固件3 为BIN文件，显示其保存的Start Address
+III: 2021-09-07 21:47:49  保存当前设备的配置
+III: 2021-09-07 21:47:49  写 config/jlink_device_info.json 文件成功
+DDD: 2021-09-07 21:47:49  添加固件1记录
+DDD: 2021-09-07 21:47:49  添加固件1记录
+III: 2021-09-07 21:47:49  写global config配置文件成功
+DDD: 2021-09-07 21:47:54  存在固件记录
+DDD: 2021-09-07 21:47:54  存在固件记录
+DDD: 2021-09-07 21:47:54  存在固件记录
+DDD: 2021-09-07 21:47:54  存在固件记录
+DDD: 2021-09-07 21:47:54  读取固件1记录成功
+DDD: 2021-09-07 21:47:54  读取固件1记录成功
+DDD: 2021-09-07 21:47:54  读取固件1记录成功
+DDD: 2021-09-07 21:47:54  读取固件1记录成功
+DDD: 2021-09-07 21:47:54  读取固件1记录成功
+DDD: 2021-09-07 21:47:54  读取固件1记录成功
+DDD: 2021-09-07 21:47:54  jlink_cmd_path value:  "C:/Program Files (x86)/SEGGER/JLink/JLink.exe"
+III: 2021-09-07 21:47:54  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" -CommandFile config/get_sn_log_cmd.txt -Log config/jlink_log.txt"
+III: 2021-09-07 21:47:54  SEGGER J-Link Commander V6.72d (Compiled May 15 2020 16:48:00)
+DLL version V6.72d, compiled May 15 2020 16:47:06
+
+
+J-Link Command File read successfully.
+Processing script file...
+
+J-Link[0]: Connection: USB, Serial number: 23521525, ProductName: SAM-ICE
+J-Link[1]: Connection: USB, Serial number: 29401025, ProductName: SAM-ICE
+
+
+Script processing completed.
+
+
+DDD: 2021-09-07 21:47:54  设置连接方式： "SWD"
+DDD: 2021-09-07 21:47:54  固件1:  "D:/Course/Nordic/nRF5_SDK_17.0.2_d674dde/components/softdevice/s140/hex/s140_nrf52_7.2.0_softdevice.hex"
+DDD: 2021-09-07 21:47:54  file format:  .hex
+DDD: 2021-09-07 21:47:54  已选择HEX文件
+DDD: 2021-09-07 21:47:54  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:47:54  data: 
+ Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:47:54  start addr:  000000 ,  end_addr:  000AFF
+DDD: 2021-09-07 21:47:54  jlinkArgs.file_start_addr:  000000 jlinkArgs.file_end_addr:  000AFF
+DDD: 2021-09-07 21:47:54  file format:  .hex
+DDD: 2021-09-07 21:47:54  file format:  .hex
+DDD: 2021-09-07 21:47:54  已选择HEX文件
+DDD: 2021-09-07 21:47:54  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Execution Start Address: 00027201
+Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:47:54  data: 
+ Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:47:54  start addr:  027000 ,  end_addr:  0301A7
+DDD: 2021-09-07 21:47:54  jlinkArgs.file2_start_addr:  027000 jlinkArgs.file2_end_addr:  0301A7
+DDD: 2021-09-07 21:47:54  filename:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.bin"
+DDD: 2021-09-07 21:47:54  file format:  .bin
+DDD: 2021-09-07 21:47:54  已选择Bin文件
+III: 2021-09-07 21:47:54  选择擦除整个芯片
+DDD: 2021-09-07 21:47:54  dev sn count:  2
+DDD: 2021-09-07 21:47:54  设置连接方式： "SWD"
+DDD: 2021-09-07 21:47:54  固件1:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/script/s140_nrf52_7.2.0_softdevice.hex"
+DDD: 2021-09-07 21:47:54  file format:  .hex
+DDD: 2021-09-07 21:47:54  已选择HEX文件
+DDD: 2021-09-07 21:47:54  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:47:54  data: 
+ Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:47:54  start addr:  000000 ,  end_addr:  000AFF
+DDD: 2021-09-07 21:47:54  jlinkArgs.file_start_addr:  000000 jlinkArgs.file_end_addr:  000AFF
+DDD: 2021-09-07 21:47:54  file format:  .hex
+DDD: 2021-09-07 21:47:54  file format:  .hex
+DDD: 2021-09-07 21:47:54  已选择HEX文件
+DDD: 2021-09-07 21:47:54  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Execution Start Address: 00027201
+Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:47:54  data: 
+ Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:47:54  start addr:  027000 ,  end_addr:  0301A7
+DDD: 2021-09-07 21:47:54  jlinkArgs.file2_start_addr:  027000 jlinkArgs.file2_end_addr:  0301A7
+DDD: 2021-09-07 21:47:54  file format:  .hex
+DDD: 2021-09-07 21:47:54  filename:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.bin"
+DDD: 2021-09-07 21:47:54  file format:  .bin
+DDD: 2021-09-07 21:47:54  已选择Bin文件
+DDD: 2021-09-07 21:47:54  file format:  .bin
+DDD: 2021-09-07 21:47:54  固件3 为BIN文件，显示其保存的Start Address
+DDD: 2021-09-07 21:48:37  固件1:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/script/s140_nrf52_7.2.0_softdevice.hex"
+DDD: 2021-09-07 21:48:37  file format:  .hex
+DDD: 2021-09-07 21:48:37  已选择HEX文件
+DDD: 2021-09-07 21:48:37  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:48:37  data: 
+ Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:48:37  start addr:  000000 ,  end_addr:  000AFF
+DDD: 2021-09-07 21:48:37  jlinkArgs.file_start_addr:  000000 jlinkArgs.file_end_addr:  000AFF
+DDD: 2021-09-07 21:48:37  file format:  .hex
+DDD: 2021-09-07 21:48:37  已选择HEX文件
+DDD: 2021-09-07 21:48:37  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Execution Start Address: 00027201
+Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:48:37  data: 
+ Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:48:37  start addr:  027000 ,  end_addr:  0301A7
+DDD: 2021-09-07 21:48:37  jlinkArgs.file2_start_addr:  027000 jlinkArgs.file2_end_addr:  0301A7
+DDD: 2021-09-07 21:48:37  filename:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.bin"
+DDD: 2021-09-07 21:48:37  file format:  .bin
+DDD: 2021-09-07 21:48:37  已选择Bin文件
+DDD: 2021-09-07 21:48:37  file format:  .hex
+DDD: 2021-09-07 21:48:37  load_file2 存在
+DDD: 2021-09-07 21:48:37  file format:  .hex
+DDD: 2021-09-07 21:48:37  file format:  .bin
+DDD: 2021-09-07 21:48:37  file format:  .hex
+DDD: 2021-09-07 21:48:37  file format:  .hex
+DDD: 2021-09-07 21:48:37  file format:  .bin
+DDD: 2021-09-07 21:48:37  load_file3 name:  D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.hex
+III: 2021-09-07 21:48:37  arguments:  QList("D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.bin", "-Binary", "-offset", "0x0380C0", "-o", "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.hex", "-Intel")
+III: 2021-09-07 21:48:37  ""
+III: 2021-09-07 21:48:37  exec cmd:  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" config/flush_config.txt"
+III: 2021-09-07 21:48:42  保存当前设备的配置
+III: 2021-09-07 21:48:42  写 config/jlink_device_info.json 文件成功
+DDD: 2021-09-07 21:49:41  filename:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.bin"
+DDD: 2021-09-07 21:49:41  file format:  .bin
+DDD: 2021-09-07 21:49:41  已选择Bin文件
+DDD: 2021-09-07 21:49:43  filename:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.bin"
+DDD: 2021-09-07 21:49:43  file format:  .bin
+DDD: 2021-09-07 21:49:43  已选择Bin文件
+DDD: 2021-09-07 21:49:44  file format:  .hex
+DDD: 2021-09-07 21:49:44  已选择HEX文件
+DDD: 2021-09-07 21:49:44  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Execution Start Address: 00027201
+Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:49:44  data: 
+ Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:49:44  start addr:  027000 ,  end_addr:  0301A7
+DDD: 2021-09-07 21:49:44  jlinkArgs.file2_start_addr:  027000 jlinkArgs.file2_end_addr:  0301A7
+DDD: 2021-09-07 21:49:44  固件1:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/script/s140_nrf52_7.2.0_softdevice.hex"
+DDD: 2021-09-07 21:49:44  file format:  .hex
+DDD: 2021-09-07 21:49:44  已选择HEX文件
+DDD: 2021-09-07 21:49:45  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:49:45  data: 
+ Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:49:45  start addr:  000000 ,  end_addr:  000AFF
+DDD: 2021-09-07 21:49:45  jlinkArgs.file_start_addr:  000000 jlinkArgs.file_end_addr:  000AFF
+DDD: 2021-09-07 21:49:47  file format:  .hex
+DDD: 2021-09-07 21:49:47  已选择HEX文件
+DDD: 2021-09-07 21:49:47  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Execution Start Address: 00027201
+Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:49:47  data: 
+ Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:49:47  start addr:  027000 ,  end_addr:  0301A7
+DDD: 2021-09-07 21:49:47  jlinkArgs.file2_start_addr:  027000 jlinkArgs.file2_end_addr:  0301A7
+DDD: 2021-09-07 21:49:50  file format:  .hex
+DDD: 2021-09-07 21:49:50  已选择HEX文件
+DDD: 2021-09-07 21:49:50  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Execution Start Address: 00027201
+Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:49:50  data: 
+ Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:49:50  start addr:  027000 ,  end_addr:  0301A7
+DDD: 2021-09-07 21:49:50  jlinkArgs.file2_start_addr:  027000 jlinkArgs.file2_end_addr:  0301A7
+DDD: 2021-09-07 21:49:50  固件1:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/script/s140_nrf52_7.2.0_softdevice.hex"
+DDD: 2021-09-07 21:49:50  file format:  .hex
+DDD: 2021-09-07 21:49:50  已选择HEX文件
+DDD: 2021-09-07 21:49:50  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:49:50  data: 
+ Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:49:50  start addr:  000000 ,  end_addr:  000AFF
+DDD: 2021-09-07 21:49:50  jlinkArgs.file_start_addr:  000000 jlinkArgs.file_end_addr:  000AFF
+DDD: 2021-09-07 21:49:51  filename:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.bin"
+DDD: 2021-09-07 21:49:51  file format:  .bin
+DDD: 2021-09-07 21:49:51  已选择Bin文件
+DDD: 2021-09-07 21:50:00  固件1:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/script/s140_nrf52_7.2.0_softdevice.hex"
+DDD: 2021-09-07 21:50:00  file format:  .hex
+DDD: 2021-09-07 21:50:00  已选择HEX文件
+DDD: 2021-09-07 21:50:00  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:50:00  data: 
+ Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:50:00  start addr:  000000 ,  end_addr:  000AFF
+DDD: 2021-09-07 21:50:00  jlinkArgs.file_start_addr:  000000 jlinkArgs.file_end_addr:  000AFF
+DDD: 2021-09-07 21:50:02  file format:  .hex
+DDD: 2021-09-07 21:50:02  已选择HEX文件
+DDD: 2021-09-07 21:50:02  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Execution Start Address: 00027201
+Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:50:02  data: 
+ Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:50:02  start addr:  027000 ,  end_addr:  0301A7
+DDD: 2021-09-07 21:50:02  jlinkArgs.file2_start_addr:  027000 jlinkArgs.file2_end_addr:  0301A7
+DDD: 2021-09-07 21:50:03  filename:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.bin"
+DDD: 2021-09-07 21:50:03  file format:  .bin
+DDD: 2021-09-07 21:50:03  已选择Bin文件
+DDD: 2021-09-07 21:50:04  file format:  .hex
+DDD: 2021-09-07 21:50:04  已选择HEX文件
+DDD: 2021-09-07 21:50:04  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Execution Start Address: 00027201
+Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:50:04  data: 
+ Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:50:04  start addr:  027000 ,  end_addr:  0301A7
+DDD: 2021-09-07 21:50:04  jlinkArgs.file2_start_addr:  027000 jlinkArgs.file2_end_addr:  0301A7
+DDD: 2021-09-07 21:50:05  固件1:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/script/s140_nrf52_7.2.0_softdevice.hex"
+DDD: 2021-09-07 21:50:05  file format:  .hex
+DDD: 2021-09-07 21:50:05  已选择HEX文件
+DDD: 2021-09-07 21:50:05  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:50:05  data: 
+ Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:50:05  start addr:  000000 ,  end_addr:  000AFF
+DDD: 2021-09-07 21:50:05  jlinkArgs.file_start_addr:  000000 jlinkArgs.file_end_addr:  000AFF
+DDD: 2021-09-07 21:50:30  清除log
+III: 2021-09-07 21:50:32  保存当前设备的配置
+III: 2021-09-07 21:50:32  写 config/jlink_device_info.json 文件成功
+III: 2021-09-07 21:50:32  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" -CommandFile config/get_sn_log_cmd.txt -Log config/jlink_log.txt"
+III: 2021-09-07 21:50:32  SEGGER J-Link Commander V6.72d (Compiled May 15 2020 16:48:00)
+DLL version V6.72d, compiled May 15 2020 16:47:06
+
+
+J-Link Command File read successfully.
+Processing script file...
+
+J-Link[0]: Connection: USB, Serial number: 23521525, ProductName: SAM-ICE
+J-Link[1]: Connection: USB, Serial number: 29401025, ProductName: SAM-ICE
+
+
+Script processing completed.
+
+
+DDD: 2021-09-07 21:50:32  设置连接方式： "SWD"
+DDD: 2021-09-07 21:50:32  固件1:  "D:/Course/Nordic/nRF5_SDK_17.0.2_d674dde/components/softdevice/s140/hex/s140_nrf52_7.2.0_softdevice.hex"
+DDD: 2021-09-07 21:50:32  file format:  .hex
+DDD: 2021-09-07 21:50:32  已选择HEX文件
+DDD: 2021-09-07 21:50:32  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:50:32  data: 
+ Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:50:32  start addr:  000000 ,  end_addr:  000AFF
+DDD: 2021-09-07 21:50:32  jlinkArgs.file_start_addr:  000000 jlinkArgs.file_end_addr:  000AFF
+DDD: 2021-09-07 21:50:32  file format:  .hex
+DDD: 2021-09-07 21:50:32  file format:  .hex
+DDD: 2021-09-07 21:50:32  已选择HEX文件
+DDD: 2021-09-07 21:50:32  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Execution Start Address: 00027201
+Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:50:32  data: 
+ Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:50:32  start addr:  027000 ,  end_addr:  0301A7
+DDD: 2021-09-07 21:50:32  jlinkArgs.file2_start_addr:  027000 jlinkArgs.file2_end_addr:  0301A7
+DDD: 2021-09-07 21:50:32  filename:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.bin"
+DDD: 2021-09-07 21:50:32  file format:  .bin
+DDD: 2021-09-07 21:50:32  已选择Bin文件
+III: 2021-09-07 21:50:33  exec cmd:  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" config/reboot_config.txt"
+EEE: 2021-09-07 21:50:44  Cannot connect to target.
+III: 2021-09-07 21:50:49  保存当前设备的配置
+III: 2021-09-07 21:50:49  写 config/jlink_device_info.json 文件成功
+III: 2021-09-07 21:50:49  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" -CommandFile config/get_sn_log_cmd.txt -Log config/jlink_log.txt"
+III: 2021-09-07 21:50:49  SEGGER J-Link Commander V6.72d (Compiled May 15 2020 16:48:00)
+DLL version V6.72d, compiled May 15 2020 16:47:06
+
+
+J-Link Command File read successfully.
+Processing script file...
+
+J-Link[0]: Connection: USB, Serial number: 23521525, ProductName: SAM-ICE
+J-Link[1]: Connection: USB, Serial number: 29401025, ProductName: SAM-ICE
+
+
+Script processing completed.
+
+
+DDD: 2021-09-07 21:50:49  设置连接方式： "SWD"
+DDD: 2021-09-07 21:50:49  固件1:  "D:/Course/Nordic/nRF5_SDK_17.0.2_d674dde/components/softdevice/s140/hex/s140_nrf52_7.2.0_softdevice.hex"
+DDD: 2021-09-07 21:50:49  file format:  .hex
+DDD: 2021-09-07 21:50:49  已选择HEX文件
+DDD: 2021-09-07 21:50:49  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:50:49  data: 
+ Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:50:49  start addr:  000000 ,  end_addr:  000AFF
+DDD: 2021-09-07 21:50:49  jlinkArgs.file_start_addr:  000000 jlinkArgs.file_end_addr:  000AFF
+DDD: 2021-09-07 21:50:49  file format:  .hex
+DDD: 2021-09-07 21:50:49  file format:  .hex
+DDD: 2021-09-07 21:50:49  已选择HEX文件
+DDD: 2021-09-07 21:50:49  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Execution Start Address: 00027201
+Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:50:49  data: 
+ Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:50:49  start addr:  027000 ,  end_addr:  0301A7
+DDD: 2021-09-07 21:50:49  jlinkArgs.file2_start_addr:  027000 jlinkArgs.file2_end_addr:  0301A7
+DDD: 2021-09-07 21:50:49  file format:  .hex
+DDD: 2021-09-07 21:50:49  filename:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.bin"
+DDD: 2021-09-07 21:50:49  file format:  .bin
+DDD: 2021-09-07 21:50:49  已选择Bin文件
+DDD: 2021-09-07 21:50:49  file format:  .bin
+DDD: 2021-09-07 21:50:49  固件3 为BIN文件，显示其保存的Start Address
+DDD: 2021-09-07 21:50:53  filename:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.bin"
+DDD: 2021-09-07 21:50:53  file format:  .bin
+DDD: 2021-09-07 21:50:53  已选择Bin文件
+DDD: 2021-09-07 21:50:54  固件1:  "D:/Course/Nordic/nRF5_SDK_17.0.2_d674dde/components/softdevice/s140/hex/s140_nrf52_7.2.0_softdevice.hex"
+DDD: 2021-09-07 21:50:54  file format:  .hex
+DDD: 2021-09-07 21:50:54  已选择HEX文件
+DDD: 2021-09-07 21:50:54  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:50:54  data: 
+ Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:50:54  start addr:  000000 ,  end_addr:  000AFF
+DDD: 2021-09-07 21:50:54  jlinkArgs.file_start_addr:  000000 jlinkArgs.file_end_addr:  000AFF
+DDD: 2021-09-07 21:50:54  file format:  .hex
+DDD: 2021-09-07 21:50:54  已选择HEX文件
+DDD: 2021-09-07 21:50:54  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Execution Start Address: 00027201
+Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:50:54  data: 
+ Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:50:54  start addr:  027000 ,  end_addr:  0301A7
+DDD: 2021-09-07 21:50:54  jlinkArgs.file2_start_addr:  027000 jlinkArgs.file2_end_addr:  0301A7
+DDD: 2021-09-07 21:50:54  filename:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.bin"
+DDD: 2021-09-07 21:50:54  file format:  .bin
+DDD: 2021-09-07 21:50:54  已选择Bin文件
+DDD: 2021-09-07 21:50:54  file format:  .hex
+DDD: 2021-09-07 21:50:54  load_file2 存在
+DDD: 2021-09-07 21:50:54  file format:  .hex
+DDD: 2021-09-07 21:50:54  file format:  .bin
+DDD: 2021-09-07 21:50:54  file format:  .hex
+DDD: 2021-09-07 21:50:54  file format:  .hex
+DDD: 2021-09-07 21:50:54  file format:  .bin
+DDD: 2021-09-07 21:50:54  load_file3 name:  D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.hex
+III: 2021-09-07 21:50:54  arguments:  QList("D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.bin", "-Binary", "-offset", "0x0380C0", "-o", "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.hex", "-Intel")
+III: 2021-09-07 21:50:54  ""
+III: 2021-09-07 21:50:54  exec cmd:  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" config/flush_config.txt"
+III: 2021-09-07 21:51:05  保存当前设备的配置
+III: 2021-09-07 21:51:05  写 config/jlink_device_info.json 文件成功
+DDD: 2021-09-07 21:52:19  固件1:  "D:/Course/Nordic/nRF5_SDK_17.0.2_d674dde/components/softdevice/s140/hex/s140_nrf52_7.2.0_softdevice.hex"
+DDD: 2021-09-07 21:52:19  file format:  .hex
+DDD: 2021-09-07 21:52:19  已选择HEX文件
+DDD: 2021-09-07 21:52:19  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:52:19  data: 
+ Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:52:19  start addr:  000000 ,  end_addr:  000AFF
+DDD: 2021-09-07 21:52:19  jlinkArgs.file_start_addr:  000000 jlinkArgs.file_end_addr:  000AFF
+DDD: 2021-09-07 21:52:19  file format:  .hex
+DDD: 2021-09-07 21:52:19  已选择HEX文件
+DDD: 2021-09-07 21:52:19  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Execution Start Address: 00027201
+Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:52:19  data: 
+ Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:52:19  start addr:  027000 ,  end_addr:  0301A7
+DDD: 2021-09-07 21:52:19  jlinkArgs.file2_start_addr:  027000 jlinkArgs.file2_end_addr:  0301A7
+DDD: 2021-09-07 21:52:19  filename:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.bin"
+DDD: 2021-09-07 21:52:19  file format:  .bin
+DDD: 2021-09-07 21:52:19  已选择Bin文件
+DDD: 2021-09-07 21:52:19  file format:  .hex
+DDD: 2021-09-07 21:52:19  load_file2 存在
+DDD: 2021-09-07 21:52:19  file format:  .hex
+DDD: 2021-09-07 21:52:19  file format:  .bin
+DDD: 2021-09-07 21:52:19  file format:  .hex
+DDD: 2021-09-07 21:52:19  file format:  .hex
+DDD: 2021-09-07 21:52:19  file format:  .bin
+DDD: 2021-09-07 21:52:19  load_file3 name:  D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.hex
+III: 2021-09-07 21:52:19  arguments:  QList("D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.bin", "-Binary", "-offset", "0x0380C0", "-o", "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.hex", "-Intel")
+III: 2021-09-07 21:52:20  ""
+III: 2021-09-07 21:52:20  exec cmd:  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" config/flush_config.txt"
+III: 2021-09-07 21:52:24  保存当前设备的配置
+III: 2021-09-07 21:52:24  写 config/jlink_device_info.json 文件成功
+DDD: 2021-09-07 21:56:43  固件1:  "D:/Course/Nordic/nRF5_SDK_17.0.2_d674dde/components/softdevice/s140/hex/s140_nrf52_7.2.0_softdevice.hex"
+DDD: 2021-09-07 21:56:43  file format:  .hex
+DDD: 2021-09-07 21:56:43  已选择HEX文件
+DDD: 2021-09-07 21:56:43  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:56:43  data: 
+ Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:56:43  start addr:  000000 ,  end_addr:  000AFF
+DDD: 2021-09-07 21:56:43  jlinkArgs.file_start_addr:  000000 jlinkArgs.file_end_addr:  000AFF
+DDD: 2021-09-07 21:56:43  file format:  .hex
+DDD: 2021-09-07 21:56:43  已选择HEX文件
+DDD: 2021-09-07 21:56:43  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Execution Start Address: 00027201
+Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:56:43  data: 
+ Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:56:43  start addr:  027000 ,  end_addr:  0301A7
+DDD: 2021-09-07 21:56:43  jlinkArgs.file2_start_addr:  027000 jlinkArgs.file2_end_addr:  0301A7
+DDD: 2021-09-07 21:56:43  filename:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.bin"
+DDD: 2021-09-07 21:56:43  file format:  .bin
+DDD: 2021-09-07 21:56:43  已选择Bin文件
+DDD: 2021-09-07 21:56:43  file format:  .hex
+DDD: 2021-09-07 21:56:43  load_file2 存在
+DDD: 2021-09-07 21:56:43  file format:  .hex
+DDD: 2021-09-07 21:56:43  file format:  .bin
+DDD: 2021-09-07 21:56:43  file format:  .hex
+DDD: 2021-09-07 21:56:43  file format:  .hex
+DDD: 2021-09-07 21:56:43  file format:  .bin
+DDD: 2021-09-07 21:56:43  load_file3 name:  D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.hex
+III: 2021-09-07 21:56:43  arguments:  QList("D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.bin", "-Binary", "-offset", "0x0380C0", "-o", "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.hex", "-Intel")
+III: 2021-09-07 21:56:43  ""
+III: 2021-09-07 21:56:43  exec cmd:  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" config/flush_config.txt"
+III: 2021-09-07 21:56:47  保存当前设备的配置
+III: 2021-09-07 21:56:47  写 config/jlink_device_info.json 文件成功
+III: 2021-09-07 21:58:57  保存当前设备的配置
+III: 2021-09-07 21:58:57  写 config/jlink_device_info.json 文件成功
+DDD: 2021-09-07 21:58:57  添加固件1记录
+DDD: 2021-09-07 21:58:57  添加固件1记录
+III: 2021-09-07 21:58:57  写global config配置文件成功
+DDD: 2021-09-07 21:59:05  存在固件记录
+DDD: 2021-09-07 21:59:05  存在固件记录
+DDD: 2021-09-07 21:59:05  存在固件记录
+DDD: 2021-09-07 21:59:05  存在固件记录
+DDD: 2021-09-07 21:59:05  读取固件1记录成功
+DDD: 2021-09-07 21:59:05  读取固件1记录成功
+DDD: 2021-09-07 21:59:05  读取固件1记录成功
+DDD: 2021-09-07 21:59:05  读取固件1记录成功
+DDD: 2021-09-07 21:59:05  读取固件1记录成功
+DDD: 2021-09-07 21:59:05  读取固件1记录成功
+DDD: 2021-09-07 21:59:05  jlink_cmd_path value:  "C:/Program Files (x86)/SEGGER/JLink/JLink.exe"
+III: 2021-09-07 21:59:05  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" -CommandFile config/get_sn_log_cmd.txt -Log config/jlink_log.txt"
+III: 2021-09-07 21:59:05  SEGGER J-Link Commander V6.72d (Compiled May 15 2020 16:48:00)
+DLL version V6.72d, compiled May 15 2020 16:47:06
+
+
+J-Link Command File read successfully.
+Processing script file...
+
+J-Link[0]: Connection: USB, Serial number: 23521525, ProductName: SAM-ICE
+J-Link[1]: Connection: USB, Serial number: 29401025, ProductName: SAM-ICE
+
+
+Script processing completed.
+
+
+DDD: 2021-09-07 21:59:05  设置连接方式： "SWD"
+DDD: 2021-09-07 21:59:05  固件1:  "D:/Course/Nordic/nRF5_SDK_17.0.2_d674dde/components/softdevice/s140/hex/s140_nrf52_7.2.0_softdevice.hex"
+DDD: 2021-09-07 21:59:05  file format:  .hex
+DDD: 2021-09-07 21:59:05  已选择HEX文件
+DDD: 2021-09-07 21:59:05  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:59:05  data: 
+ Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:59:05  start addr:  000000 ,  end_addr:  000AFF
+DDD: 2021-09-07 21:59:05  jlinkArgs.file_start_addr:  000000 jlinkArgs.file_end_addr:  000AFF
+DDD: 2021-09-07 21:59:05  file format:  .hex
+DDD: 2021-09-07 21:59:05  file format:  .hex
+DDD: 2021-09-07 21:59:05  已选择HEX文件
+DDD: 2021-09-07 21:59:05  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Execution Start Address: 00027201
+Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:59:05  data: 
+ Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:59:05  start addr:  027000 ,  end_addr:  0301A7
+DDD: 2021-09-07 21:59:05  jlinkArgs.file2_start_addr:  027000 jlinkArgs.file2_end_addr:  0301A7
+DDD: 2021-09-07 21:59:05  file format:  .hex
+DDD: 2021-09-07 21:59:05  filename:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.bin"
+DDD: 2021-09-07 21:59:05  file format:  .bin
+DDD: 2021-09-07 21:59:05  已选择Bin文件
+DDD: 2021-09-07 21:59:05  file format:  .bin
+DDD: 2021-09-07 21:59:05  固件3 为BIN文件，显示其保存的Start Address
+III: 2021-09-07 21:59:05  选择擦除整个芯片
+DDD: 2021-09-07 21:59:05  dev sn count:  2
+III: 2021-09-07 21:59:13  保存当前设备的配置
+III: 2021-09-07 21:59:13  写 config/jlink_device_info.json 文件成功
+DDD: 2021-09-07 21:59:13  添加固件1记录
+DDD: 2021-09-07 21:59:13  添加固件1记录
+III: 2021-09-07 21:59:13  写global config配置文件成功
+DDD: 2021-09-07 21:59:41  存在固件记录
+DDD: 2021-09-07 21:59:41  存在固件记录
+DDD: 2021-09-07 21:59:41  存在固件记录
+DDD: 2021-09-07 21:59:41  存在固件记录
+DDD: 2021-09-07 21:59:41  读取固件1记录成功
+DDD: 2021-09-07 21:59:41  读取固件1记录成功
+DDD: 2021-09-07 21:59:41  读取固件1记录成功
+DDD: 2021-09-07 21:59:41  读取固件1记录成功
+DDD: 2021-09-07 21:59:41  读取固件1记录成功
+DDD: 2021-09-07 21:59:41  读取固件1记录成功
+DDD: 2021-09-07 21:59:41  jlink_cmd_path value:  "C:/Program Files (x86)/SEGGER/JLink/JLink.exe"
+III: 2021-09-07 21:59:41  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" -CommandFile config/get_sn_log_cmd.txt -Log config/jlink_log.txt"
+III: 2021-09-07 21:59:41  SEGGER J-Link Commander V6.72d (Compiled May 15 2020 16:48:00)
+DLL version V6.72d, compiled May 15 2020 16:47:06
+
+
+J-Link Command File read successfully.
+Processing script file...
+
+J-Link[0]: Connection: USB, Serial number: 23521525, ProductName: SAM-ICE
+J-Link[1]: Connection: USB, Serial number: 29401025, ProductName: SAM-ICE
+
+
+Script processing completed.
+
+
+DDD: 2021-09-07 21:59:41  设置连接方式： "SWD"
+DDD: 2021-09-07 21:59:41  固件1:  "D:/Course/Nordic/nRF5_SDK_17.0.2_d674dde/components/softdevice/s140/hex/s140_nrf52_7.2.0_softdevice.hex"
+DDD: 2021-09-07 21:59:41  file format:  .hex
+DDD: 2021-09-07 21:59:41  已选择HEX文件
+DDD: 2021-09-07 21:59:41  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:59:41  data: 
+ Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 21:59:41  start addr:  000000 ,  end_addr:  000AFF
+DDD: 2021-09-07 21:59:41  jlinkArgs.file_start_addr:  000000 jlinkArgs.file_end_addr:  000AFF
+DDD: 2021-09-07 21:59:41  file format:  .hex
+DDD: 2021-09-07 21:59:41  file format:  .hex
+DDD: 2021-09-07 21:59:41  已选择HEX文件
+DDD: 2021-09-07 21:59:41  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Execution Start Address: 00027201
+Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:59:41  data: 
+ Data:   027000 - 0301A7
+
+DDD: 2021-09-07 21:59:41  start addr:  027000 ,  end_addr:  0301A7
+DDD: 2021-09-07 21:59:41  jlinkArgs.file2_start_addr:  027000 jlinkArgs.file2_end_addr:  0301A7
+DDD: 2021-09-07 21:59:41  file format:  .hex
+DDD: 2021-09-07 21:59:41  filename:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.bin"
+DDD: 2021-09-07 21:59:41  file format:  .bin
+DDD: 2021-09-07 21:59:41  已选择Bin文件
+DDD: 2021-09-07 21:59:41  file format:  .bin
+DDD: 2021-09-07 21:59:41  固件3 为BIN文件，显示其保存的Start Address
+III: 2021-09-07 21:59:41  选择擦除整个芯片
+DDD: 2021-09-07 21:59:41  dev sn count:  2
+III: 2021-09-07 21:59:48  保存当前设备的配置
+III: 2021-09-07 21:59:48  写 config/jlink_device_info.json 文件成功
+DDD: 2021-09-07 21:59:48  添加固件1记录
+DDD: 2021-09-07 21:59:48  添加固件1记录
+III: 2021-09-07 21:59:48  写global config配置文件成功
+DDD: 2021-09-07 22:00:02  存在固件记录
+DDD: 2021-09-07 22:00:02  存在固件记录
+DDD: 2021-09-07 22:00:02  存在固件记录
+DDD: 2021-09-07 22:00:02  存在固件记录
+DDD: 2021-09-07 22:00:02  读取固件1记录成功
+DDD: 2021-09-07 22:00:02  读取固件1记录成功
+DDD: 2021-09-07 22:00:02  读取固件1记录成功
+DDD: 2021-09-07 22:00:02  读取固件1记录成功
+DDD: 2021-09-07 22:00:02  读取固件1记录成功
+DDD: 2021-09-07 22:00:02  读取固件1记录成功
+DDD: 2021-09-07 22:00:02  jlink_cmd_path value:  "C:/Program Files (x86)/SEGGER/JLink/JLink.exe"
+III: 2021-09-07 22:00:02  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" -CommandFile config/get_sn_log_cmd.txt -Log config/jlink_log.txt"
+III: 2021-09-07 22:00:02  SEGGER J-Link Commander V6.72d (Compiled May 15 2020 16:48:00)
+DLL version V6.72d, compiled May 15 2020 16:47:06
+
+
+J-Link Command File read successfully.
+Processing script file...
+
+J-Link[0]: Connection: USB, Serial number: 23521525, ProductName: SAM-ICE
+J-Link[1]: Connection: USB, Serial number: 29401025, ProductName: SAM-ICE
+
+
+Script processing completed.
+
+
+DDD: 2021-09-07 22:00:02  设置连接方式： "SWD"
+DDD: 2021-09-07 22:00:02  固件1:  "D:/Course/Nordic/nRF5_SDK_17.0.2_d674dde/components/softdevice/s140/hex/s140_nrf52_7.2.0_softdevice.hex"
+DDD: 2021-09-07 22:00:02  file format:  .hex
+DDD: 2021-09-07 22:00:02  已选择HEX文件
+DDD: 2021-09-07 22:00:02  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 22:00:02  data: 
+ Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 22:00:02  start addr:  000000 ,  end_addr:  000AFF
+DDD: 2021-09-07 22:00:02  jlinkArgs.file_start_addr:  000000 jlinkArgs.file_end_addr:  000AFF
+DDD: 2021-09-07 22:00:02  file format:  .hex
+DDD: 2021-09-07 22:00:02  file format:  .hex
+DDD: 2021-09-07 22:00:02  已选择HEX文件
+DDD: 2021-09-07 22:00:02  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Execution Start Address: 00027201
+Data:   027000 - 0301A7
+
+DDD: 2021-09-07 22:00:02  data: 
+ Data:   027000 - 0301A7
+
+DDD: 2021-09-07 22:00:02  start addr:  027000 ,  end_addr:  0301A7
+DDD: 2021-09-07 22:00:02  jlinkArgs.file2_start_addr:  027000 jlinkArgs.file2_end_addr:  0301A7
+DDD: 2021-09-07 22:00:02  file format:  .hex
+DDD: 2021-09-07 22:00:02  filename:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.bin"
+DDD: 2021-09-07 22:00:02  file format:  .bin
+DDD: 2021-09-07 22:00:02  已选择Bin文件
+DDD: 2021-09-07 22:00:02  file format:  .bin
+DDD: 2021-09-07 22:00:02  固件3 为BIN文件，显示其保存的Start Address
+III: 2021-09-07 22:00:02  选择擦除整个芯片
+DDD: 2021-09-07 22:00:02  dev sn count:  2
+III: 2021-09-07 22:00:10  保存当前设备的配置
+III: 2021-09-07 22:00:10  写 config/jlink_device_info.json 文件成功
+DDD: 2021-09-07 22:00:10  添加固件1记录
+DDD: 2021-09-07 22:00:10  添加固件1记录
+III: 2021-09-07 22:00:10  写global config配置文件成功
+DDD: 2021-09-07 22:00:25  存在固件记录
+DDD: 2021-09-07 22:00:25  存在固件记录
+DDD: 2021-09-07 22:00:25  存在固件记录
+DDD: 2021-09-07 22:00:25  存在固件记录
+DDD: 2021-09-07 22:00:25  读取固件1记录成功
+DDD: 2021-09-07 22:00:25  读取固件1记录成功
+DDD: 2021-09-07 22:00:25  读取固件1记录成功
+DDD: 2021-09-07 22:00:25  读取固件1记录成功
+DDD: 2021-09-07 22:00:25  读取固件1记录成功
+DDD: 2021-09-07 22:00:25  读取固件1记录成功
+DDD: 2021-09-07 22:00:25  jlink_cmd_path value:  "C:/Program Files (x86)/SEGGER/JLink/JLink.exe"
+III: 2021-09-07 22:00:25  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" -CommandFile config/get_sn_log_cmd.txt -Log config/jlink_log.txt"
+III: 2021-09-07 22:00:25  SEGGER J-Link Commander V6.72d (Compiled May 15 2020 16:48:00)
+DLL version V6.72d, compiled May 15 2020 16:47:06
+
+
+J-Link Command File read successfully.
+Processing script file...
+
+J-Link[0]: Connection: USB, Serial number: 23521525, ProductName: SAM-ICE
+J-Link[1]: Connection: USB, Serial number: 29401025, ProductName: SAM-ICE
+
+
+Script processing completed.
+
+
+DDD: 2021-09-07 22:00:25  设置连接方式： "SWD"
+DDD: 2021-09-07 22:00:25  固件1:  "D:/Course/Nordic/nRF5_SDK_17.0.2_d674dde/components/softdevice/s140/hex/s140_nrf52_7.2.0_softdevice.hex"
+DDD: 2021-09-07 22:00:25  file format:  .hex
+DDD: 2021-09-07 22:00:25  已选择HEX文件
+DDD: 2021-09-07 22:00:25  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 22:00:25  data: 
+ Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 22:00:25  start addr:  000000 ,  end_addr:  000AFF
+DDD: 2021-09-07 22:00:25  jlinkArgs.file_start_addr:  000000 jlinkArgs.file_end_addr:  000AFF
+DDD: 2021-09-07 22:00:25  file format:  .hex
+DDD: 2021-09-07 22:00:25  file format:  .hex
+DDD: 2021-09-07 22:00:25  已选择HEX文件
+DDD: 2021-09-07 22:00:25  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Execution Start Address: 00027201
+Data:   027000 - 0301A7
+
+DDD: 2021-09-07 22:00:25  data: 
+ Data:   027000 - 0301A7
+
+DDD: 2021-09-07 22:00:25  start addr:  027000 ,  end_addr:  0301A7
+DDD: 2021-09-07 22:00:25  jlinkArgs.file2_start_addr:  027000 jlinkArgs.file2_end_addr:  0301A7
+DDD: 2021-09-07 22:00:25  file format:  .hex
+DDD: 2021-09-07 22:00:25  filename:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.bin"
+DDD: 2021-09-07 22:00:25  file format:  .bin
+DDD: 2021-09-07 22:00:25  已选择Bin文件
+DDD: 2021-09-07 22:00:25  file format:  .bin
+DDD: 2021-09-07 22:00:25  固件3 为BIN文件，显示其保存的Start Address
+III: 2021-09-07 22:00:25  选择擦除整个芯片
+DDD: 2021-09-07 22:00:25  dev sn count:  2
+III: 2021-09-07 22:00:32  保存当前设备的配置
+III: 2021-09-07 22:00:32  写 config/jlink_device_info.json 文件成功
+DDD: 2021-09-07 22:00:32  添加固件1记录
+DDD: 2021-09-07 22:00:32  添加固件1记录
+III: 2021-09-07 22:00:32  写global config配置文件成功
+DDD: 2021-09-07 22:01:29  存在固件记录
+DDD: 2021-09-07 22:01:29  存在固件记录
+DDD: 2021-09-07 22:01:29  存在固件记录
+DDD: 2021-09-07 22:01:29  存在固件记录
+DDD: 2021-09-07 22:01:29  读取固件1记录成功
+DDD: 2021-09-07 22:01:29  读取固件1记录成功
+DDD: 2021-09-07 22:01:29  读取固件1记录成功
+DDD: 2021-09-07 22:01:29  读取固件1记录成功
+DDD: 2021-09-07 22:01:29  读取固件1记录成功
+DDD: 2021-09-07 22:01:29  读取固件1记录成功
+DDD: 2021-09-07 22:01:29  jlink_cmd_path value:  "C:/Program Files (x86)/SEGGER/JLink/JLink.exe"
+III: 2021-09-07 22:01:29  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" -CommandFile config/get_sn_log_cmd.txt -Log config/jlink_log.txt"
+III: 2021-09-07 22:01:29  SEGGER J-Link Commander V6.72d (Compiled May 15 2020 16:48:00)
+DLL version V6.72d, compiled May 15 2020 16:47:06
+
+
+J-Link Command File read successfully.
+Processing script file...
+
+J-Link[0]: Connection: USB, Serial number: 23521525, ProductName: SAM-ICE
+J-Link[1]: Connection: USB, Serial number: 29401025, ProductName: SAM-ICE
+
+
+Script processing completed.
+
+
+DDD: 2021-09-07 22:01:29  设置连接方式： "SWD"
+DDD: 2021-09-07 22:01:29  固件1:  "D:/Course/Nordic/nRF5_SDK_17.0.2_d674dde/components/softdevice/s140/hex/s140_nrf52_7.2.0_softdevice.hex"
+DDD: 2021-09-07 22:01:29  file format:  .hex
+DDD: 2021-09-07 22:01:29  已选择HEX文件
+DDD: 2021-09-07 22:01:29  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 22:01:29  data: 
+ Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 22:01:29  start addr:  000000 ,  end_addr:  000AFF
+DDD: 2021-09-07 22:01:29  jlinkArgs.file_start_addr:  000000 jlinkArgs.file_end_addr:  000AFF
+DDD: 2021-09-07 22:01:29  file format:  .hex
+DDD: 2021-09-07 22:01:29  file format:  .hex
+DDD: 2021-09-07 22:01:29  已选择HEX文件
+DDD: 2021-09-07 22:01:29  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Execution Start Address: 00027201
+Data:   027000 - 0301A7
+
+DDD: 2021-09-07 22:01:29  data: 
+ Data:   027000 - 0301A7
+
+DDD: 2021-09-07 22:01:29  start addr:  027000 ,  end_addr:  0301A7
+DDD: 2021-09-07 22:01:29  jlinkArgs.file2_start_addr:  027000 jlinkArgs.file2_end_addr:  0301A7
+DDD: 2021-09-07 22:01:29  file format:  .hex
+DDD: 2021-09-07 22:01:29  filename:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.bin"
+DDD: 2021-09-07 22:01:29  file format:  .bin
+DDD: 2021-09-07 22:01:29  已选择Bin文件
+DDD: 2021-09-07 22:01:29  file format:  .bin
+DDD: 2021-09-07 22:01:29  固件3 为BIN文件，显示其保存的Start Address
+III: 2021-09-07 22:01:29  选择擦除整个芯片
+DDD: 2021-09-07 22:01:29  dev sn count:  2
+III: 2021-09-07 22:01:44  保存当前设备的配置
+III: 2021-09-07 22:01:44  写 config/jlink_device_info.json 文件成功
+DDD: 2021-09-07 22:01:44  添加固件1记录
+DDD: 2021-09-07 22:01:44  添加固件1记录
+III: 2021-09-07 22:01:44  写global config配置文件成功
+DDD: 2021-09-07 22:02:06  存在固件记录
+DDD: 2021-09-07 22:02:06  存在固件记录
+DDD: 2021-09-07 22:02:06  存在固件记录
+DDD: 2021-09-07 22:02:06  存在固件记录
+DDD: 2021-09-07 22:02:06  读取固件1记录成功
+DDD: 2021-09-07 22:02:06  读取固件1记录成功
+DDD: 2021-09-07 22:02:06  读取固件1记录成功
+DDD: 2021-09-07 22:02:06  读取固件1记录成功
+DDD: 2021-09-07 22:02:06  读取固件1记录成功
+DDD: 2021-09-07 22:02:06  读取固件1记录成功
+DDD: 2021-09-07 22:02:06  jlink_cmd_path value:  "C:/Program Files (x86)/SEGGER/JLink/JLink.exe"
+III: 2021-09-07 22:02:06  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" -CommandFile config/get_sn_log_cmd.txt -Log config/jlink_log.txt"
+III: 2021-09-07 22:02:06  SEGGER J-Link Commander V6.72d (Compiled May 15 2020 16:48:00)
+DLL version V6.72d, compiled May 15 2020 16:47:06
+
+
+J-Link Command File read successfully.
+Processing script file...
+
+J-Link[0]: Connection: USB, Serial number: 23521525, ProductName: SAM-ICE
+J-Link[1]: Connection: USB, Serial number: 29401025, ProductName: SAM-ICE
+
+
+Script processing completed.
+
+
+DDD: 2021-09-07 22:02:06  设置连接方式： "SWD"
+DDD: 2021-09-07 22:02:06  固件1:  "D:/Course/Nordic/nRF5_SDK_17.0.2_d674dde/components/softdevice/s140/hex/s140_nrf52_7.2.0_softdevice.hex"
+DDD: 2021-09-07 22:02:06  file format:  .hex
+DDD: 2021-09-07 22:02:06  已选择HEX文件
+DDD: 2021-09-07 22:02:06  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 22:02:06  data: 
+ Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 22:02:06  start addr:  000000 ,  end_addr:  000AFF
+DDD: 2021-09-07 22:02:06  jlinkArgs.file_start_addr:  000000 jlinkArgs.file_end_addr:  000AFF
+DDD: 2021-09-07 22:02:06  file format:  .hex
+DDD: 2021-09-07 22:02:06  file format:  .hex
+DDD: 2021-09-07 22:02:06  已选择HEX文件
+DDD: 2021-09-07 22:02:06  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Execution Start Address: 00027201
+Data:   027000 - 0301A7
+
+DDD: 2021-09-07 22:02:06  data: 
+ Data:   027000 - 0301A7
+
+DDD: 2021-09-07 22:02:06  start addr:  027000 ,  end_addr:  0301A7
+DDD: 2021-09-07 22:02:06  jlinkArgs.file2_start_addr:  027000 jlinkArgs.file2_end_addr:  0301A7
+DDD: 2021-09-07 22:02:06  file format:  .hex
+DDD: 2021-09-07 22:02:06  filename:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.bin"
+DDD: 2021-09-07 22:02:06  file format:  .bin
+DDD: 2021-09-07 22:02:06  已选择Bin文件
+DDD: 2021-09-07 22:02:06  file format:  .bin
+DDD: 2021-09-07 22:02:06  固件3 为BIN文件，显示其保存的Start Address
+III: 2021-09-07 22:02:06  选择擦除整个芯片
+DDD: 2021-09-07 22:02:06  dev sn count:  2
+III: 2021-09-07 22:02:33  保存当前设备的配置
+III: 2021-09-07 22:02:33  写 config/jlink_device_info.json 文件成功
+DDD: 2021-09-07 22:02:33  添加固件1记录
+DDD: 2021-09-07 22:02:33  添加固件1记录
+III: 2021-09-07 22:02:33  写global config配置文件成功
+DDD: 2021-09-07 22:02:51  存在固件记录
+DDD: 2021-09-07 22:02:51  存在固件记录
+DDD: 2021-09-07 22:02:51  存在固件记录
+DDD: 2021-09-07 22:02:51  存在固件记录
+DDD: 2021-09-07 22:02:51  读取固件1记录成功
+DDD: 2021-09-07 22:02:51  读取固件1记录成功
+DDD: 2021-09-07 22:02:51  读取固件1记录成功
+DDD: 2021-09-07 22:02:51  读取固件1记录成功
+DDD: 2021-09-07 22:02:51  读取固件1记录成功
+DDD: 2021-09-07 22:02:51  读取固件1记录成功
+DDD: 2021-09-07 22:02:51  jlink_cmd_path value:  "C:/Program Files (x86)/SEGGER/JLink/JLink.exe"
+III: 2021-09-07 22:02:51  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" -CommandFile config/get_sn_log_cmd.txt -Log config/jlink_log.txt"
+III: 2021-09-07 22:02:51  SEGGER J-Link Commander V6.72d (Compiled May 15 2020 16:48:00)
+DLL version V6.72d, compiled May 15 2020 16:47:06
+
+
+J-Link Command File read successfully.
+Processing script file...
+
+J-Link[0]: Connection: USB, Serial number: 23521525, ProductName: SAM-ICE
+J-Link[1]: Connection: USB, Serial number: 29401025, ProductName: SAM-ICE
+
+
+Script processing completed.
+
+
+DDD: 2021-09-07 22:02:51  设置连接方式： "SWD"
+DDD: 2021-09-07 22:02:51  固件1:  "D:/Course/Nordic/nRF5_SDK_17.0.2_d674dde/components/softdevice/s140/hex/s140_nrf52_7.2.0_softdevice.hex"
+DDD: 2021-09-07 22:02:51  file format:  .hex
+DDD: 2021-09-07 22:02:51  已选择HEX文件
+DDD: 2021-09-07 22:02:51  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 22:02:51  data: 
+ Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 22:02:51  start addr:  000000 ,  end_addr:  000AFF
+DDD: 2021-09-07 22:02:51  jlinkArgs.file_start_addr:  000000 jlinkArgs.file_end_addr:  000AFF
+DDD: 2021-09-07 22:02:51  file format:  .hex
+DDD: 2021-09-07 22:02:51  file format:  .hex
+DDD: 2021-09-07 22:02:51  已选择HEX文件
+DDD: 2021-09-07 22:02:51  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Execution Start Address: 00027201
+Data:   027000 - 0301A7
+
+DDD: 2021-09-07 22:02:51  data: 
+ Data:   027000 - 0301A7
+
+DDD: 2021-09-07 22:02:51  start addr:  027000 ,  end_addr:  0301A7
+DDD: 2021-09-07 22:02:51  jlinkArgs.file2_start_addr:  027000 jlinkArgs.file2_end_addr:  0301A7
+DDD: 2021-09-07 22:02:51  file format:  .hex
+DDD: 2021-09-07 22:02:51  filename:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.bin"
+DDD: 2021-09-07 22:02:51  file format:  .bin
+DDD: 2021-09-07 22:02:51  已选择Bin文件
+DDD: 2021-09-07 22:02:51  file format:  .bin
+DDD: 2021-09-07 22:02:51  固件3 为BIN文件，显示其保存的Start Address
+III: 2021-09-07 22:02:51  选择擦除整个芯片
+DDD: 2021-09-07 22:02:51  dev sn count:  2
+III: 2021-09-07 22:03:57  保存当前设备的配置
+III: 2021-09-07 22:03:57  写 config/jlink_device_info.json 文件成功
+DDD: 2021-09-07 22:03:57  添加固件1记录
+DDD: 2021-09-07 22:03:57  添加固件1记录
+III: 2021-09-07 22:03:57  写global config配置文件成功
+DDD: 2021-09-07 22:04:00  存在固件记录
+DDD: 2021-09-07 22:04:00  存在固件记录
+DDD: 2021-09-07 22:04:00  存在固件记录
+DDD: 2021-09-07 22:04:00  存在固件记录
+DDD: 2021-09-07 22:04:00  读取固件1记录成功
+DDD: 2021-09-07 22:04:00  读取固件1记录成功
+DDD: 2021-09-07 22:04:00  读取固件1记录成功
+DDD: 2021-09-07 22:04:00  读取固件1记录成功
+DDD: 2021-09-07 22:04:00  读取固件1记录成功
+DDD: 2021-09-07 22:04:00  读取固件1记录成功
+DDD: 2021-09-07 22:04:00  jlink_cmd_path value:  "C:/Program Files (x86)/SEGGER/JLink/JLink.exe"
+III: 2021-09-07 22:04:00  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" -CommandFile config/get_sn_log_cmd.txt -Log config/jlink_log.txt"
+III: 2021-09-07 22:04:00  SEGGER J-Link Commander V6.72d (Compiled May 15 2020 16:48:00)
+DLL version V6.72d, compiled May 15 2020 16:47:06
+
+
+J-Link Command File read successfully.
+Processing script file...
+
+J-Link[0]: Connection: USB, Serial number: 23521525, ProductName: SAM-ICE
+J-Link[1]: Connection: USB, Serial number: 29401025, ProductName: SAM-ICE
+
+
+Script processing completed.
+
+
+DDD: 2021-09-07 22:04:00  设置连接方式： "SWD"
+DDD: 2021-09-07 22:04:00  固件1:  "D:/Course/Nordic/nRF5_SDK_17.0.2_d674dde/components/softdevice/s140/hex/s140_nrf52_7.2.0_softdevice.hex"
+DDD: 2021-09-07 22:04:00  file format:  .hex
+DDD: 2021-09-07 22:04:00  已选择HEX文件
+DDD: 2021-09-07 22:04:00  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 22:04:00  data: 
+ Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 22:04:00  start addr:  000000 ,  end_addr:  000AFF
+DDD: 2021-09-07 22:04:00  jlinkArgs.file_start_addr:  000000 jlinkArgs.file_end_addr:  000AFF
+DDD: 2021-09-07 22:04:00  file format:  .hex
+DDD: 2021-09-07 22:04:00  file format:  .hex
+DDD: 2021-09-07 22:04:00  已选择HEX文件
+DDD: 2021-09-07 22:04:00  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Execution Start Address: 00027201
+Data:   027000 - 0301A7
+
+DDD: 2021-09-07 22:04:00  data: 
+ Data:   027000 - 0301A7
+
+DDD: 2021-09-07 22:04:00  start addr:  027000 ,  end_addr:  0301A7
+DDD: 2021-09-07 22:04:00  jlinkArgs.file2_start_addr:  027000 jlinkArgs.file2_end_addr:  0301A7
+DDD: 2021-09-07 22:04:00  file format:  .hex
+DDD: 2021-09-07 22:04:00  filename:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.bin"
+DDD: 2021-09-07 22:04:00  file format:  .bin
+DDD: 2021-09-07 22:04:00  已选择Bin文件
+DDD: 2021-09-07 22:04:00  file format:  .bin
+DDD: 2021-09-07 22:04:00  固件3 为BIN文件，显示其保存的Start Address
+III: 2021-09-07 22:04:00  选择擦除整个芯片
+DDD: 2021-09-07 22:04:00  dev sn count:  2
+III: 2021-09-07 22:04:17  保存当前设备的配置
+III: 2021-09-07 22:04:17  写 config/jlink_device_info.json 文件成功
+DDD: 2021-09-07 22:04:17  添加固件1记录
+DDD: 2021-09-07 22:04:17  添加固件1记录
+III: 2021-09-07 22:04:17  写global config配置文件成功
+DDD: 2021-09-07 22:09:33  存在固件记录
+DDD: 2021-09-07 22:09:33  存在固件记录
+DDD: 2021-09-07 22:09:33  存在固件记录
+DDD: 2021-09-07 22:09:33  存在固件记录
+DDD: 2021-09-07 22:09:33  读取固件1记录成功
+DDD: 2021-09-07 22:09:33  读取固件1记录成功
+DDD: 2021-09-07 22:09:33  读取固件1记录成功
+DDD: 2021-09-07 22:09:33  读取固件1记录成功
+DDD: 2021-09-07 22:09:33  读取固件1记录成功
+DDD: 2021-09-07 22:09:33  读取固件1记录成功
+DDD: 2021-09-07 22:09:33  jlink_cmd_path value:  "C:/Program Files (x86)/SEGGER/JLink/JLink.exe"
+III: 2021-09-07 22:09:33  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" -CommandFile config/get_sn_log_cmd.txt -Log config/jlink_log.txt"
+III: 2021-09-07 22:09:33  SEGGER J-Link Commander V6.72d (Compiled May 15 2020 16:48:00)
+DLL version V6.72d, compiled May 15 2020 16:47:06
+
+
+J-Link Command File read successfully.
+Processing script file...
+
+J-Link[0]: Connection: USB, Serial number: 23521525, ProductName: SAM-ICE
+J-Link[1]: Connection: USB, Serial number: 29401025, ProductName: SAM-ICE
+
+
+Script processing completed.
+
+
+DDD: 2021-09-07 22:09:33  设置连接方式： "SWD"
+DDD: 2021-09-07 22:09:33  固件1:  "D:/Course/Nordic/nRF5_SDK_17.0.2_d674dde/components/softdevice/s140/hex/s140_nrf52_7.2.0_softdevice.hex"
+DDD: 2021-09-07 22:09:33  file format:  .hex
+DDD: 2021-09-07 22:09:33  已选择HEX文件
+DDD: 2021-09-07 22:09:33  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 22:09:33  data: 
+ Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 22:09:33  start addr:  000000 ,  end_addr:  000AFF
+DDD: 2021-09-07 22:09:33  jlinkArgs.file_start_addr:  000000 jlinkArgs.file_end_addr:  000AFF
+DDD: 2021-09-07 22:09:33  file format:  .hex
+DDD: 2021-09-07 22:09:33  file format:  .hex
+DDD: 2021-09-07 22:09:33  已选择HEX文件
+DDD: 2021-09-07 22:09:33  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Execution Start Address: 00027201
+Data:   027000 - 0301A7
+
+DDD: 2021-09-07 22:09:33  data: 
+ Data:   027000 - 0301A7
+
+DDD: 2021-09-07 22:09:33  start addr:  027000 ,  end_addr:  0301A7
+DDD: 2021-09-07 22:09:33  jlinkArgs.file2_start_addr:  027000 jlinkArgs.file2_end_addr:  0301A7
+DDD: 2021-09-07 22:09:33  file format:  .hex
+DDD: 2021-09-07 22:09:33  filename:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.bin"
+DDD: 2021-09-07 22:09:33  file format:  .bin
+DDD: 2021-09-07 22:09:33  已选择Bin文件
+DDD: 2021-09-07 22:09:33  file format:  .bin
+DDD: 2021-09-07 22:09:33  固件3 为BIN文件，显示其保存的Start Address
+III: 2021-09-07 22:09:33  选择擦除整个芯片
+DDD: 2021-09-07 22:09:33  dev sn count:  2
+III: 2021-09-07 22:09:48  保存当前设备的配置
+III: 2021-09-07 22:09:48  写 config/jlink_device_info.json 文件成功
+DDD: 2021-09-07 22:09:48  添加固件1记录
+DDD: 2021-09-07 22:09:48  添加固件1记录
+III: 2021-09-07 22:09:48  写global config配置文件成功
+DDD: 2021-09-07 22:10:24  存在固件记录
+DDD: 2021-09-07 22:10:24  存在固件记录
+DDD: 2021-09-07 22:10:24  存在固件记录
+DDD: 2021-09-07 22:10:24  存在固件记录
+DDD: 2021-09-07 22:10:24  读取固件1记录成功
+DDD: 2021-09-07 22:10:24  读取固件1记录成功
+DDD: 2021-09-07 22:10:24  读取固件1记录成功
+DDD: 2021-09-07 22:10:24  读取固件1记录成功
+DDD: 2021-09-07 22:10:24  读取固件1记录成功
+DDD: 2021-09-07 22:10:24  jlink_cmd_path value:  "C:/Program Files (x86)/SEGGER/JLink/JLink.exe"
+III: 2021-09-07 22:10:24  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" -CommandFile config/get_sn_log_cmd.txt -Log config/jlink_log.txt"
+III: 2021-09-07 22:10:25  SEGGER J-Link Commander V6.72d (Compiled May 15 2020 16:48:00)
+DLL version V6.72d, compiled May 15 2020 16:47:06
+
+
+J-Link Command File read successfully.
+Processing script file...
+
+J-Link[0]: Connection: USB, Serial number: 23521525, ProductName: SAM-ICE
+J-Link[1]: Connection: USB, Serial number: 29401025, ProductName: SAM-ICE
+
+
+Script processing completed.
+
+
+DDD: 2021-09-07 22:10:25  设置连接方式： "SWD"
+DDD: 2021-09-07 22:10:25  固件1:  "D:/Course/Nordic/nRF5_SDK_17.0.2_d674dde/components/softdevice/s140/hex/s140_nrf52_7.2.0_softdevice.hex"
+DDD: 2021-09-07 22:10:25  file format:  .hex
+DDD: 2021-09-07 22:10:25  已选择HEX文件
+DDD: 2021-09-07 22:10:25  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 22:10:25  data: 
+ Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 22:10:25  start addr:  000000 ,  end_addr:  000AFF
+DDD: 2021-09-07 22:10:25  jlinkArgs.file_start_addr:  000000 jlinkArgs.file_end_addr:  000AFF
+DDD: 2021-09-07 22:10:25  file format:  .hex
+DDD: 2021-09-07 22:10:25  file format:  .hex
+DDD: 2021-09-07 22:10:25  已选择HEX文件
+DDD: 2021-09-07 22:10:25  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Execution Start Address: 00027201
+Data:   027000 - 0301A7
+
+DDD: 2021-09-07 22:10:25  data: 
+ Data:   027000 - 0301A7
+
+DDD: 2021-09-07 22:10:25  start addr:  027000 ,  end_addr:  0301A7
+DDD: 2021-09-07 22:10:25  jlinkArgs.file2_start_addr:  027000 jlinkArgs.file2_end_addr:  0301A7
+DDD: 2021-09-07 22:10:25  file format:  .hex
+DDD: 2021-09-07 22:10:25  filename:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.bin"
+DDD: 2021-09-07 22:10:25  file format:  .bin
+DDD: 2021-09-07 22:10:25  已选择Bin文件
+DDD: 2021-09-07 22:10:25  file format:  .bin
+DDD: 2021-09-07 22:10:25  固件3 为BIN文件，显示其保存的Start Address
+III: 2021-09-07 22:10:25  选择擦除整个芯片
+DDD: 2021-09-07 22:10:25  dev sn count:  2
+III: 2021-09-07 22:21:26  保存当前设备的配置
+III: 2021-09-07 22:21:26  写 config/jlink_device_info.json 文件成功
+DDD: 2021-09-07 22:21:26  添加固件1记录
+DDD: 2021-09-07 22:21:26  添加固件1记录
+III: 2021-09-07 22:21:26  写global config配置文件成功
+DDD: 2021-09-07 22:28:53  存在固件记录
+DDD: 2021-09-07 22:28:53  存在固件记录
+DDD: 2021-09-07 22:28:53  存在固件记录
+DDD: 2021-09-07 22:28:53  存在固件记录
+DDD: 2021-09-07 22:28:53  读取固件1记录成功
+DDD: 2021-09-07 22:28:53  读取固件1记录成功
+DDD: 2021-09-07 22:28:53  读取固件1记录成功
+DDD: 2021-09-07 22:28:53  读取固件1记录成功
+DDD: 2021-09-07 22:28:53  读取固件1记录成功
+DDD: 2021-09-07 22:28:53  jlink_cmd_path value:  "C:/Program Files (x86)/SEGGER/JLink/JLink.exe"
+III: 2021-09-07 22:28:53  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" -CommandFile config/get_sn_log_cmd.txt -Log config/jlink_log.txt"
+III: 2021-09-07 22:28:53  SEGGER J-Link Commander V6.72d (Compiled May 15 2020 16:48:00)
+DLL version V6.72d, compiled May 15 2020 16:47:06
+
+
+J-Link Command File read successfully.
+Processing script file...
+
+J-Link[0]: Connection: USB, Serial number: 23521525, ProductName: SAM-ICE
+J-Link[1]: Connection: USB, Serial number: 29401025, ProductName: SAM-ICE
+
+
+Script processing completed.
+
+
+DDD: 2021-09-07 22:28:53  设置连接方式： "SWD"
+DDD: 2021-09-07 22:28:53  固件1:  "D:/Course/Nordic/nRF5_SDK_17.0.2_d674dde/components/softdevice/s140/hex/s140_nrf52_7.2.0_softdevice.hex"
+DDD: 2021-09-07 22:28:53  file format:  .hex
+DDD: 2021-09-07 22:28:53  已选择HEX文件
+DDD: 2021-09-07 22:28:53  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 22:28:53  data: 
+ Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 22:28:53  start addr:  000000 ,  end_addr:  000AFF
+DDD: 2021-09-07 22:28:53  jlinkArgs.file_start_addr:  000000 jlinkArgs.file_end_addr:  000AFF
+DDD: 2021-09-07 22:28:53  file format:  .hex
+DDD: 2021-09-07 22:28:53  file format:  .hex
+DDD: 2021-09-07 22:28:53  已选择HEX文件
+DDD: 2021-09-07 22:28:53  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Execution Start Address: 00027201
+Data:   027000 - 0301A7
+
+DDD: 2021-09-07 22:28:53  data: 
+ Data:   027000 - 0301A7
+
+DDD: 2021-09-07 22:28:53  start addr:  027000 ,  end_addr:  0301A7
+DDD: 2021-09-07 22:28:53  jlinkArgs.file2_start_addr:  027000 jlinkArgs.file2_end_addr:  0301A7
+DDD: 2021-09-07 22:28:53  file format:  .hex
+DDD: 2021-09-07 22:28:53  filename:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.bin"
+DDD: 2021-09-07 22:28:53  file format:  .bin
+DDD: 2021-09-07 22:28:53  已选择Bin文件
+DDD: 2021-09-07 22:28:53  file format:  .bin
+DDD: 2021-09-07 22:28:53  固件3 为BIN文件，显示其保存的Start Address
+III: 2021-09-07 22:28:53  选择擦除整个芯片
+DDD: 2021-09-07 22:28:53  dev sn count:  2
+III: 2021-09-07 22:29:11  保存当前设备的配置
+III: 2021-09-07 22:29:11  写 config/jlink_device_info.json 文件成功
+DDD: 2021-09-07 22:29:11  添加固件1记录
+DDD: 2021-09-07 22:29:11  添加固件1记录
+III: 2021-09-07 22:29:11  写global config配置文件成功
+DDD: 2021-09-07 22:29:13  存在固件记录
+DDD: 2021-09-07 22:29:13  存在固件记录
+DDD: 2021-09-07 22:29:13  存在固件记录
+DDD: 2021-09-07 22:29:13  存在固件记录
+DDD: 2021-09-07 22:29:13  读取固件1记录成功
+DDD: 2021-09-07 22:29:13  读取固件1记录成功
+DDD: 2021-09-07 22:29:13  读取固件1记录成功
+DDD: 2021-09-07 22:29:13  读取固件1记录成功
+DDD: 2021-09-07 22:29:13  读取固件1记录成功
+DDD: 2021-09-07 22:29:13  jlink_cmd_path value:  "C:/Program Files (x86)/SEGGER/JLink/JLink.exe"
+III: 2021-09-07 22:29:13  "\"C:/Program Files (x86)/SEGGER/JLink/JLink.exe\" -CommandFile config/get_sn_log_cmd.txt -Log config/jlink_log.txt"
+III: 2021-09-07 22:29:13  SEGGER J-Link Commander V6.72d (Compiled May 15 2020 16:48:00)
+DLL version V6.72d, compiled May 15 2020 16:47:06
+
+
+J-Link Command File read successfully.
+Processing script file...
+
+J-Link[0]: Connection: USB, Serial number: 23521525, ProductName: SAM-ICE
+J-Link[1]: Connection: USB, Serial number: 29401025, ProductName: SAM-ICE
+
+
+Script processing completed.
+
+
+DDD: 2021-09-07 22:29:13  设置连接方式： "SWD"
+DDD: 2021-09-07 22:29:13  固件1:  "D:/Course/Nordic/nRF5_SDK_17.0.2_d674dde/components/softdevice/s140/hex/s140_nrf52_7.2.0_softdevice.hex"
+DDD: 2021-09-07 22:29:13  file format:  .hex
+DDD: 2021-09-07 22:29:13  已选择HEX文件
+DDD: 2021-09-07 22:29:13  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 22:29:13  data: 
+ Data:   000000 - 000AFF
+        001000 - 026633
+
+DDD: 2021-09-07 22:29:13  start addr:  000000 ,  end_addr:  000AFF
+DDD: 2021-09-07 22:29:13  jlinkArgs.file_start_addr:  000000 jlinkArgs.file_end_addr:  000AFF
+DDD: 2021-09-07 22:29:13  file format:  .hex
+DDD: 2021-09-07 22:29:13  file format:  .hex
+DDD: 2021-09-07 22:29:13  已选择HEX文件
+DDD: 2021-09-07 22:29:13  out: 
+ Format: Intel Hexadecimal (MCS-86)
+Execution Start Address: 00027201
+Data:   027000 - 0301A7
+
+DDD: 2021-09-07 22:29:13  data: 
+ Data:   027000 - 0301A7
+
+DDD: 2021-09-07 22:29:13  start addr:  027000 ,  end_addr:  0301A7
+DDD: 2021-09-07 22:29:13  jlinkArgs.file2_start_addr:  027000 jlinkArgs.file2_end_addr:  0301A7
+DDD: 2021-09-07 22:29:13  file format:  .hex
+DDD: 2021-09-07 22:29:13  filename:  "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.bin"
+DDD: 2021-09-07 22:29:13  file format:  .bin
+DDD: 2021-09-07 22:29:13  已选择Bin文件
+DDD: 2021-09-07 22:29:13  file format:  .bin
+DDD: 2021-09-07 22:29:13  固件3 为BIN文件，显示其保存的Start Address
+III: 2021-09-07 22:29:13  选择擦除整个芯片
+DDD: 2021-09-07 22:29:13  dev sn count:  2
+III: 2021-09-07 22:29:28  保存当前设备的配置
+III: 2021-09-07 22:29:28  写 config/jlink_device_info.json 文件成功
+DDD: 2021-09-07 22:29:28  添加固件1记录
+DDD: 2021-09-07 22:29:28  添加固件1记录
+III: 2021-09-07 22:29:28  写global config配置文件成功

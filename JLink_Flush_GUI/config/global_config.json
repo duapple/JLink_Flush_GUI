@@ -8,9 +8,26 @@
         "nRF52810_XXAA",
         "nRF52832_XXAA",
         "nRF52840_XXAA",
+        "EFR32MG21AxxxF512",
         "EFR32MG21AxxxF768",
-        "EFR32MG21AxxxF1024"
+        "EFR32MG21AxxxF1024",
+        "EFR32MG21BxxxF512",
+        "EFR32MG21BxxxF768",
+        "EFR32MG21BxxxF1024"
     ],
+    "fw_records": {
+        "fw2_list": [
+            "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/script/bootloader_52840.hex"
+        ],
+        "fw3_list": [
+            "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.bin",
+            "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.hex"
+        ],
+        "fw_list": [
+            "D:/Course/Nordic/nRF5_SDK_17.0.2_d674dde/components/softdevice/s140/hex/s140_nrf52_7.2.0_softdevice.hex",
+            "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/script/s140_nrf52_7.2.0_softdevice.hex"
+        ]
+    },
     "jlink_cmd_path": "C:/Program Files (x86)/SEGGER/JLink/JLink.exe",
     "speed_list": [
         1000,
@@ -18,6 +35,7 @@
         4000,
         8000,
         10000,
+        16000,
         20000
     ]
 }

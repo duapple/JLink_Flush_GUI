@@ -152,7 +152,7 @@ void MainWindow::process_finished(int exit_code)
     }
 
     if (program_grogress != 100) {
-        QString str = QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss") + TEXT_COLOR_RED("烧录 FAILED !!!");
+        QString str = QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss") + TEXT_COLOR_RED("  烧录 FAILED !!!");
         ui->textBrowser_log_2->append(str);
         ui->textBrowser_log_2->append("\r\n\r\n");
         ui->textBrowser_log_2->moveCursor(QTextCursor::End);
@@ -161,7 +161,7 @@ void MainWindow::process_finished(int exit_code)
     else if (program_grogress == 100)
     {
         pProgressBar->setValue(100);
-        QString str = QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss") + TEXT_COLOR_BLUE("烧录 SUCCESS !!!");
+        QString str = QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss") + TEXT_COLOR_BLUE("  烧录 SUCCESS !!!");
         ui->textBrowser_log_2->append(str);
         ui->textBrowser_log_2->append("\r\n\r\n");
         ui->textBrowser_log_2->moveCursor(QTextCursor::End);
@@ -970,9 +970,10 @@ int MainWindow::fw_file_check(void)
 
 void MainWindow::on_pushButton_flush_clicked()
 {
+#if defined(Q_OS_LINUX)
     pProgressBar->setValue(0);
     program_grogress = 0;
-
+#endif
     if (ui->comboBox_sn->currentText() == "") {
         qInfo() << "当前无Jlink设备连接";
         QMessageBox::information(this, tr("警告"), tr("当前没有Jlink设备，请刷新"), tr("退出"));
@@ -1027,10 +1028,8 @@ void MainWindow::on_pushButton_flush_clicked()
     p.start(cmd);
     p.waitForStarted();
     p.waitForFinished();
-    process->waitForFinished();
 
     string out = QString::fromLocal8Bit(p.readAllStandardOutput()).toStdString();
-    out = QString::fromLocal8Bit(p.readLine()).toStdString();
     ui->textBrowser_log_2->append(QString::fromStdString(out));
     ui->textBrowser_log_2->moveCursor(QTextCursor::End);
 
@@ -1038,19 +1037,22 @@ void MainWindow::on_pushButton_flush_clicked()
     {
         qCritical() << "Connecting to J-Link via USB...FAILED";
         QMessageBox::information(this, tr("警告"), tr("当前Jlink没有连接上终端设备，请连接终端设备后再尝试"), tr("退出"));
+        QString str = QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss") + TEXT_COLOR_RED("  烧录 FAILED !!!");
+        ui->textBrowser_log_2->append(str);
+        ui->textBrowser_log_2->append("\r\n\r\n");
+        ui->textBrowser_log_2->moveCursor(QTextCursor::End);
     }
     else if (out.find("J-Link: Flash download:") < out.size() && out.find("O.K.")) {
-        QString str = QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss") + TEXT_COLOR_RED("烧录 success !!!");
+        QString str = QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss") + TEXT_COLOR_BLUE("  烧录 SUCCESS !!!");
         ui->textBrowser_log_2->append(str);
         ui->textBrowser_log_2->append("\r\n\r\n");
         ui->textBrowser_log_2->moveCursor(QTextCursor::End);
     }
     else {
-        QString str = QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss") + TEXT_COLOR_RED("烧录 FAILED !!!");
+        QString str = QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss") + TEXT_COLOR_RED("  烧录 FAILED !!!");
         ui->textBrowser_log_2->append(str);
         ui->textBrowser_log_2->append("\r\n\r\n");
         ui->textBrowser_log_2->moveCursor(QTextCursor::End);
-        pProgressBar->setValue(0);
     }
 #endif
 
@@ -1101,22 +1103,22 @@ void MainWindow::on_pushButton_reboot_clicked()
     {
         qCritical() << "Connecting to J-Link via USB...FAILED";
         QMessageBox::information(this, tr("警告"), tr("当前Jlink没有连接上终端设备，请连接终端设备后再尝试"), tr("退出"));
-        str = QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss") + TEXT_COLOR_BLUE("重启芯片 FAILED !!!");
+        str = QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss") + TEXT_COLOR_BLUE("  重启芯片 FAILED !!!");
     }
     else if (out.find("Cannot connect to target.") < out.size())
     {
         qCritical() << "Cannot connect to target.";
         QMessageBox::information(this, tr("警告"), tr("Cannot connect to target. 请检查Jlink是否正常工作"), tr("退出"));
-        str = QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss") + TEXT_COLOR_BLUE("重启芯片 FAILED !!!");
+        str = QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss") + TEXT_COLOR_BLUE("  重启芯片 FAILED !!!");
     }
     else if (out.find("Failed to power up DAP") < out.size())
     {
         qCritical() << "Cannot connect to target. Failed to power up DAP";
         QMessageBox::information(this, tr("警告"), tr("Cannot connect to target. Failed to power up DAP, 请检查终端设备供电是否正常"), tr("退出"));
-        str = QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss") + TEXT_COLOR_BLUE("重启芯片 FAILED !!!");
+        str = QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss") + TEXT_COLOR_BLUE("  重启芯片 FAILED !!!");
     }
     else {
-        str = QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss") + TEXT_COLOR_BLUE("重启芯片 SUCCESS !!!");
+        str = QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss") + TEXT_COLOR_BLUE("  重启芯片 SUCCESS !!!");
     }
 
     ui->textBrowser_log_2->append(str);
@@ -1165,22 +1167,22 @@ void MainWindow::on_pushButton_erase_clicked()
     {
         qCritical() << "Connecting to J-Link via USB...FAILED";
         QMessageBox::information(this, tr("警告"), tr("当前Jlink没有连接上终端设备，请连接终端设备后再尝试"), tr("退出"));
-        str = QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss") + TEXT_COLOR_RED("擦除芯片 FAILED !!!");
+        str = QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss") + TEXT_COLOR_RED("  擦除芯片 FAILED !!!");
     }
     else if (out.find("Failed to power up DAP") < out.size())
     {
         qCritical() << "Cannot connect to target. Failed to power up DAP";
         QMessageBox::information(this, tr("警告"), tr("Cannot connect to target. Failed to power up DAP, 请检查终端设备供电是否正常"), tr("退出"));
-        str = QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss") + TEXT_COLOR_RED("擦除芯片 FAILED !!!");
+        str = QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss") + TEXT_COLOR_RED("  擦除芯片 FAILED !!!");
     }
     else if (out.find("Cannot connect to target.") < out.size())
     {
         qCritical() << "Cannot connect to target. Failed to power up DAP";
         QMessageBox::information(this, tr("警告"), tr("Cannot connect to target. 请检查Jlink是否正常工作"), tr("退出"));
-        str = QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss") + TEXT_COLOR_RED("擦除芯片 FAILED !!!");
+        str = QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss") + TEXT_COLOR_RED("  擦除芯片 FAILED !!!");
     }
     else {
-        str = QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss") + TEXT_COLOR_BLUE("擦除芯片 SUCCESS !!!");
+        str = QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss") + TEXT_COLOR_BLUE("  擦除芯片 SUCCESS !!!");
     }
 
     ui->textBrowser_log_2->append(str);

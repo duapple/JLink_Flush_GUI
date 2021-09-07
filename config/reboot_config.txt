@@ -1,6 +1,6 @@
-usb 29401025
+usb 23521525
 si 1
-speed 1000
+speed 4000
 device nRF52840_XXAA
 r 
 q 

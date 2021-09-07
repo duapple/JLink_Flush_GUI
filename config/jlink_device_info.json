@@ -1,18 +1,33 @@
 {
+    "23521525": {
+        "connect_type": "SWD",
+        "device_type": "nRF52840_XXAA",
+        "erase_chip": true,
+        "firmware": "D:/Course/Nordic/nRF5_SDK_17.0.2_d674dde/components/softdevice/s140/hex/s140_nrf52_7.2.0_softdevice.hex",
+        "firmware2": "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/script/bootloader_52840.hex",
+        "firmware3": "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.bin",
+        "fw2_enabled": true,
+        "fw2_start_addr": "027000",
+        "fw3_enabled": true,
+        "fw3_start_addr": "0380C0",
+        "fw_enabled": true,
+        "fw_start_addr": "000000",
+        "speed": "4000"
+    },
     "29401025": {
         "connect_type": "SWD",
         "device_type": "nRF52840_XXAA",
         "erase_chip": true,
-        "firmware": "/home/duapple/work/qt/JLink_Flash_GUI/JLink_Flash_GUI/build-JLink_Flash_GUI-Desktop_Qt_5_12_2_GCC_64bit-Debug/Z3_Humiture.bin",
-        "firmware2": "",
-        "firmware3": "/home/duapple/work/qt/JLink_Flash_GUI/JLink_Flash_GUI/build-JLink_Flash_GUI-Desktop_Qt_5_12_2_GCC_64bit-Debug/Z3_Humiture.hex",
-        "fw2_enabled": false,
-        "fw2_start_addr": "000000",
-        "fw3_enabled": false,
-        "fw3_start_addr": "000000",
-        "fw_enabled": false,
-        "fw_start_addr": "",
+        "firmware": "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/script/s140_nrf52_7.2.0_softdevice.hex",
+        "firmware2": "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/script/bootloader_52840.hex",
+        "firmware3": "D:/Projects/2020/Oil_drop/Code/nRF5_SDK_17.0.2_d674dde/examples/ble_peripheral/ble_app_rail_humiture/pca10056/s140/tool/hex_create/burn.bin",
+        "fw2_enabled": true,
+        "fw2_start_addr": "027000",
+        "fw3_enabled": true,
+        "fw3_start_addr": "0380C0",
+        "fw_enabled": true,
+        "fw_start_addr": "000000",
         "speed": "4000"
     },
-    "current_dev_sn": "29401025"
+    "current_dev_sn": "23521525"
 }

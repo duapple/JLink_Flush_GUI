@@ -1,0 +1,30 @@
+{
+    "connect_type_list": [
+        "JTAG",
+        "SWD",
+        "cJTAG"
+    ],
+    "device_type_list": [
+        "nRF52810_XXAA",
+        "nRF52832_XXAA",
+        "nRF52840_XXAA",
+        "EFR32MG21AxxxF512",
+        "EFR32MG21AxxxF768",
+        "EFR32MG21AxxxF1024",
+        "EFR32MG21BxxxF512",
+        "EFR32MG21BxxxF768",
+        "EFR32MG21BxxxF1024"
+    ],
+    "fw_records": {
+    },
+    "jlink_cmd_path": "/home/duapple/下载/JLink_Linux_V672d_x86_64/JLinkExe",
+    "speed_list": [
+        1000,
+        2000,
+        4000,
+        8000,
+        10000,
+        16000,
+        20000
+    ]
+}
