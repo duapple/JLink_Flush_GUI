@@ -1246,7 +1246,7 @@ void MainWindow::on_pushButton_rtt_viewer_clicked()
 #if defined(Q_OS_LINUX)
     jlink_exe = "JLinkRTTViewerExe";
 #elif defined(Q_OS_WIN)
-    jlink_exe = "JLinkRTTViewer.exe"
+    jlink_exe = "JLinkRTTViewer.exe";
 #endif
     std::string rtt_viewer_path = get_file_path(globalConf.jlink_cmd_path) +  "/" + jlink_exe;
 
