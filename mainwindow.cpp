@@ -25,6 +25,7 @@
 #include <string>
 #include <QMutex>
 #include <QWidget>
+#include <thread>
 
 #define JLINK_LOG_FILE              CONFIG_PATH "jlink_log.txt"
 #define JLINK_DEVICE_INFO_FILE      CONFIG_PATH "jlink_device_info.json"
@@ -784,6 +785,8 @@ void MainWindow::get_connect_sn()
     cmd.append(JLINK_LOG_FILE);
     qInfo() << cmd;
 
+    kill_fw_update_notify_window();
+
     // 使用QProcess来执行命令
     QProcess p(0);
     p.start(cmd);
@@ -1008,6 +1011,8 @@ void MainWindow::on_pushButton_flush_clicked()
 
     log_buffer.clear();
 
+    kill_fw_update_notify_window();
+
     // 执行获取动作
     QString cmd;
     cmd = "\"" + QString::fromStdString(globalConf.jlink_cmd_path) + "\"";
@@ -1073,6 +1078,8 @@ void MainWindow::on_pushButton_reboot_clicked()
 
     get_current_jlink_config();
     fileArgs.generate_reboot_config_file(&jlinkArgs);
+
+    kill_fw_update_notify_window();
 
     // 执行获取动作
     QString cmd;
@@ -1149,6 +1156,8 @@ void MainWindow::on_pushButton_erase_clicked()
     cmd = cmd + " " + QString::fromStdString(fileArgs.erase_file);
 
     qInfo() << "exec cmd: " << cmd;
+
+    kill_fw_update_notify_window();
 
     // 使用QProcess来执行命令
     QProcess p(0);
@@ -1255,6 +1264,8 @@ void MainWindow::on_pushButton_rtt_viewer_clicked()
         QMessageBox::information(this, tr("警告"), QString::fromStdString(rtt_viewer_path) + tr(" 文件或路径不存在，请检查"), tr("确认"), tr("退出"));
         return ;
     }
+
+    kill_fw_update_notify_window();
 
     // 执行获取动作
     QString cmd;
@@ -1717,3 +1728,9 @@ void MainWindow::on_actionSave_triggered()
     }
 }
 
+void MainWindow::kill_fw_update_notify_window()
+{
+    static char exe[] = "JLinkGUIServerExe";
+    std::thread th(kill_process, ref(exe));
+    th.detach();
+}

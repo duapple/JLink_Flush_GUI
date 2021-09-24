@@ -4,6 +4,10 @@
 #include <QDebug>
 #include <QProcess>
 #include <stdio.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <time.h>
+#include <unistd.h>
 
 #if defined(Q_OS_LINUX)
 #define SREC_INFO_EXEC       "./bin/srec_info"
@@ -130,4 +134,43 @@ int get_bin_file_start_addr(std::string filename, std::string &start_addr, std::
     end_addr = end_addr_str;
 
     return 0;
+}
+
+int kill_process(char *exe)
+{
+#ifdef Q_OS_LINUX
+    char *fmt = "ps -ef | grep -v \"grep\" | grep %s | awk '{print $2}'";
+    char cmd[1024] = {0};
+    char out[2048] = {0};
+    snprintf(cmd, sizeof(cmd) - 1, fmt, exe);
+    int i = 20;
+    while (i--)
+    {
+        FILE *p_out = NULL;
+        if ((p_out = popen(cmd, "r")) != NULL) {
+            while(fgets(out, sizeof(out) - 1, p_out) != NULL)
+            {
+                printf("%s", out);
+                if (strcmp(out, "") != 0)
+                {
+                    char *kill_fmt = "kill %s";
+                    char kill_cmd[128] = {0};
+                    snprintf(kill_cmd, sizeof(kill_cmd) - 1, kill_fmt, out);
+                    system(kill_cmd);
+                    return 0;
+                }
+                memset(out, 0, sizeof(out));
+            }
+            pclose(p_out);
+        }
+        else{
+            printf("popen failed: %s\n", cmd);
+        }
+        usleep(100000);
+    }
+#elif defined(Q_OS_WIN)
+
+#endif
+
+    return 1;
 }

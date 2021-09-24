@@ -116,6 +116,7 @@ private:
     QString log_buffer;
 
     void restoreUiSettings();
+    void kill_fw_update_notify_window();
 
 protected:
     void closeEvent(QCloseEvent *event);

@@ -12,5 +12,6 @@ std::string get_file_format(std::string path);
 int get_bin_file_start_addr(std::string filename, std::string &start_addr, std::string &end_addr);
 int format_bin_to_hex(std::string &filename);
 int bin_to_hex(std::string filename, string &offset);
+int kill_process(char *exe);
 
 #endif // UTILS_H
